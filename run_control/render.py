@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Collect unmodified model outputs for VisualBench, without aesthetic scoring.
 
-Usage: python3 bench/render.py WORK --track frontend|video --case-id CASE_ID
+Usage: python3 run_control/render.py WORK --track frontend|video --case-id CASE_ID
 The final stdout line is a JSON result, also saved as WORK/render-result.json.
 All artifact paths in the result are relative to WORK. Frontend captures use
-the single shared Ego TaskSpace under bench/browser.lock; video renders use a
+the single shared Ego TaskSpace under run_control/browser.lock; video renders use a
 separate global lock and at most two Remotion workers. No model source is edited.
 """
 from __future__ import annotations
@@ -25,7 +25,7 @@ from urllib.parse import quote
 from urllib.request import urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
-BENCH = ROOT / 'bench'
+BENCH = Path(__file__).resolve().parent
 ACTIVE_CHILD = None
 DEADLINE = None
 

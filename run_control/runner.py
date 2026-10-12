@@ -267,11 +267,11 @@ def renderer():
         try:
             if meta is None: return
             d = json.loads(meta.read_text()); work = meta.parent/'work'; private = meta.parent/'private'
-            while not (ROOT/'bench/render.py').exists():
+            while not (ROOT/'run_control/render.py').exists():
                 if STOP.wait(5): return
             if STOP.is_set(): return
             update(meta, status='rendering', phase='media_capture')
-            cmd = ['python3', str(ROOT/'bench/render.py'), str(work), '--track', d['track'], '--case-id', d['case_id']]
+            cmd = ['python3', str(ROOT/'run_control/render.py'), str(work), '--track', d['track'], '--case-id', d['case_id']]
             code, duration = run_command(cmd, ROOT, private/'capture.stdout', private/'capture.stderr', CONFIG['render_timeout_seconds'])
             if STOP.is_set():
                 update(meta, status='awaiting_render', phase='awaiting_render'); return

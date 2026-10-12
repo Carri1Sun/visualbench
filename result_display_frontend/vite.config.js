@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 const proxy = {
-  '/data': { target: 'http://127.0.0.1:4174', changeOrigin: true },
+  '/api': { target: 'http://127.0.0.1:4174', changeOrigin: true },
   '/results': { target: 'http://127.0.0.1:4174', changeOrigin: true },
   '/inputs': { target: 'http://127.0.0.1:4174', changeOrigin: true },
 };

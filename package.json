@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "python3 bench/manage.py start",
-    "build": "npm --prefix app run build",
-    "bench:init": "python3 bench/common.py",
-    "bench:run": "python3 -u bench/runner.py",
-    "bench:start": "python3 bench/manage.py start --runner",
-    "bench:status": "python3 bench/manage.py status",
-    "bench:export": "python3 bench/export_trajectories.py",
-    "bench:setup": "python3 bench/setup.py"
+    "dev": "python3 run_control/manage.py start",
+    "build": "npm --prefix result_display_frontend run build",
+    "bench:init": "python3 run_control/common.py",
+    "bench:run": "python3 -u run_control/runner.py",
+    "bench:start": "python3 run_control/manage.py start --runner",
+    "bench:status": "python3 run_control/manage.py status",
+    "bench:export": "python3 run_control/export_trajectories.py",
+    "bench:setup": "python3 run_control/setup.py",
+    "serve": "python3 result_background/server.py --port 4174"
   }
 }

@@ -24,10 +24,10 @@ export default function useLiveData() {
     const timeout = setTimeout(() => abort.abort(), 15000);
     setState((previous) => ({ ...previous, refreshing: true }));
     const responses = await Promise.allSettled([
-      fetchJSON('/data/catalog.json', abort.signal),
-      fetchJSON('/results/index.json', abort.signal),
-      fetchJSON('/data/trajectories.json', abort.signal),
-      fetchJSON('/data/audits.json', abort.signal),
+      fetchJSON('/api/catalog', abort.signal),
+      fetchJSON('/api/index', abort.signal),
+      fetchJSON('/api/trajectories', abort.signal),
+      fetchJSON('/api/audits', abort.signal),
     ]);
     clearTimeout(timeout);
     if (alive.current && controller.current === abort) {

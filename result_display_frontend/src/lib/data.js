@@ -167,8 +167,9 @@ export function resultPath(path) {
 }
 
 export function artifactUrl(path) {
-  const safe = resultPath(path);
-  return safe ? `http://127.0.0.1:4174${safe}` : null;
+  // Same-origin relative path: vite dev proxy or the production reverse proxy
+  // forwards /api, /results and /inputs to result_background.
+  return resultPath(path);
 }
 
 export function sourcePath(run) {

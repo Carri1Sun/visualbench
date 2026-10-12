@@ -37,15 +37,15 @@ def status():
 
 def start(include_runner=False):
     services = [
-        ('server',['python3','bench/server.py','--port','4174']),
-        ('capture-server',['python3','bench/server.py','--port','4175']),
-        ('trajectory',['python3','-u','bench/export_trajectories.py','--watch']),
-        ('audit',['python3','-u','bench/audit_outputs.py','--watch']),
+        ('server',['python3','result_background/server.py','--port','4174']),
+        ('capture-server',['python3','result_background/server.py','--port','4175']),
+        ('trajectory',['python3','-u','run_control/export_trajectories.py','--watch']),
+        ('audit',['python3','-u','run_control/audit_outputs.py','--watch']),
         ('app',['npm','run','dev','--','--host','127.0.0.1']),
     ]
-    if include_runner: services.append(('runner',['python3','-u','bench/runner.py']))
+    if include_runner: services.append(('runner',['python3','-u','run_control/runner.py']))
     for name,cmd in services:
-        print(name,spawn(name,cmd,ROOT/'app' if name=='app' else ROOT))
+        print(name,spawn(name,cmd,ROOT/'result_display_frontend' if name=='app' else ROOT))
     runner_pid=RUNTIME/'runner.pid'
     if __import__('sys').platform=='darwin' and runner_pid.exists() and alive(int(runner_pid.read_text())):
         spawn('awake',['caffeinate','-i','-w',(RUNTIME/'runner.pid').read_text()])

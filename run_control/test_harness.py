@@ -348,7 +348,7 @@ class FileServerBoundaryTests(unittest.TestCase):
         (self.work / 'log-alias.txt').symlink_to(self.work / 'render.log')
         (self.work / 'raw-alias.txt').symlink_to(self.work / 'raw.jsonl')
         (self.run.parent / 'run-2').symlink_to(self.other_run, target_is_directory=True)
-        (self.work / 'outside-root.txt').symlink_to(ROOT / 'bench/config.json')
+        (self.work / 'outside-root.txt').symlink_to(ROOT / 'run_control/config.json')
         self.patch_root = patch.object(server_module, 'ROOT', self.root)
         self.patch_root.start()
 

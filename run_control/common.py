@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-CONFIG = json.loads((ROOT / 'bench/config.json').read_text())
+CONFIG = json.loads((Path(__file__).resolve().parent / 'config.json').read_text())
 PACKS = {'frontend': ROOT / 'frontend-showcase-inputs-v1', 'video': ROOT / 'video-bench-inputs-v1'}
 
 def now():
