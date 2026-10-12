@@ -14,7 +14,7 @@
   --ink-strong: #000000;
   --text: rgba(0, 0, 0, 0.8);
   --muted: rgba(0, 0, 0, 0.5);
-  --faint: rgba(0, 0, 0, 0.35);
+  --faint: rgba(0, 0, 0, 0.5);
 
   /* Surfaces & lines */
   --border: rgba(0, 0, 0, 0.06);

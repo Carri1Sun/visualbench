@@ -487,12 +487,12 @@ img,video {
 }
 
 .button.primary {
-  background:#25272c;
+  background:#111111;
   color:#fff;
 }
 
 .button.primary:hover {
-  background:#454850;
+  background:#333333;
 }
 
 .button.outline {
@@ -916,7 +916,7 @@ img,video {
 }
 
 .ring-value {
-  stroke:#d54b4f;
+  stroke:#e65c53;
   stroke-linecap:round;
   transition:stroke-dashoffset .7s;
 }
@@ -1010,7 +1010,7 @@ img,video {
 }
 
 .text-failed {
-  color:#a76060;
+  color:#c2453c;
 }
 
 .text-waiting {
@@ -1081,7 +1081,7 @@ img,video {
 }
 
 .failed {
-  --state-color:#c97575;
+  --state-color:#e65c53;
 }
 
 .waiting {
@@ -1097,7 +1097,7 @@ img,video {
 }
 
 .dot.failed,.status-legend i.failed {
-  background:#c97575;
+  background:#e65c53;
 }
 
 .dot.waiting,.status-legend i.waiting {
