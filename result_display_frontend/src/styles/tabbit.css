@@ -1,0 +1,383 @@
+/* Tabbit visual layer — loaded after app.css.
+   Re-skins the VisualBench results site with the Tabbit website language:
+   - warm peach/cream canvas that fades to white
+   - a single horizontal top navigation (no left rail), orange active state
+   - black pill primary actions, white outline pills, orange eyebrows
+   - Montserrat + PingFang SC type, 24–32px card radii, hairline borders, almost no shadow
+   Layout, data flow and components are untouched; only presentation changes. */
+
+:root {
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: #fff;
+}
+
+body {
+  background:
+    radial-gradient(900px 420px at 18% -8%, rgba(243, 160, 76, 0.16), transparent 70%),
+    radial-gradient(900px 420px at 84% -6%, rgba(251, 214, 186, 0.22), transparent 70%),
+    linear-gradient(180deg, #fbf1ec 0, #fffaf6 380px, #ffffff 900px);
+  background-attachment: scroll;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Top bar ---------- */
+.topbar {
+  height: 64px;
+  padding: 0 32px;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.86);
+  border-bottom: 0;
+  box-shadow: none;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.brand {
+  font-family: var(--font-sans);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  color: #000;
+}
+
+.brand-second { font-weight: 800; }
+
+.brand-play {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #ff9a3c 0%, #e58522 100%);
+  box-shadow: 0 4px 12px rgba(229, 133, 34, 0.28);
+}
+
+.brand-description { display: none; }
+
+.global-search {
+  height: 40px;
+  max-width: 420px;
+  border-radius: var(--radius-pill);
+  background: #f5f5f5;
+  border: 0;
+  box-shadow: none;
+}
+
+.global-search:focus-within {
+  background: #fff;
+  box-shadow: 0 0 0 2px rgba(229, 133, 34, 0.35);
+}
+
+.global-search input { font-size: 14px; }
+.global-search kbd {
+  border-radius: var(--radius-pill);
+  background: #fff;
+  border: 0;
+  color: var(--muted);
+}
+
+.round-button,
+.live-connection {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.round-button {
+  height: 34px;
+  padding: 0 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-strong);
+  background: #fff;
+}
+
+.round-button:hover { background: #fafafa; }
+.round-dot { background: var(--accent); }
+
+.icon-button {
+  border-radius: var(--radius-pill);
+}
+
+.icon-button:hover { background: #f3f3f3; }
+
+/* ---------- Navigation: horizontal, centred, orange active ---------- */
+.sidebar {
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  width: auto;
+  height: 56px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px;
+  border-right: 0;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.sidebar nav {
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sidebar nav > div {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  flex-direction: row;
+  width: auto;
+  height: 36px;
+  margin: 0;
+  padding: 0 14px;
+  gap: 6px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+  white-space: nowrap;
+}
+
+.nav-item:hover { background: rgba(0, 0, 0, 0.04); color: #000; }
+.nav-item.active { background: transparent; color: var(--accent); }
+.nav-item.active:hover { background: rgba(229, 133, 34, 0.08); }
+
+.nav-icon { display: flex; }
+.nav-icon svg { width: 16px; height: 16px; }
+
+.nav-count {
+  background: var(--accent);
+  border: 2px solid #fff;
+}
+
+.nav-separated {
+  border-top: 0;
+  margin: 0 0 0 8px;
+  padding: 0 0 0 12px;
+  border-left: 1px solid var(--border-strong);
+  height: 18px;
+  align-items: center;
+}
+
+.rail-foot { display: none; }
+
+/* ---------- Main canvas ---------- */
+.main-content {
+  margin-left: 0;
+  padding: 136px 40px 0;
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 1750px) {
+  .main-content { padding-left: 40px; margin-left: auto; }
+}
+
+/* Eyebrows / kickers — Tabbit's orange uppercase label */
+.eyebrow,
+.red-label,
+.hero-live-tag,
+.eyebrow-divider {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.red-label { font-size: 12px; }
+
+/* Headlines — Montserrat 800, tight tracking */
+.hero-copy h1,
+.section-heading h2 {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #000;
+}
+
+.hero-description,
+.section-heading p,
+.hero-copy p {
+  color: var(--muted);
+}
+
+.hero-copy h1 .hero-linebreak { display: inline; }
+
+/* Red period after hero titles becomes the Tabbit orange */
+.red-period { color: var(--accent); }
+
+/* Progress ring: brand orange on a warm track */
+.ring-track { stroke: #f3ece6; }
+.ring-value { stroke: var(--accent); }
+
+.section-kicker { color: var(--muted); font-weight: 500; letter-spacing: 0; text-transform: none; }
+
+/* ---------- Buttons ---------- */
+.button,
+.icon-button {
+  border-radius: var(--radius-pill);
+}
+
+.button {
+  height: 40px;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.button.small { height: 32px; padding: 0 14px; font-size: 13px; }
+
+.button.primary {
+  background: #111;
+  color: #fff;
+  border: 0;
+}
+
+.button.primary:hover { background: #333; }
+
+.button.outline {
+  background: #fff;
+  color: #111;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.button.outline:hover { background: #fafafa; border-color: rgba(0, 0, 0, 0.2); }
+
+.button.ghost:hover { background: rgba(0, 0, 0, 0.04); }
+
+.button.selected-button {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* ---------- Surfaces: cards, panels, dialogs ---------- */
+.task-card,
+.model-progress-card,
+.trajectory-panel,
+.observation-panel,
+.technical-warning,
+.data-notice,
+.connection-banner,
+.empty-state,
+.loading-state {
+  border-radius: var(--radius-lg);
+}
+
+.task-card {
+  border: 1px solid var(--border);
+  background: #fff;
+  box-shadow: none;
+  transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.task-card:hover {
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.model-progress-card {
+  border: 1px solid var(--border);
+  background: #fff;
+  box-shadow: none;
+}
+
+.trajectory-panel {
+  background: #fefdfc;
+  border: 1px solid var(--border);
+}
+
+.dialog {
+  border-radius: 28px;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.16);
+}
+
+.dialog-backdrop { background: rgba(20, 14, 8, 0.36); }
+
+.toast {
+  background: #111;
+  color: #fff;
+  border-radius: var(--radius-pill);
+}
+
+.data-notice,
+.connection-banner {
+  background: #fff8f0;
+  border: 1px solid rgba(229, 133, 34, 0.22);
+}
+
+/* ---------- Filters / segmented tabs ---------- */
+.filter-select,
+.filter-select select {
+  border-radius: var(--radius-pill);
+}
+
+.filter-select select {
+  background-color: #f5f5f5;
+  border: 0;
+}
+
+.track-tabs button,
+.view-switch button {
+  border-radius: var(--radius-pill);
+}
+
+.track-tabs button.active,
+.view-switch button.active {
+  color: var(--accent);
+  box-shadow: none;
+}
+
+.view-switch {
+  background: #f3f3f3;
+  border: 0;
+  border-radius: var(--radius-pill);
+  padding: 4px;
+}
+
+.view-switch button.active {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Status ---------- */
+.status-badge {
+  border-radius: var(--radius-pill);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--border);
+}
+
+.site-footer button { border-radius: var(--radius-pill); }
+
+/* ---------- Responsive: keep the top navigation usable ---------- */
+@media (max-width: 1200px) {
+  .topbar { padding: 0 22px; gap: 14px; }
+  .main-content { padding: 128px 28px 0; }
+  .nav-item { padding: 0 11px; }
+}
+
+@media (max-width: 960px) {
+  .sidebar { padding: 0 12px; overflow-x: auto; justify-content: flex-start; }
+  .nav-item { white-space: nowrap; }
+  .main-content { padding: 128px 20px 0; }
+}
+
+@media (max-width: 650px) {
+  .topbar { padding: 0 14px; }
+  .brand { font-size: 19px; }
+  .sidebar { height: 52px; top: 64px; }
+  .main-content { padding: 124px 14px 0; }
+}
