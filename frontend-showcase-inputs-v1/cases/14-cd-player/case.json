@@ -1,0 +1,45 @@
+{
+  "id": "14-cd-player",
+  "number": 14,
+  "title_zh": "PS1 风格 CD 播放器",
+  "title_en": "PS1-style CD player",
+  "category": "interactive",
+  "difficulty": "hard",
+  "source_url": "https://www.bridgebench.ai/prompts/a3a1f845-18a4-4f82-9865-e412949067f5",
+  "source_input_note_zh": "原题是短描述，要求低多边形播放器、CD 与封面交互，且每张唱片有完整 chiptune 音乐；未附音频或图片。",
+  "adaptation_note_zh": "新增原创唱片名称、封面 SVG 和短音序；将完整乐曲缩小为循环短音序，不复用已有音乐。",
+  "prompt_status": "package_authored_adaptation",
+  "source_starter_included": false,
+  "supplied_design_reference": false,
+  "starter": "three-html",
+  "output_file": "artifact.html",
+  "plan_file": "plan.json",
+  "input_files": [
+    "assets/albums.json",
+    "assets/cover-orbit.svg",
+    "assets/cover-afterglow.svg",
+    "assets/cover-tidal.svg"
+  ],
+  "material_requirement": "text_plus_fixed_fixture",
+  "rubric": [
+    "选中、插入、播放、退出状态清楚",
+    "唱片堆随状态重排",
+    "不能同时播放两张 CD",
+    "音频仅在用户激活后运行，静音有效"
+  ],
+  "interaction_actions": [
+    {
+      "action": "click",
+      "target": "Orbit Arcade"
+    },
+    {
+      "action": "click",
+      "target": "Play"
+    },
+    {
+      "action": "click",
+      "target": "Eject"
+    }
+  ],
+  "original_short_quote_available": false
+}

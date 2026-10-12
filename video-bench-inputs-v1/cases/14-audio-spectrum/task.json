@@ -1,0 +1,47 @@
+{
+  "id": "14-audio-spectrum",
+  "number": 14,
+  "title_zh": "音乐频谱动画",
+  "title_en": "Audio Spectrum",
+  "engine": "remotion",
+  "input_mode": "assets",
+  "source_kind": "published_prompt",
+  "source_url": "https://www.remotion.dev/prompts/audio-spectrum-visualizer",
+  "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+  "duration_seconds": 16,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration_frames": 480,
+  "alpha_required": false,
+  "changes_from_source": "原帖 funk.mp3 未随 prompt 公布；提供原创分段频段诊断音乐。",
+  "checks": [
+    "频谱使用实际音频",
+    "静音区间收敛",
+    "低高频表现不同",
+    "可修改样式参数"
+  ],
+  "inputs": [
+    {
+      "path": "music.json",
+      "bytes": 421,
+      "sha256": "308d3b5c0f3b651349037512b91517efcda8f9ab10f694d2240c616c4eb5ef4f"
+    },
+    {
+      "path": "music.wav",
+      "bytes": 1411244,
+      "sha256": "8d400f57d1c26eacc50005f5e83bbd81ea0d478f2b5131a880224c43afdf0c6d"
+    }
+  ],
+  "brief_en": "Analyze music.wav and render a 16-second spectrum with 32 frequency bars. The bar values must derive from the actual sound, not random or purely periodic animation. Use a magenta-to-cyan palette with restrained glow and reflection. Make the low-only, high-only and silent regions perceptibly different. Parameters for bar count, color and glow should be easy to edit.",
+  "brief_zh": "分析 music.wav，制作 16 秒、32 根频谱柱动画。数值必须来自实际声音，不能使用随机或纯周期动画。采用洋红到青色配色，适度加入辉光和倒影。低频、高频与静音区间应呈现可辨识差异，柱数、颜色和辉光便于修改。",
+  "assets_ready": true,
+  "prompt_only": false,
+  "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+  "entrypoints": {
+    "en": "cases/14-audio-spectrum/prompt.en.md",
+    "zh": "cases/14-audio-spectrum/prompt.zh.md",
+    "task": "cases/14-audio-spectrum/task.json",
+    "assets": "cases/14-audio-spectrum/assets"
+  }
+}

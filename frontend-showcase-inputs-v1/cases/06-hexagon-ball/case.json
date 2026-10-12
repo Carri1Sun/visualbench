@@ -1,0 +1,43 @@
+{
+  "id": "06-hexagon-ball",
+  "number": 6,
+  "title_zh": "旋转六边形弹球",
+  "title_en": "Ball in a rotating hexagon",
+  "category": "simulation",
+  "difficulty": "medium",
+  "source_url": "https://www.reddit.com/r/LocalLLaMA/comments/1jwhp26/deepcoder_14b_vs_qwen25_coder_32b_vs_qwq_32b/",
+  "source_input_note_zh": "公开帖给出 HTML5 Canvas 弹球题，包含重力、边界碰撞及重置；没有图像或项目输入。",
+  "adaptation_note_zh": "新增统一初始参数、暂停和转速滑块，让不同实现可以接受相同操作。",
+  "prompt_status": "package_authored_adaptation",
+  "source_starter_included": false,
+  "supplied_design_reference": false,
+  "starter": "plain-html",
+  "output_file": "artifact.html",
+  "plan_file": "plan.json",
+  "input_files": [
+    "assets/physics.json"
+  ],
+  "material_requirement": "text_plus_fixed_fixture",
+  "rubric": [
+    "球始终位于容器内部",
+    "碰撞包含转动墙面影响",
+    "长时间运行不异常爆炸",
+    "重置可重复得到初始状态"
+  ],
+  "interaction_actions": [
+    {
+      "action": "wait",
+      "seconds": 8
+    },
+    {
+      "action": "set",
+      "target": "rotation speed",
+      "value": 0.8
+    },
+    {
+      "action": "click",
+      "target": "Reset"
+    }
+  ],
+  "original_short_quote_available": false
+}

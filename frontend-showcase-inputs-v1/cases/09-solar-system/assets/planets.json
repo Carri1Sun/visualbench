@@ -1,0 +1,70 @@
+{
+  "provenance": "Approximate orbital periods from NASA NSSDC Planetary Fact Sheet; colors and display radii/distances are package-authored illustrative values. Not an ephemeris.",
+  "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+  "planets": [
+    {
+      "id": "mercury",
+      "name": "Mercury",
+      "period_days_approx": 88.0,
+      "display_orbit_radius": 4,
+      "display_radius": 0.2,
+      "display_color": "#ada49b"
+    },
+    {
+      "id": "venus",
+      "name": "Venus",
+      "period_days_approx": 224.7,
+      "display_orbit_radius": 5.5,
+      "display_radius": 0.4,
+      "display_color": "#d6b777"
+    },
+    {
+      "id": "earth",
+      "name": "Earth",
+      "period_days_approx": 365.2,
+      "display_orbit_radius": 7,
+      "display_radius": 0.43,
+      "display_color": "#3b82c4"
+    },
+    {
+      "id": "mars",
+      "name": "Mars",
+      "period_days_approx": 687.0,
+      "display_orbit_radius": 8.5,
+      "display_radius": 0.3,
+      "display_color": "#bc6744"
+    },
+    {
+      "id": "jupiter",
+      "name": "Jupiter",
+      "period_days_approx": 4331,
+      "display_orbit_radius": 11,
+      "display_radius": 0.85,
+      "display_color": "#c09a76"
+    },
+    {
+      "id": "saturn",
+      "name": "Saturn",
+      "period_days_approx": 10747,
+      "display_orbit_radius": 14,
+      "display_radius": 0.7,
+      "display_color": "#d1b77f"
+    },
+    {
+      "id": "uranus",
+      "name": "Uranus",
+      "period_days_approx": 30589,
+      "display_orbit_radius": 17,
+      "display_radius": 0.58,
+      "display_color": "#9ad9db"
+    },
+    {
+      "id": "neptune",
+      "name": "Neptune",
+      "period_days_approx": 59800,
+      "display_orbit_radius": 20,
+      "display_radius": 0.56,
+      "display_color": "#3765c3"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+Security issues always go to urgent human review. Other tickets are checked for a refund request. A refund within fourteen days is approved; later requests go to manual review. Non-refund questions receive a help article. Ticket A is approved. Ticket B receives urgent human review.

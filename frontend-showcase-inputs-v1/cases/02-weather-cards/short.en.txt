@@ -1,0 +1,1 @@
+Create four dark animated weather cards for wind, rain, sun and snow.

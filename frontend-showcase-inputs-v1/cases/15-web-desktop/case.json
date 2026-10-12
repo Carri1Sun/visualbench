@@ -1,0 +1,53 @@
+{
+  "id": "15-web-desktop",
+  "number": 15,
+  "title_zh": "浏览器桌面操作系统",
+  "title_en": "Browser desktop",
+  "category": "interactive",
+  "difficulty": "hard",
+  "source_url": "https://goldiebench.com/tasks/webos",
+  "source_input_note_zh": "公开一句任务要求窗口、Dock、Notes/Paint/Terminal；未提供起始项目或设计图，原 Agent OS 系统模板未公开。",
+  "adaptation_note_zh": "明确三种应用的最低功能与模拟终端边界，新增保存、重置和窗口管理要求。",
+  "prompt_status": "package_authored_adaptation",
+  "source_starter_included": false,
+  "supplied_design_reference": false,
+  "starter": "plain-html",
+  "output_file": "artifact.html",
+  "plan_file": "plan.json",
+  "input_files": [],
+  "material_requirement": "text_only",
+  "rubric": [
+    "三种应用有实际功能",
+    "窗口焦点、缩放和最小化有效",
+    "记事内容刷新后保留",
+    "模拟终端和重置状态正确"
+  ],
+  "interaction_actions": [
+    {
+      "action": "click",
+      "target": "Notes"
+    },
+    {
+      "action": "drag",
+      "target": "Notes title bar"
+    },
+    {
+      "action": "click",
+      "target": "Paint"
+    },
+    {
+      "action": "draw",
+      "target": "paint canvas"
+    },
+    {
+      "action": "click",
+      "target": "Terminal"
+    },
+    {
+      "action": "type",
+      "target": "terminal input",
+      "text": "echo hello"
+    }
+  ],
+  "original_short_quote_available": true
+}

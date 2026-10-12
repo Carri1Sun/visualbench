@@ -1,0 +1,131 @@
+You are creating one frontend showcase artifact from a task brief and any supplied input files. Use your own design judgment. Do not ask follow-up questions.
+
+Return two deliverables:
+1. plan.json: a concise PUBLIC design proposal with these keys: layout, visual_direction, interactions, implementation_choices, limitations. Use strings or short arrays, at most 160 words total. This is an explicit design proposal, not a request for private reasoning.
+2. artifact.html: a complete, working HTML document. Put authored CSS and JS inline; referencing the supplied local assets and optional local Three.js runtime is allowed. Do not load external websites, fonts, images, packages, models, audio or APIs. Do not embed another app.
+
+Keep visible UI copy in English. Support a desktop viewport of 1280 x 800 and avoid clipping controls. Product pages must also adapt to 390 x 844. Choose fonts from local/system stacks; no particular aesthetic is imposed. Make controls keyboard reachable when practical, with visible labels. There is no backend, account, secret or network data source.
+
+Use ./assets/ for supplied case inputs. You can fetch local JSON when served over HTTP. If using Three.js, the included import map is:
+{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}
+Only OrbitControls is supplied as an addon. Other features must be implemented inline or from Three.js core. Canvas, SVG, CSS and Web Audio are also available. Procedural drawings are allowed. Clearly identify mock or illustrative data when the task requires it.
+
+Prefer a finished, visible artifact over adding scope. Do not report that controls or simulations work if they are merely decorative. Make any approximation or missing requirement explicit in plan.json. In a chat-only session return labeled code blocks for the two files. In a coding-agent session write the two files in the provided run workspace.
+
+TASK / 任务
+Create a compact business metrics dashboard using metrics.json. Display each current value, a sparkline and its change for the selected period. Offer 7-day and 30-day views using the supplied data. Correctly distinguish a lower-is-better metric from higher-is-better metrics, and disclose whether changes are relative percentages or percentage points. Choose typography and layout yourself. Do not substitute invented chart values or hardcoded decorative sparklines.
+
+INPUT FILE: assets/metrics.json
+```json
+{
+  "provenance": "package-authored synthetic history; current values adapted from public task",
+  "periods": [
+    "7d",
+    "30d"
+  ],
+  "metrics": [
+    {
+      "id": "dau",
+      "label": "DAU",
+      "unit": "count",
+      "direction": "higher_is_better",
+      "current": 4231,
+      "series_7d": [
+        3700,
+        3810,
+        3890,
+        3850,
+        4050,
+        4170,
+        4231
+      ],
+      "series_30d": [
+        3100,
+        3260,
+        3450,
+        3620,
+        3790,
+        3980,
+        4231
+      ]
+    },
+    {
+      "id": "revenue",
+      "label": "Revenue",
+      "unit": "USD",
+      "direction": "higher_is_better",
+      "current": 12840,
+      "series_7d": [
+        11200,
+        11650,
+        11500,
+        11900,
+        12200,
+        12600,
+        12840
+      ],
+      "series_30d": [
+        8800,
+        9500,
+        10300,
+        10900,
+        11600,
+        12300,
+        12840
+      ]
+    },
+    {
+      "id": "churn",
+      "label": "Churn rate",
+      "unit": "percent",
+      "direction": "lower_is_better",
+      "current": 2.1,
+      "series_7d": [
+        2.7,
+        2.6,
+        2.5,
+        2.4,
+        2.3,
+        2.2,
+        2.1
+      ],
+      "series_30d": [
+        3.2,
+        3.0,
+        2.9,
+        2.7,
+        2.5,
+        2.3,
+        2.1
+      ]
+    },
+    {
+      "id": "nps",
+      "label": "NPS",
+      "unit": "score",
+      "direction": "higher_is_better",
+      "current": 67,
+      "series_7d": [
+        61,
+        62,
+        61,
+        64,
+        65,
+        66,
+        67
+      ],
+      "series_30d": [
+        52,
+        54,
+        57,
+        60,
+        62,
+        65,
+        67
+      ]
+    }
+  ]
+}
+```
+
+The input files above are supplied fixtures. In a file-based agent workspace they already exist; in chat output, preserve them in the named ./assets paths or inline their exact content.

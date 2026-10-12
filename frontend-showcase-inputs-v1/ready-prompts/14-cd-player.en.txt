@@ -1,0 +1,93 @@
+You are creating one frontend showcase artifact from a task brief and any supplied input files. Use your own design judgment. Do not ask follow-up questions.
+
+Return two deliverables:
+1. plan.json: a concise PUBLIC design proposal with these keys: layout, visual_direction, interactions, implementation_choices, limitations. Use strings or short arrays, at most 160 words total. This is an explicit design proposal, not a request for private reasoning.
+2. artifact.html: a complete, working HTML document. Put authored CSS and JS inline; referencing the supplied local assets and optional local Three.js runtime is allowed. Do not load external websites, fonts, images, packages, models, audio or APIs. Do not embed another app.
+
+Keep visible UI copy in English. Support a desktop viewport of 1280 x 800 and avoid clipping controls. Product pages must also adapt to 390 x 844. Choose fonts from local/system stacks; no particular aesthetic is imposed. Make controls keyboard reachable when practical, with visible labels. There is no backend, account, secret or network data source.
+
+Use ./assets/ for supplied case inputs. You can fetch local JSON when served over HTTP. If using Three.js, the included import map is:
+{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}
+Only OrbitControls is supplied as an addon. Other features must be implemented inline or from Three.js core. Canvas, SVG, CSS and Web Audio are also available. Procedural drawings are allowed. Clearly identify mock or illustrative data when the task requires it.
+
+Prefer a finished, visible artifact over adding scope. Do not report that controls or simulations work if they are merely decorative. Make any approximation or missing requirement explicit in plan.json. In a chat-only session return labeled code blocks for the two files. In a coding-agent session write the two files in the provided run workspace.
+
+TASK / 任务
+Build a low-poly, PS1-inspired 3D CD player experience using albums.json and the supplied original cover SVGs. Clicking an album reveals its disc and a Play action. Playing should insert that disc into the player, move its cover aside and visibly reorganize the remaining stack. Only one disc can be active. Provide Stop/Eject and mute controls; ejection returns the album to the stack. Synthesize the provided short note sequence with Web Audio after a user gesture. Choose the machine, camera, lighting and UI design. Audio failure must not break the visual interaction.
+
+INPUT FILE: assets/albums.json
+```json
+{
+  "provenance": "package-authored fictional albums and original note sequences",
+  "albums": [
+    {
+      "id": "orbit",
+      "title": "Orbit Arcade",
+      "artist": "Circuit Garden",
+      "cover": "cover-orbit.svg",
+      "tempo_bpm": 120,
+      "midi_notes": [
+        60,
+        64,
+        67,
+        72,
+        67,
+        64,
+        62,
+        65
+      ]
+    },
+    {
+      "id": "afterglow",
+      "title": "Afterglow",
+      "artist": "Circuit Garden",
+      "cover": "cover-afterglow.svg",
+      "tempo_bpm": 100,
+      "midi_notes": [
+        57,
+        60,
+        64,
+        69,
+        64,
+        60,
+        55,
+        59
+      ]
+    },
+    {
+      "id": "tidal",
+      "title": "Tidal Memory",
+      "artist": "Circuit Garden",
+      "cover": "cover-tidal.svg",
+      "tempo_bpm": 110,
+      "midi_notes": [
+        62,
+        65,
+        69,
+        74,
+        69,
+        65,
+        60,
+        64
+      ]
+    }
+  ]
+}
+```
+
+INPUT FILE: assets/cover-orbit.svg
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" aria-label="ORBIT ARCADE original album cover"><rect width="360" height="360" fill="#12182c"/><circle cx="180" cy="155" r="70" fill="none" stroke="#f7dcc5" stroke-width="12"/><ellipse cx="180" cy="155" rx="135" ry="27" fill="none" stroke="#fc6a53" stroke-width="7" transform="rotate(-25 180 155)"/><text x="24" y="330" font-family="sans-serif" font-size="25" font-weight="700" fill="#fff">ORBIT ARCADE</text></svg>
+```
+
+INPUT FILE: assets/cover-afterglow.svg
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" aria-label="AFTERGLOW original album cover"><rect width="360" height="360" fill="#592945"/><circle cx="180" cy="148" r="74" fill="#ffb570"/><path d="M0 240L360 130M0 275L360 165M0 310L360 200" stroke="#d86766" stroke-width="20"/><text x="24" y="330" font-family="sans-serif" font-size="25" font-weight="700" fill="#fff">AFTERGLOW</text></svg>
+```
+
+INPUT FILE: assets/cover-tidal.svg
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" aria-label="TIDAL MEMORY original album cover"><rect width="360" height="360" fill="#123d43"/><path d="M0 125Q90 55 180 125T360 125M0 180Q90 110 180 180T360 180M0 235Q90 165 180 235T360 235" fill="none" stroke="#8bd4bf" stroke-width="17"/><text x="24" y="330" font-family="sans-serif" font-size="25" font-weight="700" fill="#fff">TIDAL MEMORY</text></svg>
+```
+
+The input files above are supplied fixtures. In a file-based agent workspace they already exist; in chat output, preserve them in the named ./assets paths or inline their exact content.

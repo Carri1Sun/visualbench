@@ -1,0 +1,40 @@
+You are creating one frontend showcase artifact from a task brief and any supplied input files. Use your own design judgment. Do not ask follow-up questions.
+
+Return two deliverables:
+1. plan.json: a concise PUBLIC design proposal with these keys: layout, visual_direction, interactions, implementation_choices, limitations. Use strings or short arrays, at most 160 words total. This is an explicit design proposal, not a request for private reasoning.
+2. artifact.html: a complete, working HTML document. Put authored CSS and JS inline; referencing the supplied local assets and optional local Three.js runtime is allowed. Do not load external websites, fonts, images, packages, models, audio or APIs. Do not embed another app.
+
+Keep visible UI copy in English. Support a desktop viewport of 1280 x 800 and avoid clipping controls. Product pages must also adapt to 390 x 844. Choose fonts from local/system stacks; no particular aesthetic is imposed. Make controls keyboard reachable when practical, with visible labels. There is no backend, account, secret or network data source.
+
+Use ./assets/ for supplied case inputs. You can fetch local JSON when served over HTTP. If using Three.js, the included import map is:
+{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}
+Only OrbitControls is supplied as an addon. Other features must be implemented inline or from Three.js core. Canvas, SVG, CSS and Web Audio are also available. Procedural drawings are allowed. Clearly identify mock or illustrative data when the task requires it.
+
+Prefer a finished, visible artifact over adding scope. Do not report that controls or simulations work if they are merely decorative. Make any approximation or missing requirement explicit in plan.json. In a chat-only session return labeled code blocks for the two files. In a coding-agent session write the two files in the provided run workspace.
+
+TASK / 任务
+Create a Canvas simulation of a ball bouncing inside a rotating hexagonal container. Load the initial settings from physics.json. Include gravity, loss of energy and collision response that accounts for wall motion; the ball must remain inside. Use elapsed time rather than assuming a fixed rendering frame rate. Provide Pause/Resume, Reset and a rotation-speed slider. Reset should restore the supplied initial state. You may use a lightweight numerical approximation; write your own simulation instead of loading a physics engine. Choose the scene and controls' visual design yourself.
+
+INPUT FILE: assets/physics.json
+```json
+{
+  "provenance": "package-authored reproducibility fixture; units are pixels and seconds",
+  "hexagon_radius_px": 220,
+  "ball_radius_px": 14,
+  "gravity_px_s2": 600,
+  "rotation_rad_s": 0.45,
+  "restitution": 0.8,
+  "linear_damping_per_second": 0.15,
+  "initial_ball_offset_px": [
+    0,
+    -80
+  ],
+  "initial_velocity_px_s": [
+    110,
+    0
+  ],
+  "initial_hexagon_angle_rad": 0
+}
+```
+
+The input files above are supplied fixtures. In a file-based agent workspace they already exist; in chat output, preserve them in the named ./assets paths or inline their exact content.

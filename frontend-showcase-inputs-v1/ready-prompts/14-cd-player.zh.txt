@@ -1,0 +1,93 @@
+你需要根据任务说明与给定输入文件，创作一个前端展示作品。自行作设计判断，不提出追问。
+
+交付两个文件：
+1. plan.json：简短的公开设计方案，包含 layout、visual_direction、interactions、implementation_choices、limitations。值为字符串或短数组，总长不超过约 160 个英文词。这是明确要求撰写的设计方案，不是私有推理过程。
+2. artifact.html：完整可运行 HTML，自己编写的 CSS 和 JS 内联，可引用提供的本地素材与可选 Three.js 运行库。不得加载外部网站、字体、图片、包、模型、音频或 API，不嵌入其他应用。
+
+可见界面文案使用英语。支持 1280×800 桌面视口，不裁切控件；产品页面还需适配 390×844。字体使用本地/系统字体栈，不强制特定美学。尽可能让控件可用键盘访问且有可见名称。没有后端、账户、密钥或在线数据源。
+
+题目素材位于 ./assets/，通过 HTTP 服务时可 fetch 本地 JSON。Three.js 的 import map 为：
+{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}
+只附带 OrbitControls 插件，其他功能使用核心库或自行内联实现。也可使用 Canvas、SVG、CSS、Web Audio 与程序化绘图。按题目要求标注虚构或示意数据。
+
+优先交付完成且可见的作品，不扩张任务范围。装饰性按钮或模拟不能宣称具有实际功能。近似方法与缺失要求写入 plan.json。在纯聊天模式中返回两个有文件名的代码块；在 coding agent 中将两个文件写入给定运行目录。
+
+TASK / 任务
+使用 albums.json 与提供的原创封面 SVG，制作低多边形、PS1 风格 3D CD 播放器体验。点击唱片时展示 CD 与 Play 操作。播放时将 CD 插入播放器，封面移到旁边，其余唱片堆可见地重排。同一时间只有一张 CD 激活。提供停止/退出和静音，退出后唱片回到堆中。用户操作后用 Web Audio 合成给定短音序。自行设计机器、镜头、光照与界面。音频失败不能破坏视觉交互。
+
+INPUT FILE: assets/albums.json
+```json
+{
+  "provenance": "package-authored fictional albums and original note sequences",
+  "albums": [
+    {
+      "id": "orbit",
+      "title": "Orbit Arcade",
+      "artist": "Circuit Garden",
+      "cover": "cover-orbit.svg",
+      "tempo_bpm": 120,
+      "midi_notes": [
+        60,
+        64,
+        67,
+        72,
+        67,
+        64,
+        62,
+        65
+      ]
+    },
+    {
+      "id": "afterglow",
+      "title": "Afterglow",
+      "artist": "Circuit Garden",
+      "cover": "cover-afterglow.svg",
+      "tempo_bpm": 100,
+      "midi_notes": [
+        57,
+        60,
+        64,
+        69,
+        64,
+        60,
+        55,
+        59
+      ]
+    },
+    {
+      "id": "tidal",
+      "title": "Tidal Memory",
+      "artist": "Circuit Garden",
+      "cover": "cover-tidal.svg",
+      "tempo_bpm": 110,
+      "midi_notes": [
+        62,
+        65,
+        69,
+        74,
+        69,
+        65,
+        60,
+        64
+      ]
+    }
+  ]
+}
+```
+
+INPUT FILE: assets/cover-orbit.svg
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" aria-label="ORBIT ARCADE original album cover"><rect width="360" height="360" fill="#12182c"/><circle cx="180" cy="155" r="70" fill="none" stroke="#f7dcc5" stroke-width="12"/><ellipse cx="180" cy="155" rx="135" ry="27" fill="none" stroke="#fc6a53" stroke-width="7" transform="rotate(-25 180 155)"/><text x="24" y="330" font-family="sans-serif" font-size="25" font-weight="700" fill="#fff">ORBIT ARCADE</text></svg>
+```
+
+INPUT FILE: assets/cover-afterglow.svg
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" aria-label="AFTERGLOW original album cover"><rect width="360" height="360" fill="#592945"/><circle cx="180" cy="148" r="74" fill="#ffb570"/><path d="M0 240L360 130M0 275L360 165M0 310L360 200" stroke="#d86766" stroke-width="20"/><text x="24" y="330" font-family="sans-serif" font-size="25" font-weight="700" fill="#fff">AFTERGLOW</text></svg>
+```
+
+INPUT FILE: assets/cover-tidal.svg
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" aria-label="TIDAL MEMORY original album cover"><rect width="360" height="360" fill="#123d43"/><path d="M0 125Q90 55 180 125T360 125M0 180Q90 110 180 180T360 180M0 235Q90 165 180 235T360 235" fill="none" stroke="#8bd4bf" stroke-width="17"/><text x="24" y="330" font-family="sans-serif" font-size="25" font-weight="700" fill="#fff">TIDAL MEMORY</text></svg>
+```
+
+The input files above are supplied fixtures. In a file-based agent workspace they already exist; in chat output, preserve them in the named ./assets paths or inline their exact content.

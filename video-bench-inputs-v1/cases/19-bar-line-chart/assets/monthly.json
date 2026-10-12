@@ -1,0 +1,28 @@
+{
+  "fictional": true,
+  "currency": "USD",
+  "months": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun"
+  ],
+  "revenue": [
+    8000,
+    12000,
+    15000,
+    11000,
+    18000,
+    22000
+  ],
+  "conversion_percent": [
+    2.1,
+    2.8,
+    3.2,
+    2.9,
+    3.8,
+    4.2
+  ]
+}

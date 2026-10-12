@@ -1,0 +1,56 @@
+{
+  "provenance": "package-authored fictional albums and original note sequences",
+  "albums": [
+    {
+      "id": "orbit",
+      "title": "Orbit Arcade",
+      "artist": "Circuit Garden",
+      "cover": "cover-orbit.svg",
+      "tempo_bpm": 120,
+      "midi_notes": [
+        60,
+        64,
+        67,
+        72,
+        67,
+        64,
+        62,
+        65
+      ]
+    },
+    {
+      "id": "afterglow",
+      "title": "Afterglow",
+      "artist": "Circuit Garden",
+      "cover": "cover-afterglow.svg",
+      "tempo_bpm": 100,
+      "midi_notes": [
+        57,
+        60,
+        64,
+        69,
+        64,
+        60,
+        55,
+        59
+      ]
+    },
+    {
+      "id": "tidal",
+      "title": "Tidal Memory",
+      "artist": "Circuit Garden",
+      "cover": "cover-tidal.svg",
+      "tempo_bpm": 110,
+      "midi_notes": [
+        62,
+        65,
+        69,
+        74,
+        69,
+        65,
+        60,
+        64
+      ]
+    }
+  ]
+}

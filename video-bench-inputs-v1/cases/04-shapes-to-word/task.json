@@ -1,0 +1,42 @@
+{
+  "id": "04-shapes-to-word",
+  "number": 4,
+  "title_zh": "几何图形变成品牌文字",
+  "title_en": "Shapes To Word",
+  "engine": "remotion",
+  "input_mode": "assets",
+  "source_kind": "published_prompt",
+  "source_url": "https://www.remotion.dev/prompts/shape-to-words-transformation",
+  "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+  "duration_seconds": 10,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration_frames": 300,
+  "alpha_required": false,
+  "changes_from_source": "品牌替换为虚构 WAYPOINT；提供原创 Logo，固定字母数。",
+  "checks": [
+    "8 个图形和 8 个字母对应",
+    "形变可见",
+    "文字可读",
+    "擦除顺序跟随 Logo"
+  ],
+  "inputs": [
+    {
+      "path": "logo.svg",
+      "bytes": 244,
+      "sha256": "7c226d589d305e422684589071b77b8e58edf8490311cfa22a6d24bf50243c81"
+    }
+  ],
+  "brief_en": "Make a 10-second ident for WAYPOINT. Eight colorful filled geometric shapes become the eight letters of WAYPOINT through a visible shape transformation. Use the supplied logo as a separate mark. In the last section the mark travels left to right and removes each letter only as it passes that letter. Keep the word readable before the exit.",
+  "brief_zh": "为 WAYPOINT 制作 10 秒品牌片头。8 个彩色实心几何图形通过可见形变成为 WAYPOINT 的 8 个字母。使用提供的独立标志，最后让标志从左到右移动，经过哪个字母才擦除哪个字母；退场前让完整品牌词清晰停留。",
+  "assets_ready": true,
+  "prompt_only": false,
+  "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+  "entrypoints": {
+    "en": "cases/04-shapes-to-word/prompt.en.md",
+    "zh": "cases/04-shapes-to-word/prompt.zh.md",
+    "task": "cases/04-shapes-to-word/task.json",
+    "assets": "cases/04-shapes-to-word/assets"
+  }
+}

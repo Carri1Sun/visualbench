@@ -1,0 +1,21 @@
+{
+  "trip": "Lisbon in three days",
+  "steps": [
+    {
+      "action": "Create trip",
+      "result": "A three-day Lisbon plan appears"
+    },
+    {
+      "action": "Add MAAT museum",
+      "result": "MAAT appears on Day 1 at 14:00"
+    },
+    {
+      "action": "Drag MAAT to Day 2",
+      "result": "MAAT leaves Day 1 and appears on Day 2 at 14:00"
+    },
+    {
+      "action": "Share",
+      "result": "A view-only link waypoint.example/t/lisbon is copied"
+    }
+  ]
+}

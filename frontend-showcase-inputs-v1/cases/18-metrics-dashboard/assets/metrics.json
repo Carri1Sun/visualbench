@@ -1,0 +1,109 @@
+{
+  "provenance": "package-authored synthetic history; current values adapted from public task",
+  "periods": [
+    "7d",
+    "30d"
+  ],
+  "metrics": [
+    {
+      "id": "dau",
+      "label": "DAU",
+      "unit": "count",
+      "direction": "higher_is_better",
+      "current": 4231,
+      "series_7d": [
+        3700,
+        3810,
+        3890,
+        3850,
+        4050,
+        4170,
+        4231
+      ],
+      "series_30d": [
+        3100,
+        3260,
+        3450,
+        3620,
+        3790,
+        3980,
+        4231
+      ]
+    },
+    {
+      "id": "revenue",
+      "label": "Revenue",
+      "unit": "USD",
+      "direction": "higher_is_better",
+      "current": 12840,
+      "series_7d": [
+        11200,
+        11650,
+        11500,
+        11900,
+        12200,
+        12600,
+        12840
+      ],
+      "series_30d": [
+        8800,
+        9500,
+        10300,
+        10900,
+        11600,
+        12300,
+        12840
+      ]
+    },
+    {
+      "id": "churn",
+      "label": "Churn rate",
+      "unit": "percent",
+      "direction": "lower_is_better",
+      "current": 2.1,
+      "series_7d": [
+        2.7,
+        2.6,
+        2.5,
+        2.4,
+        2.3,
+        2.2,
+        2.1
+      ],
+      "series_30d": [
+        3.2,
+        3.0,
+        2.9,
+        2.7,
+        2.5,
+        2.3,
+        2.1
+      ]
+    },
+    {
+      "id": "nps",
+      "label": "NPS",
+      "unit": "score",
+      "direction": "higher_is_better",
+      "current": 67,
+      "series_7d": [
+        61,
+        62,
+        61,
+        64,
+        65,
+        66,
+        67
+      ],
+      "series_30d": [
+        52,
+        54,
+        57,
+        60,
+        62,
+        65,
+        67
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "17-forge-pricing",
+  "number": 17,
+  "title_zh": "Forge CLI 定价页",
+  "title_en": "Forge CLI pricing page",
+  "category": "product",
+  "difficulty": "easy",
+  "source_url": "https://github.com/dani-z/frontend-design-skill-benchmark",
+  "source_input_note_zh": "原题给出套餐名称与价格，没有输入设计图；截图是生成结果。",
+  "adaptation_note_zh": "新增功能表和本地套餐选择反馈，价格保持原题数值；没有加载原作者 skill。",
+  "prompt_status": "package_authored_adaptation",
+  "source_starter_included": false,
+  "supplied_design_reference": false,
+  "starter": "plain-html",
+  "output_file": "artifact.html",
+  "plan_file": "plan.json",
+  "input_files": [
+    "assets/pricing.json"
+  ],
+  "material_requirement": "text_plus_fixed_fixture",
+  "rubric": [
+    "价格与数据一致",
+    "功能差异便于比较",
+    "选择后确认内容正确",
+    "窄屏仍可理解各档区别"
+  ],
+  "interaction_actions": [
+    {
+      "action": "click",
+      "target": "Select Pro"
+    },
+    {
+      "action": "close",
+      "target": "confirmation dialog"
+    }
+  ],
+  "original_short_quote_available": false
+}

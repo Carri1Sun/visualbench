@@ -1,0 +1,44 @@
+你需要根据任务说明与给定输入文件，创作一个前端展示作品。自行作设计判断，不提出追问。
+
+交付两个文件：
+1. plan.json：简短的公开设计方案，包含 layout、visual_direction、interactions、implementation_choices、limitations。值为字符串或短数组，总长不超过约 160 个英文词。这是明确要求撰写的设计方案，不是私有推理过程。
+2. artifact.html：完整可运行 HTML，自己编写的 CSS 和 JS 内联，可引用提供的本地素材与可选 Three.js 运行库。不得加载外部网站、字体、图片、包、模型、音频或 API，不嵌入其他应用。
+
+可见界面文案使用英语。支持 1280×800 桌面视口，不裁切控件；产品页面还需适配 390×844。字体使用本地/系统字体栈，不强制特定美学。尽可能让控件可用键盘访问且有可见名称。没有后端、账户、密钥或在线数据源。
+
+题目素材位于 ./assets/，通过 HTTP 服务时可 fetch 本地 JSON。Three.js 的 import map 为：
+{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}
+只附带 OrbitControls 插件，其他功能使用核心库或自行内联实现。也可使用 Canvas、SVG、CSS、Web Audio 与程序化绘图。按题目要求标注虚构或示意数据。
+
+优先交付完成且可见的作品，不扩张任务范围。装饰性按钮或模拟不能宣称具有实际功能。近似方法与缺失要求写入 plan.json。在纯聊天模式中返回两个有文件名的代码块；在 coding agent 中将两个文件写入给定运行目录。
+
+TASK / 任务
+根据提供的演示规格制作交互式 3D 教学机芯。用几何建模可辨认的齿轮组、摆动的摆轮、擒纵机构和三根指针，不用齿轮照片代替。加载后运行，表达一致的机械关系。用户可旋转观察、暂停、改变模拟速度，以及切换保持部件身份的爆炸视图。选中主要部件时显示名称。自行选择材质、构图和界面。使用给定指针比例，并说明这是简化教学模型，非商业机芯的精确复刻。
+
+INPUT FILE: assets/movement-demo.json
+```json
+{
+  "provenance": "package-authored simplified teaching fixture; not a commercial caliber specification",
+  "seconds_per_second_hand_revolution": 60,
+  "seconds_per_minute_hand_revolution": 3600,
+  "seconds_per_hour_hand_revolution": 43200,
+  "balance_frequency_hz_demo": 2,
+  "speed_presets": [
+    0.25,
+    1,
+    5
+  ],
+  "parts": [
+    "barrel",
+    "gear train",
+    "escape wheel",
+    "pallet fork",
+    "balance",
+    "second hand",
+    "minute hand",
+    "hour hand"
+  ]
+}
+```
+
+The input files above are supplied fixtures. In a file-based agent workspace they already exist; in chat output, preserve them in the named ./assets paths or inline their exact content.

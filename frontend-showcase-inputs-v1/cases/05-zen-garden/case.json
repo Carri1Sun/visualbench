@@ -1,0 +1,35 @@
+{
+  "id": "05-zen-garden",
+  "number": 5,
+  "title_zh": "数字禅意花园",
+  "title_en": "Digital zen garden",
+  "category": "visual",
+  "difficulty": "easy",
+  "source_url": "https://www.bridgebench.ai/prompts/6167391e-81b4-4b55-896a-4e48c79c75c8",
+  "source_input_note_zh": "公开原题是单文件 HTML/CSS/JS，要求可点击圆石、涟漪和五句预定义文字；没有图片输入。",
+  "adaptation_note_zh": "新增五句统一文字及连续点击要求；这些文案不是原题附带素材。",
+  "prompt_status": "package_authored_adaptation",
+  "source_starter_included": false,
+  "supplied_design_reference": false,
+  "starter": "plain-html",
+  "output_file": "artifact.html",
+  "plan_file": "plan.json",
+  "input_files": [
+    "assets/phrases.json"
+  ],
+  "material_requirement": "text_plus_fixed_fixture",
+  "rubric": [
+    "圆石、文字和背景层次清楚",
+    "每次点击可触发反馈",
+    "连续点击不堆积错误状态",
+    "键盘可使用"
+  ],
+  "interaction_actions": [
+    {
+      "action": "click",
+      "target": "stone",
+      "repeat": 3
+    }
+  ],
+  "original_short_quote_available": false
+}

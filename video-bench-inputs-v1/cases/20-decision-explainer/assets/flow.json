@@ -1,0 +1,74 @@
+{
+  "fictional": true,
+  "nodes": [
+    {
+      "id": "start",
+      "label": "New ticket"
+    },
+    {
+      "id": "security",
+      "label": "Security issue?"
+    },
+    {
+      "id": "urgent",
+      "label": "Urgent human review"
+    },
+    {
+      "id": "refund",
+      "label": "Refund request?"
+    },
+    {
+      "id": "window",
+      "label": "Within 14 days?"
+    },
+    {
+      "id": "approve",
+      "label": "Approve refund"
+    },
+    {
+      "id": "manual",
+      "label": "Manual review"
+    },
+    {
+      "id": "help",
+      "label": "Send help article"
+    }
+  ],
+  "edges": [
+    {
+      "from": "start",
+      "to": "security",
+      "label": ""
+    },
+    {
+      "from": "security",
+      "to": "urgent",
+      "label": "Yes"
+    },
+    {
+      "from": "security",
+      "to": "refund",
+      "label": "No"
+    },
+    {
+      "from": "refund",
+      "to": "window",
+      "label": "Yes"
+    },
+    {
+      "from": "refund",
+      "to": "help",
+      "label": "No"
+    },
+    {
+      "from": "window",
+      "to": "approve",
+      "label": "Yes"
+    },
+    {
+      "from": "window",
+      "to": "manual",
+      "label": "No"
+    }
+  ]
+}

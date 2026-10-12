@@ -1,0 +1,1 @@
+Why does an agent repeat the same action? Sometimes it cannot see that the previous attempt failed. A useful loop needs fresh feedback, a stopping rule, and a different next step. Better feedback helps the agent move forward.

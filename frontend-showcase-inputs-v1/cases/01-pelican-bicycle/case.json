@@ -1,0 +1,27 @@
+{
+  "id": "01-pelican-bicycle",
+  "number": 1,
+  "title_zh": "鹈鹕骑自行车",
+  "title_en": "Pelican riding a bicycle",
+  "category": "visual",
+  "difficulty": "easy",
+  "source_url": "https://simonwillison.net/2024/oct/25/pelicans-on-a-bicycle/",
+  "source_input_note_zh": "原题是很短的 SVG 绘图请求，没有要求提供参考图或项目。",
+  "adaptation_note_zh": "为统一画廊展示，本包让 SVG 内嵌在 HTML 中；保持绘图题，不提供现成鸟或自行车图形。",
+  "prompt_status": "package_authored_adaptation",
+  "source_starter_included": false,
+  "supplied_design_reference": false,
+  "starter": "plain-html",
+  "output_file": "artifact.html",
+  "plan_file": "plan.json",
+  "input_files": [],
+  "material_requirement": "text_only",
+  "rubric": [
+    "能辨认鹈鹕和自行车",
+    "座位、踏板、脚、车把之间关系合理",
+    "完整构图不被裁切",
+    "SVG 可缩放且没有外部图片"
+  ],
+  "interaction_actions": [],
+  "original_short_quote_available": true
+}

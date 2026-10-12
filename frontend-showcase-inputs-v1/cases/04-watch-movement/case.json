@@ -1,0 +1,43 @@
+{
+  "id": "04-watch-movement",
+  "number": 4,
+  "title_zh": "机械手表机芯",
+  "title_en": "Mechanical watch movement",
+  "category": "visual",
+  "difficulty": "hard",
+  "source_url": "https://www.superbash.ai/benchmarks/prompts/10-mechanical-watch-simulator/",
+  "source_input_note_zh": "原题是很长的一次任务说明，要求多个真实机芯、正确传动速度、不同视图和浏览器验证；不要求预置机芯图片。",
+  "adaptation_note_zh": "缩小为单个教学机芯，提供新增的演示参数；不声称复现某型号真实机械构造。",
+  "prompt_status": "package_authored_adaptation",
+  "source_starter_included": false,
+  "supplied_design_reference": false,
+  "starter": "three-html",
+  "output_file": "artifact.html",
+  "plan_file": "plan.json",
+  "input_files": [
+    "assets/movement-demo.json"
+  ],
+  "material_requirement": "text_plus_fixed_fixture",
+  "rubric": [
+    "主要机械部件可辨认",
+    "指针相对速度与参数一致",
+    "暂停、调速和爆炸视图有效",
+    "部件名称与对象对应"
+  ],
+  "interaction_actions": [
+    {
+      "action": "drag",
+      "target": "scene",
+      "purpose": "orbit"
+    },
+    {
+      "action": "click",
+      "target": "Exploded view"
+    },
+    {
+      "action": "click",
+      "target": "Pause"
+    }
+  ],
+  "original_short_quote_available": false
+}

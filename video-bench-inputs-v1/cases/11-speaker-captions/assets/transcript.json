@@ -1,0 +1,107 @@
+{
+  "provenance": "faster-whisper tiny.en automatic draft; approximate word boundaries, reviewed against supplied text where available",
+  "words": [
+    {
+      "text": "dreams.",
+      "startMs": 0,
+      "endMs": 960,
+      "confidence": 0.709
+    },
+    {
+      "text": "Yesterday",
+      "startMs": 2020,
+      "endMs": 2520,
+      "confidence": 0.974
+    },
+    {
+      "text": "you",
+      "startMs": 2520,
+      "endMs": 3080,
+      "confidence": 0.695
+    },
+    {
+      "text": "said",
+      "startMs": 3080,
+      "endMs": 3260,
+      "confidence": 0.996
+    },
+    {
+      "text": "tomorrow.",
+      "startMs": 3260,
+      "endMs": 3660,
+      "confidence": 0.9
+    },
+    {
+      "text": "So",
+      "startMs": 4200,
+      "endMs": 4300,
+      "confidence": 0.953
+    },
+    {
+      "text": "just",
+      "startMs": 4300,
+      "endMs": 5040,
+      "confidence": 0.927
+    },
+    {
+      "text": "do",
+      "startMs": 5040,
+      "endMs": 5400,
+      "confidence": 0.874
+    },
+    {
+      "text": "it.",
+      "startMs": 5400,
+      "endMs": 6020,
+      "confidence": 0.996
+    },
+    {
+      "text": "Make",
+      "startMs": 6020,
+      "endMs": 6440,
+      "confidence": 0.99
+    },
+    {
+      "text": "your",
+      "startMs": 6440,
+      "endMs": 6800,
+      "confidence": 0.929
+    },
+    {
+      "text": "dreams",
+      "startMs": 6800,
+      "endMs": 7340,
+      "confidence": 0.997
+    },
+    {
+      "text": "come",
+      "startMs": 7340,
+      "endMs": 7860,
+      "confidence": 0.985
+    },
+    {
+      "text": "true.",
+      "startMs": 7860,
+      "endMs": 8520,
+      "confidence": 0.992
+    },
+    {
+      "text": "Just",
+      "startMs": 9120,
+      "endMs": 9560,
+      "confidence": 0.982
+    },
+    {
+      "text": "do",
+      "startMs": 9560,
+      "endMs": 10020,
+      "confidence": 0.97
+    },
+    {
+      "text": "it.",
+      "startMs": 10020,
+      "endMs": 10480,
+      "confidence": 0.998
+    }
+  ]
+}

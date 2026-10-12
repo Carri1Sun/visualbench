@@ -1,0 +1,43 @@
+{
+  "provenance": "package-authored feature matrix; names and prices adapted from public task",
+  "product": "Forge CLI",
+  "currency": "USD",
+  "billing_period": "month",
+  "plans": [
+    {
+      "id": "hobbyist",
+      "name": "Hobbyist",
+      "price": 0,
+      "features": [
+        "1 local workspace",
+        "Core CLI commands",
+        "Community support",
+        "Local history"
+      ]
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "price": 19,
+      "features": [
+        "10 workspaces",
+        "Core CLI commands",
+        "Priority support",
+        "Sync settings",
+        "Export history"
+      ]
+    },
+    {
+      "id": "team",
+      "name": "Team",
+      "price": 79,
+      "features": [
+        "Unlimited workspaces",
+        "Shared settings",
+        "Team access controls",
+        "Priority support",
+        "Audit export"
+      ]
+    }
+  ]
+}

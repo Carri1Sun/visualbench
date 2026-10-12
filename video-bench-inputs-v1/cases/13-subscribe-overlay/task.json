@@ -1,0 +1,47 @@
+{
+  "id": "13-subscribe-overlay",
+  "number": 13,
+  "title_zh": "透明订阅引导动画",
+  "title_en": "Subscribe Overlay",
+  "engine": "remotion",
+  "input_mode": "assets",
+  "source_kind": "published_prompt",
+  "source_url": "https://www.remotion.dev/prompts/transparent-call-to-action-overlay",
+  "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+  "duration_seconds": 8,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration_frames": 240,
+  "alpha_required": true,
+  "changes_from_source": "原题需在线抓取频道；提供虚构频道固定数据和原创头像。",
+  "checks": [
+    "数据准确",
+    "按钮状态有改变",
+    "按下和释放反馈可见",
+    "导出保留 alpha"
+  ],
+  "inputs": [
+    {
+      "path": "avatar.svg",
+      "bytes": 240,
+      "sha256": "316b334ab71f3b163d62a0968472863e847189b0fa77249a2a6bac0a58fca88c"
+    },
+    {
+      "path": "channel.json",
+      "bytes": 184,
+      "sha256": "855cd314267d3fb25fc70681b65b8a94952da758c6e62ecc8772a300c3e7503a"
+    }
+  ],
+  "brief_en": "Use channel.json and avatar.svg. Make an 8-second lower-third subscription callout that slides in, shows the exact name and count, receives a cursor click, changes Subscribe to Subscribed, then exits. The button press and release should have distinct motion. Deliver a transparent overlay.mov and a preview composited over a neutral background.",
+  "brief_zh": "使用 channel.json 与 avatar.svg 制作 8 秒订阅条：滑入、显示准确名称和订阅数、鼠标点击、Subscribe 变为 Subscribed、退出。按钮按下和释放有不同反馈。交付透明 overlay.mov 和中性背景上的预览视频。",
+  "assets_ready": true,
+  "prompt_only": false,
+  "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+  "entrypoints": {
+    "en": "cases/13-subscribe-overlay/prompt.en.md",
+    "zh": "cases/13-subscribe-overlay/prompt.zh.md",
+    "task": "cases/13-subscribe-overlay/task.json",
+    "assets": "cases/13-subscribe-overlay/assets"
+  }
+}

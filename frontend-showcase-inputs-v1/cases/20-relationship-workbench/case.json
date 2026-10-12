@@ -1,0 +1,42 @@
+{
+  "id": "20-relationship-workbench",
+  "number": 20,
+  "title_zh": "关系图谱分析工作台",
+  "title_en": "Relationship analysis workbench",
+  "category": "product",
+  "difficulty": "hard",
+  "source_url": "https://www.bridgebench.ai/prompts/7262b063-142d-4266-a0c4-005e3c930e9c",
+  "source_input_note_zh": "原题是一套全栈 OSINT 平台说明，包含数据摄取、数据库、搜索、地图及实时来源；不能仅靠一句短 prompt 或零依赖 HTML 重现全部范围。",
+  "adaptation_note_zh": "主包缩小为前端工作台，提供虚构实体、关系、位置和事件。本包新增素材，不是原站真实数据；无数据库、账号、API 密钥要求。",
+  "prompt_status": "package_authored_adaptation",
+  "source_starter_included": false,
+  "supplied_design_reference": false,
+  "starter": "plain-html",
+  "output_file": "artifact.html",
+  "plan_file": "plan.json",
+  "input_files": [
+    "assets/investigation.json"
+  ],
+  "material_requirement": "text_plus_fixed_fixture",
+  "rubric": [
+    "四类视图使用同一数据源",
+    "实体选择跨视图联动",
+    "筛选及清除选择一致",
+    "虚构数据有明显标注，详情无错配"
+  ],
+  "interaction_actions": [
+    {
+      "action": "search",
+      "text": "Mira Chen"
+    },
+    {
+      "action": "click",
+      "target": "Mira Chen"
+    },
+    {
+      "action": "click",
+      "target": "Clear selection"
+    }
+  ],
+  "original_short_quote_available": false
+}

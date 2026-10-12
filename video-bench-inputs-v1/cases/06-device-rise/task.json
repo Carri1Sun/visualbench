@@ -1,0 +1,36 @@
+{
+  "id": "06-device-rise",
+  "number": 6,
+  "title_zh": "设备亮相与通知卡片",
+  "title_en": "Device Rise",
+  "engine": "remotion",
+  "input_mode": "prompt_only",
+  "source_kind": "published_prompt",
+  "source_url": "https://www.remotion.dev/prompts/apple-style-device-rise-animation",
+  "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+  "duration_seconds": 6,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration_frames": 180,
+  "alpha_required": false,
+  "changes_from_source": "保留设备上升任务，时长改为 6 秒，使用虚构 App 通知，无外部图像。",
+  "checks": [
+    "设备进入时无意外裁切",
+    "透视变化平滑",
+    "停稳后通知错峰出现",
+    "设备与通知文字清楚"
+  ],
+  "inputs": [],
+  "brief_en": "Create a six-second product reveal. Draw a premium smartphone with code on a pale background. It rises from below the frame, starts tilted in perspective and settles upright with a gentle deceleration. After settling, show three staggered notifications: \"Your trip is ready\", \"3 places saved\", \"Share with Maya\". The device occupies about two-thirds of the frame height.",
+  "brief_zh": "制作 6 秒设备亮相视频。在浅色背景上用代码绘制精致手机，从画面下方升起，由透视倾斜逐渐收敛并缓慢停稳；随后依次出现三张通知：Your trip is ready、3 places saved、Share with Maya。手机约占画面高度的三分之二。",
+  "assets_ready": true,
+  "prompt_only": true,
+  "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+  "entrypoints": {
+    "en": "cases/06-device-rise/prompt.en.md",
+    "zh": "cases/06-device-rise/prompt.zh.md",
+    "task": "cases/06-device-rise/task.json",
+    "assets": "cases/06-device-rise/assets"
+  }
+}

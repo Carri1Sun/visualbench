@@ -1,0 +1,233 @@
+{
+  "provenance": "Text corrected against the exact authored TTS script; approximate word boundaries from faster-whisper tiny.en. The inserted loop/needs boundary is interpolated, not hand-aligned ground truth.",
+  "words": [
+    {
+      "text": "Why",
+      "startMs": 400,
+      "endMs": 1120,
+      "confidence": 0.639
+    },
+    {
+      "text": "does",
+      "startMs": 1120,
+      "endMs": 1500,
+      "confidence": 0.967
+    },
+    {
+      "text": "an",
+      "startMs": 1500,
+      "endMs": 1640,
+      "confidence": 0.133
+    },
+    {
+      "text": "agent",
+      "startMs": 1640,
+      "endMs": 2020,
+      "confidence": 0.953
+    },
+    {
+      "text": "repeat",
+      "startMs": 2020,
+      "endMs": 2480,
+      "confidence": 0.994
+    },
+    {
+      "text": "the",
+      "startMs": 2480,
+      "endMs": 2880,
+      "confidence": 0.995
+    },
+    {
+      "text": "same",
+      "startMs": 2880,
+      "endMs": 3140,
+      "confidence": 0.999
+    },
+    {
+      "text": "action?",
+      "startMs": 3140,
+      "endMs": 3780,
+      "confidence": 0.842
+    },
+    {
+      "text": "Sometimes",
+      "startMs": 4300,
+      "endMs": 4640,
+      "confidence": 0.968
+    },
+    {
+      "text": "it",
+      "startMs": 4640,
+      "endMs": 5020,
+      "confidence": 0.979
+    },
+    {
+      "text": "cannot",
+      "startMs": 5020,
+      "endMs": 5520,
+      "confidence": 0.885
+    },
+    {
+      "text": "see",
+      "startMs": 5520,
+      "endMs": 5960,
+      "confidence": 0.977
+    },
+    {
+      "text": "that",
+      "startMs": 5960,
+      "endMs": 6280,
+      "confidence": 0.991
+    },
+    {
+      "text": "the",
+      "startMs": 6280,
+      "endMs": 6920,
+      "confidence": 0.982
+    },
+    {
+      "text": "previous",
+      "startMs": 6920,
+      "endMs": 7020,
+      "confidence": 0.989
+    },
+    {
+      "text": "attempt",
+      "startMs": 7020,
+      "endMs": 7660,
+      "confidence": 0.994
+    },
+    {
+      "text": "failed.",
+      "startMs": 7660,
+      "endMs": 8280,
+      "confidence": 0.995
+    },
+    {
+      "text": "A",
+      "startMs": 8680,
+      "endMs": 8940,
+      "confidence": 0.907
+    },
+    {
+      "text": "useful",
+      "startMs": 8940,
+      "endMs": 9280,
+      "confidence": 0.974
+    },
+    {
+      "text": "loop",
+      "startMs": 9280,
+      "endMs": 9520,
+      "confidence": null
+    },
+    {
+      "text": "needs",
+      "startMs": 9520,
+      "endMs": 9760,
+      "confidence": null
+    },
+    {
+      "text": "fresh",
+      "startMs": 9760,
+      "endMs": 10540,
+      "confidence": 0.4
+    },
+    {
+      "text": "feedback,",
+      "startMs": 10540,
+      "endMs": 11140,
+      "confidence": 0.982
+    },
+    {
+      "text": "a",
+      "startMs": 11800,
+      "endMs": 11920,
+      "confidence": 0.858
+    },
+    {
+      "text": "stopping",
+      "startMs": 11920,
+      "endMs": 12360,
+      "confidence": 0.99
+    },
+    {
+      "text": "rule,",
+      "startMs": 12360,
+      "endMs": 13120,
+      "confidence": 0.98
+    },
+    {
+      "text": "and",
+      "startMs": 13180,
+      "endMs": 13460,
+      "confidence": 0.993
+    },
+    {
+      "text": "a",
+      "startMs": 13460,
+      "endMs": 13640,
+      "confidence": 0.969
+    },
+    {
+      "text": "different",
+      "startMs": 13640,
+      "endMs": 14040,
+      "confidence": 0.961
+    },
+    {
+      "text": "next",
+      "startMs": 14040,
+      "endMs": 14780,
+      "confidence": 0.899
+    },
+    {
+      "text": "step.",
+      "startMs": 14780,
+      "endMs": 15280,
+      "confidence": 0.994
+    },
+    {
+      "text": "Better",
+      "startMs": 15760,
+      "endMs": 15820,
+      "confidence": 0.979
+    },
+    {
+      "text": "feedback",
+      "startMs": 15820,
+      "endMs": 16340,
+      "confidence": 0.929
+    },
+    {
+      "text": "helps",
+      "startMs": 16340,
+      "endMs": 17040,
+      "confidence": 0.917
+    },
+    {
+      "text": "the",
+      "startMs": 17040,
+      "endMs": 17320,
+      "confidence": 0.969
+    },
+    {
+      "text": "agent",
+      "startMs": 17320,
+      "endMs": 17820,
+      "confidence": 0.989
+    },
+    {
+      "text": "move",
+      "startMs": 17820,
+      "endMs": 18300,
+      "confidence": 0.997
+    },
+    {
+      "text": "forward.",
+      "startMs": 18300,
+      "endMs": 18860,
+      "confidence": 0.997
+    }
+  ]
+}

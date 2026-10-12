@@ -1,0 +1,72 @@
+{
+  "id": "10-vertical-explainer",
+  "number": 10,
+  "title_zh": "竖屏知识短视频",
+  "title_en": "Vertical Explainer",
+  "engine": "remotion",
+  "input_mode": "assets",
+  "source_kind": "official_prompt_adaptation",
+  "source_url": "https://hyperframes.app/docs/3-guides/2-prompting",
+  "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+  "duration_seconds": 20,
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "duration_frames": 600,
+  "alpha_required": false,
+  "changes_from_source": "补充原创脚本、离线合成旁白和确定性词时间；声音是固定测试输入。",
+  "checks": [
+    "语音完整且清晰",
+    "字幕内容与语音一致",
+    "图解解释重复行为",
+    "竖屏字幕不出界"
+  ],
+  "inputs": [
+    {
+      "path": "TIMING_NOTES.md",
+      "bytes": 434,
+      "sha256": "758d8c2d5b0edb3a1d17c312c951d053bf18e8208ba8fb03e82acb2b5c240b47"
+    },
+    {
+      "path": "TTS_ENGINE_LICENSE.txt",
+      "bytes": 16340,
+      "sha256": "77d13a5e6cbe7277b4721033f9ad15707241c2832baa8c74ec823c9ee5ebf71c"
+    },
+    {
+      "path": "captions.srt",
+      "bytes": 1508,
+      "sha256": "abab0fe152565603fb54691d95b2e276182d7e0efa927aff7799d53ece5aa2fb"
+    },
+    {
+      "path": "narration.wav",
+      "bytes": 1764078,
+      "sha256": "0a08db052a39f33838082246d56430589caf3ad181d2f333fb56d7a9c128ef7a"
+    },
+    {
+      "path": "script.txt",
+      "bytes": 226,
+      "sha256": "d13d4501b324e00aeb866bc2f9700befe709dfab50d818b90ba975fba66c47b8"
+    },
+    {
+      "path": "transcript.txt",
+      "bytes": 226,
+      "sha256": "d13d4501b324e00aeb866bc2f9700befe709dfab50d818b90ba975fba66c47b8"
+    },
+    {
+      "path": "words.json",
+      "bytes": 4283,
+      "sha256": "045e1162c8e130b4bd24086b58cc9d14bd7505f09680326fdace69b21ec1e6c6"
+    }
+  ],
+  "brief_en": "Create a 20-second 9:16 educational video using the exact narration.wav and script.txt. Topic: why an agent repeats the same action. Invent supporting diagrams and a strong opening visual. Add readable word-synced captions using words.json. Preserve the supplied speech, ending and factual scope. Music is optional and must not obscure the voice.",
+  "brief_zh": "使用固定 narration.wav 和 script.txt 制作 20 秒 9:16 知识短视频，主题是 agent 为什么重复同一动作。自行设计辅助图解和有吸引力的开场，依据 words.json 添加可读的逐词字幕。保留给定语音、结尾和事实范围，可加音乐但不能盖过旁白。",
+  "assets_ready": true,
+  "prompt_only": false,
+  "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+  "entrypoints": {
+    "en": "cases/10-vertical-explainer/prompt.en.md",
+    "zh": "cases/10-vertical-explainer/prompt.zh.md",
+    "task": "cases/10-vertical-explainer/task.json",
+    "assets": "cases/10-vertical-explainer/assets"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "visualbench",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "python3 bench/manage.py start",
+    "build": "npm --prefix app run build",
+    "bench:init": "python3 bench/common.py",
+    "bench:run": "python3 -u bench/runner.py",
+    "bench:start": "python3 bench/manage.py start --runner",
+    "bench:status": "python3 bench/manage.py status",
+    "bench:export": "python3 bench/export_trajectories.py",
+    "bench:setup": "python3 bench/setup.py"
+  }
+}

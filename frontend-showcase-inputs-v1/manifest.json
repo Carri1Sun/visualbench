@@ -1,0 +1,862 @@
+{
+  "schema_version": "1.0",
+  "package_name": "frontend-showcase-inputs-v1",
+  "created_date": "2026-10-03",
+  "timezone": "Asia/Shanghai",
+  "purpose": "20 task inputs for repeated frontend model comparisons; no model outputs included",
+  "default_profile": "package_authored_full_prompt",
+  "common_system_en": "common/system.en.txt",
+  "common_system_zh": "common/system.zh.txt",
+  "default_runs_per_model": 5,
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "capture_guidance": {
+    "animation_seconds": 8,
+    "initial_wait_seconds": 2,
+    "all_runs_visible": true,
+    "disclose_repairs": true
+  },
+  "runtime": {
+    "default": "plain HTML served over HTTP",
+    "network_required": false,
+    "three_version": "0.180.0",
+    "optional_react_lane_requires_npm_network": true
+  },
+  "cases": [
+    {
+      "id": "01-pelican-bicycle",
+      "number": 1,
+      "title_zh": "鹈鹕骑自行车",
+      "title_en": "Pelican riding a bicycle",
+      "category": "visual",
+      "difficulty": "easy",
+      "source_url": "https://simonwillison.net/2024/oct/25/pelicans-on-a-bicycle/",
+      "source_input_note_zh": "原题是很短的 SVG 绘图请求，没有要求提供参考图或项目。",
+      "adaptation_note_zh": "为统一画廊展示，本包让 SVG 内嵌在 HTML 中；保持绘图题，不提供现成鸟或自行车图形。",
+      "prompt_status": "package_authored_adaptation",
+      "source_starter_included": false,
+      "supplied_design_reference": false,
+      "starter": "plain-html",
+      "output_file": "artifact.html",
+      "plan_file": "plan.json",
+      "input_files": [],
+      "material_requirement": "text_only",
+      "rubric": [
+        "能辨认鹈鹕和自行车",
+        "座位、踏板、脚、车把之间关系合理",
+        "完整构图不被裁切",
+        "SVG 可缩放且没有外部图片"
+      ],
+      "interaction_actions": [],
+      "original_short_quote_available": true
+    },
+    {
+      "id": "02-weather-cards",
+      "number": 2,
+      "title_zh": "四种天气动画卡片",
+      "title_en": "Animated weather cards",
+      "category": "visual",
+      "difficulty": "easy",
+      "source_url": "https://www.reddit.com/r/LocalLLaMA/comments/1jiqi81/new_deepseek_v3_vs_r1_first_is_v3/",
+      "source_input_note_zh": "公开帖给出单 HTML 的天气卡片提示词并展示模型结果；没有提供输入设计图。",
+      "adaptation_note_zh": "保留四种天气与深色背景；增加统一的暂停和重播操作，便于比较动效。",
+      "prompt_status": "package_authored_adaptation",
+      "source_starter_included": false,
+      "supplied_design_reference": false,
+      "starter": "plain-html",
+      "output_file": "artifact.html",
+      "plan_file": "plan.json",
+      "input_files": [],
+      "material_requirement": "text_only",
+      "rubric": [
+        "四种天气可辨认且动画各不相同",
+        "卡片视觉风格一致",
+        "暂停和重播有效",
+        "窄屏无水平溢出"
+      ],
+      "interaction_actions": [
+        {
+          "action": "wait",
+          "seconds": 3
+        },
+        {
+          "action": "click",
+          "target": "Pause"
+        },
+        {
+          "action": "click",
+          "target": "Resume"
+        },
+        {
+          "action": "click",
+          "target": "Replay"
+        }
+      ],
+      "original_short_quote_available": false
+    },
+    {
+      "id": "03-black-hole",
+      "number": 3,
+      "title_zh": "旋转黑洞",
+      "title_en": "Rotating black hole",
+      "category": "visual",
+      "difficulty": "hard",
+      "source_url": "https://github.com/jdmnk/design-benchmark/blob/main/config/examples/black-hole-spin.config.json",
+      "source_input_note_zh": "原仓库有 systemPrompt、长任务提示词、统一视口和渲染配置；Three.js 等库由运行环境提供。没有必需的输入照片或模型。",
+      "adaptation_note_zh": "主测试版独立重写，提供固定 Three.js 本地文件。另存仓库原始配置（仓库 README 声明 MIT），用于查看原题环境差异。",
+      "prompt_status": "package_authored_adaptation",
+      "source_starter_included": false,
+      "supplied_design_reference": false,
+      "starter": "three-html",
+      "output_file": "artifact.html",
+      "plan_file": "plan.json",
+      "input_files": [],
+      "material_requirement": "text_only",
+      "rubric": [
+        "黑色中心和横向吸积盘清楚",
+        "上下亮弧构成空间层次",
+        "运动可辨认且稳定",
+        "不会仅有 HUD 而主体黑屏"
+      ],
+      "interaction_actions": [],
+      "original_short_quote_available": false
+    },
+    {
+      "id": "04-watch-movement",
+      "number": 4,
+      "title_zh": "机械手表机芯",
+      "title_en": "Mechanical watch movement",
+      "category": "visual",
+      "difficulty": "hard",
+      "source_url": "https://www.superbash.ai/benchmarks/prompts/10-mechanical-watch-simulator/",
+      "source_input_note_zh": "原题是很长的一次任务说明，要求多个真实机芯、正确传动速度、不同视图和浏览器验证；不要求预置机芯图片。",
+      "adaptation_note_zh": "缩小为单个教学机芯，提供新增的演示参数；不声称复现某型号真实机械构造。",
+      "prompt_status": "package_authored_adaptation",
+      "source_starter_included": false,
+      "supplied_design_reference": false,
+      "starter": "three-html",
+      "output_file": "artifact.html",
+      "plan_file": "plan.json",
+      "input_files": [
+        "assets/movement-demo.json"
+      ],
+      "material_requirement": "text_plus_fixed_fixture",
+      "rubric": [
+        "主要机械部件可辨认",
+        "指针相对速度与参数一致",
+        "暂停、调速和爆炸视图有效",
+        "部件名称与对象对应"
+      ],
+      "interaction_actions": [
+        {
+          "action": "drag",
+          "target": "scene",
+          "purpose": "orbit"
+        },
+        {
+          "action": "click",
+          "target": "Exploded view"
+        },
+        {
+          "action": "click",
+          "target": "Pause"
+        }
+      ],
+      "original_short_quote_available": false
+    },
+    {
+      "id": "05-zen-garden",
+      "number": 5,
+      "title_zh": "数字禅意花园",
+      "title_en": "Digital zen garden",
+      "category": "visual",
+      "difficulty": "easy",
+      "source_url": "https://www.bridgebench.ai/prompts/6167391e-81b4-4b55-896a-4e48c79c75c8",
+      "source_input_note_zh": "公开原题是单文件 HTML/CSS/JS，要求可点击圆石、涟漪和五句预定义文字；没有图片输入。",
+      "adaptation_note_zh": "新增五句统一文字及连续点击要求；这些文案不是原题附带素材。",
+      "prompt_status": "package_authored_adaptation",
+      "source_starter_included": false,
+      "supplied_design_reference": false,
+      "starter": "plain-html",
+      "output_file": "artifact.html",
+      "plan_file": "plan.json",
+      "input_files": [
+        "assets/phrases.json"
+      ],
+      "material_requirement": "text_plus_fixed_fixture",
+      "rubric": [
+        "圆石、文字和背景层次清楚",
+        "每次点击可触发反馈",
+        "连续点击不堆积错误状态",
+        "键盘可使用"
+      ],
+      "interaction_actions": [
+        {
+          "action": "click",
+          "target": "stone",
+          "repeat": 3
+        }
+      ],
+      "original_short_quote_available": false
+    },
+    {
+      "id": "06-hexagon-ball",
+      "number": 6,
+      "title_zh": "旋转六边形弹球",
+      "title_en": "Ball in a rotating hexagon",
+      "category": "simulation",
+      "difficulty": "medium",
+      "source_url": "https://www.reddit.com/r/LocalLLaMA/comments/1jwhp26/deepcoder_14b_vs_qwen25_coder_32b_vs_qwq_32b/",
+      "source_input_note_zh": "公开帖给出 HTML5 Canvas 弹球题，包含重力、边界碰撞及重置；没有图像或项目输入。",
+      "adaptation_note_zh": "新增统一初始参数、暂停和转速滑块，让不同实现可以接受相同操作。",
+      "prompt_status": "package_authored_adaptation",
+      "source_starter_included": false,
+      "supplied_design_reference": false,
+      "starter": "plain-html",
+      "output_file": "artifact.html",
+      "plan_file": "plan.json",
+      "input_files": [
+        "assets/physics.json"
+      ],
+      "material_requirement": "text_plus_fixed_fixture",
+      "rubric": [
+        "球始终位于容器内部",
+        "碰撞包含转动墙面影响",
+        "长时间运行不异常爆炸",
+        "重置可重复得到初始状态"
+      ],
+      "interaction_actions": [
+        {
+          "action": "wait",
+          "seconds": 8
+        },
+        {
+          "action": "set",
+          "target": "rotation speed",
+          "value": 0.8
+        },
+        {
+          "action": "click",
+          "target": "Reset"
+        }
+      ],
+      "original_short_quote_available": false
+    },
+    {
+      "id": "07-cloth-drape",
+      "number": 7,
+      "title_zh": "布料覆盖球体",
+      "title_en": "Cloth draping over a sphere",
+      "category": "simulation",
+      "difficulty": "hard",
+      "source_url": "https://goldiebench.com/tasks/cloth",
+      "source_input_note_zh": "公开页面给出一句布料模拟任务并称输出单 HTML；在 Agent Operating System 内运行，完整隐藏系统提示未公开。没有要求用户提供布料图片。",
+      "adaptation_note_zh": "使用本包统一系统说明，并新增可重复初始配置和拖拽、风力操作。不是对原站隐藏运行环境的精确复现。",
+      "prompt_status": "package_authored_adaptation",
+      "source_starter_included": false,
+      "supplied_design_reference": false,
+      "starter": "three-html",
+      "output_file": "artifact.html",
+      "plan_file": "plan.json",
+      "input_files": [
+        "assets/cloth-demo.json"
+      ],
+      "material_requirement": "text_plus_fixed_fixture",
+      "rubric": [
+        "布料实际变形并形成褶皱",
+        "不明显穿透球体",
+        "拖拽和风力改变布料状态",
+        "重置一致，数值稳定"
+      ],
+      "interaction_actions": [
+        {
+          "action": "wait",
+          "seconds": 6
+        },
+        {
+          "action": "drag",
+          "target": "cloth"
+        },
+        {
+          "action": "click",
+          "target": "Wind"
+        },
+        {
+          "action": "click",
+          "target": "Reset"
+        }
+      ],
+      "original_short_quote_available": true
+    },
+    {
+      "id": "08-fluid-dye",
+      "number": 8,
+      "title_zh": "鼠标搅动彩色流体",
+      "title_en": "Interactive dye flow",
+      "category": "simulation",
+      "difficulty": "hard",
+      "source_url": "https://goldiebench.com/tasks/fluid",
+      "source_input_note_zh": "公开页面给出一句 WebGL 流体任务并展示结果；原 Agent OS 的完整系统环境未公开。没有必需的图片。",
+      "adaptation_note_zh": "本包定义二维染料流体、统一操作与清空状态，避免把普通粒子云当成流体模拟。",
+      "prompt_status": "package_authored_adaptation",
+      "source_starter_included": false,
+      "supplied_design_reference": false,
+      "starter": "plain-html",
+      "output_file": "artifact.html",
+      "plan_file": "plan.json",
+      "input_files": [],
+      "material_requirement": "text_only",
+      "rubric": [
+        "拖动注入颜色与动量",
+        "染料被持续流场输运",
+        "清空和暂停有效",
+        "近似方法说明诚实且画面持续可见"
+      ],
+      "interaction_actions": [
+        {
+          "action": "drag",
+          "target": "simulation",
+          "from_normalized": [
+            0.25,
+            0.5
+          ],
+          "to_normalized": [
+            0.75,
+            0.5
+          ]
+        },
+        {
+          "action": "click",
+          "target": "Clear"
+        }
+      ],
+      "original_short_quote_available": true
+    },
+    {
+      "id": "09-solar-system",
+      "number": 9,
+      "title_zh": "交互式太阳系",
+      "title_en": "Interactive solar system",
+      "category": "simulation",
+      "difficulty": "hard",
+      "source_url": "https://www.bridgebench.ai/prompts/c95d2701-dd99-434c-8af0-f5caf03975dd",
+      "source_input_note_zh": "原题有很长的任务说明，允许 agent 使用文件、命令和浏览器工具，偏好 React/TypeScript/Vite；要求程序化/本地素材，不依赖天文 API。",
+      "adaptation_note_zh": "缩小为太阳与八大行星的教学演示，提供近似固定参数；不包含原题的全部轨道、音频或验证要求。",
+      "prompt_status": "package_authored_adaptation",
+      "source_starter_included": false,
+      "supplied_design_reference": false,
+      "starter": "three-html",
+      "output_file": "artifact.html",
+      "plan_file": "plan.json",
+      "input_files": [
+        "assets/planets.json"
+      ],
+      "material_requirement": "text_plus_fixed_fixture",
+      "rubric": [
+        "太阳和八大行星均可见",
+        "相对公转周期来自数据",
+        "选择行星显示正确事实",
+        "暂停、调速、重置有效"
+      ],
+      "interaction_actions": [
+        {
+          "action": "click",
+          "target": "Earth"
+        },
+        {
+          "action": "set",
+          "target": "days per second",
+          "value": 20
+        },
+        {
+          "action": "click",
+          "target": "Pause"
+        }
+      ],
+      "original_short_quote_available": false
+    },
+    {
+      "id": "10-sorting-arena",
+      "number": 10,
+      "title_zh": "排序算法竞技场",
+      "title_en": "Sorting algorithm arena",
+      "category": "logic",
+      "difficulty": "medium",
+      "source_url": "https://tools.simonwillison.net/sort-algorithms",
+      "source_input_note_zh": "作者公开了运行作品与后续提示词记录；这个作品经历了多轮修改，不能把最终版本宣称为一句 prompt 的结果。",
+      "adaptation_note_zh": "本包独立写成单次任务，提供相同数组、四种算法、统一运行与统计要求。",
+      "prompt_status": "package_authored_adaptation",
+      "source_starter_included": false,
+      "supplied_design_reference": false,
+      "starter": "plain-html",
+      "output_file": "artifact.html",
+      "plan_file": "plan.json",
+      "input_files": [
+        "assets/numbers.json"
+      ],
+      "material_requirement": "text_plus_fixed_fixture",
+      "rubric": [
+        "四个面板起始数组相同",
+        "最终结果均升序且保留重复值",
+        "算法动画和计数来自实际执行",
+        "暂停、继续、重置不交叉污染"
+      ],
+      "interaction_actions": [
+        {
+          "action": "click",
+          "target": "Run all"
+        },
+        {
+          "action": "wait",
+          "seconds": 3
+        },
+        {
+          "action": "click",
+          "target": "Pause"
+        },
+        {
+          "action": "click",
+          "target": "Reset"
+        }
+      ],
+      "original_short_quote_available": false
+    },
+    {
+      "id": "11-retro-racer",
+      "number": 11,
+      "title_zh": "复古霓虹赛车",
+      "title_en": "Retro neon racer",
+      "category": "interactive",
+      "difficulty": "medium",
+      "source_url": "https://goldiebench.com/tasks/outrun",
+      "source_input_note_zh": "公开页面给出一句伪 3D 驾驶游戏任务；Agent OS 的完整系统模板没有公开，没有图片输入要求。",
+      "adaptation_note_zh": "新增固定操控、自动演示和回放规则；不复制原游戏素材或原站模型成品。",
+      "prompt_status": "package_authored_adaptation",
+      "source_starter_included": false,
+      "supplied_design_reference": false,
+      "starter": "plain-html",
+      "output_file": "artifact.html",
+      "plan_file": "plan.json",
+      "input_files": [],
+      "material_requirement": "text_only",
+      "rubric": [
+        "公路透视和速度感成立",
+        "输入实际改变车辆状态",
+        "速度距离由运行状态产生",
+        "Demo 与 Restart 有效"
+      ],
+      "interaction_actions": [
+        {
+          "action": "key_hold",
+          "key": "ArrowUp",
+          "seconds": 3
+        },
+        {
+          "action": "key_hold",
+          "key": "ArrowLeft",
+          "seconds": 1
+        },
+        {
+          "action": "click",
+          "target": "Restart"
+        }
+      ],
+      "original_short_quote_available": true
+    },
+    {
+      "id": "12-billiards",
+      "number": 12,
+      "title_zh": "可玩的台球桌",
+      "title_en": "Playable billiards table",
+      "category": "interactive",
+      "difficulty": "medium",
+      "source_url": "https://goldiebench.com/tasks/pool",
+      "source_input_note_zh": "公开页面给出一句台球模拟任务及结果；未要求输入照片，原 Agent OS 系统模板未公开。",
+      "adaptation_note_zh": "新增固定初始球组和简单练习规则；不要求完整八球赛事规则。",
+      "prompt_status": "package_authored_adaptation",
+      "source_starter_included": false,
+      "supplied_design_reference": false,
+      "starter": "plain-html",
+      "output_file": "artifact.html",
+      "plan_file": "plan.json",
+      "input_files": [],
+      "material_requirement": "text_only",
+      "rubric": [
+        "瞄准与力度决定实际击球",
+        "球间碰撞和库边响应合理",
+        "进袋更新球状态与计数",
+        "母球复位和整桌重置有效"
+      ],
+      "interaction_actions": [
+        {
+          "action": "drag",
+          "target": "cue ball",
+          "purpose": "aim and set power"
+        },
+        {
+          "action": "wait",
+          "seconds": 5
+        },
+        {
+          "action": "click",
+          "target": "Reset table"
+        }
+      ],
+      "original_short_quote_available": true
+    },
+    {
+      "id": "13-voxel-sandbox",
+      "number": 13,
+      "title_zh": "迷你方块沙盒",
+      "title_en": "Mini voxel sandbox",
+      "category": "interactive",
+      "difficulty": "hard",
+      "source_url": "https://goldiebench.com/tasks/voxelcraft",
+      "source_input_note_zh": "公开任务要求 Minecraft 风格的放置/破坏方块及昼夜；没有用户设计图，完整 Agent OS 系统环境未公开。",
+      "adaptation_note_zh": "限定小型世界、原创程序化材质；增加视口内操作反馈。",
+      "prompt_status": "package_authored_adaptation",
+      "source_starter_included": false,
+      "supplied_design_reference": false,
+      "starter": "three-html",
+      "output_file": "artifact.html",
+      "plan_file": "plan.json",
+      "input_files": [],
+      "material_requirement": "text_only",
+      "rubric": [
+        "世界主体正常渲染",
+        "可以放置和删除被指向方块",
+        "材料选择真正生效",
+        "输入、指针锁定退出和重置有效"
+      ],
+      "interaction_actions": [
+        {
+          "action": "key_hold",
+          "key": "KeyW",
+          "seconds": 1
+        },
+        {
+          "action": "click",
+          "target": "targeted block",
+          "purpose": "remove"
+        },
+        {
+          "action": "right_click",
+          "target": "targeted face",
+          "purpose": "place"
+        }
+      ],
+      "original_short_quote_available": true
+    },
+    {
+      "id": "14-cd-player",
+      "number": 14,
+      "title_zh": "PS1 风格 CD 播放器",
+      "title_en": "PS1-style CD player",
+      "category": "interactive",
+      "difficulty": "hard",
+      "source_url": "https://www.bridgebench.ai/prompts/a3a1f845-18a4-4f82-9865-e412949067f5",
+      "source_input_note_zh": "原题是短描述，要求低多边形播放器、CD 与封面交互，且每张唱片有完整 chiptune 音乐；未附音频或图片。",
+      "adaptation_note_zh": "新增原创唱片名称、封面 SVG 和短音序；将完整乐曲缩小为循环短音序，不复用已有音乐。",
+      "prompt_status": "package_authored_adaptation",
+      "source_starter_included": false,
+      "supplied_design_reference": false,
+      "starter": "three-html",
+      "output_file": "artifact.html",
+      "plan_file": "plan.json",
+      "input_files": [
+        "assets/albums.json",
+        "assets/cover-orbit.svg",
+        "assets/cover-afterglow.svg",
+        "assets/cover-tidal.svg"
+      ],
+      "material_requirement": "text_plus_fixed_fixture",
+      "rubric": [
+        "选中、插入、播放、退出状态清楚",
+        "唱片堆随状态重排",
+        "不能同时播放两张 CD",
+        "音频仅在用户激活后运行，静音有效"
+      ],
+      "interaction_actions": [
+        {
+          "action": "click",
+          "target": "Orbit Arcade"
+        },
+        {
+          "action": "click",
+          "target": "Play"
+        },
+        {
+          "action": "click",
+          "target": "Eject"
+        }
+      ],
+      "original_short_quote_available": false
+    },
+    {
+      "id": "15-web-desktop",
+      "number": 15,
+      "title_zh": "浏览器桌面操作系统",
+      "title_en": "Browser desktop",
+      "category": "interactive",
+      "difficulty": "hard",
+      "source_url": "https://goldiebench.com/tasks/webos",
+      "source_input_note_zh": "公开一句任务要求窗口、Dock、Notes/Paint/Terminal；未提供起始项目或设计图，原 Agent OS 系统模板未公开。",
+      "adaptation_note_zh": "明确三种应用的最低功能与模拟终端边界，新增保存、重置和窗口管理要求。",
+      "prompt_status": "package_authored_adaptation",
+      "source_starter_included": false,
+      "supplied_design_reference": false,
+      "starter": "plain-html",
+      "output_file": "artifact.html",
+      "plan_file": "plan.json",
+      "input_files": [],
+      "material_requirement": "text_only",
+      "rubric": [
+        "三种应用有实际功能",
+        "窗口焦点、缩放和最小化有效",
+        "记事内容刷新后保留",
+        "模拟终端和重置状态正确"
+      ],
+      "interaction_actions": [
+        {
+          "action": "click",
+          "target": "Notes"
+        },
+        {
+          "action": "drag",
+          "target": "Notes title bar"
+        },
+        {
+          "action": "click",
+          "target": "Paint"
+        },
+        {
+          "action": "draw",
+          "target": "paint canvas"
+        },
+        {
+          "action": "click",
+          "target": "Terminal"
+        },
+        {
+          "action": "type",
+          "target": "terminal input",
+          "text": "echo hello"
+        }
+      ],
+      "original_short_quote_available": true
+    },
+    {
+      "id": "16-lumen-landing",
+      "number": 16,
+      "title_zh": "Lumen 远程团队官网",
+      "title_en": "Lumen remote-team landing page",
+      "category": "product",
+      "difficulty": "easy",
+      "source_url": "https://github.com/dani-z/frontend-design-skill-benchmark",
+      "source_input_note_zh": "原题是无素材的 SaaS 落地页请求；原仓库 assets 里的截图是输出结果，不是应交给模型的输入。",
+      "adaptation_note_zh": "新增统一品牌文案与虚构团队示例，增加 CTA 演示反馈。原仓库的 frontend-design skill 属于另一个实验条件，本包不默默加载。",
+      "prompt_status": "package_authored_adaptation",
+      "source_starter_included": false,
+      "supplied_design_reference": false,
+      "starter": "plain-html",
+      "output_file": "artifact.html",
+      "plan_file": "plan.json",
+      "input_files": [
+        "assets/product.json"
+      ],
+      "material_requirement": "text_plus_fixed_fixture",
+      "rubric": [
+        "产品用途和主要入口清楚",
+        "提供功能与产品预览",
+        "CTA 和表单反馈可操作",
+        "内容一致、窄屏可读"
+      ],
+      "interaction_actions": [
+        {
+          "action": "click",
+          "target": "Try Lumen"
+        },
+        {
+          "action": "type",
+          "target": "email",
+          "text": "demo@example.com"
+        },
+        {
+          "action": "submit",
+          "target": "signup"
+        }
+      ],
+      "original_short_quote_available": false
+    },
+    {
+      "id": "17-forge-pricing",
+      "number": 17,
+      "title_zh": "Forge CLI 定价页",
+      "title_en": "Forge CLI pricing page",
+      "category": "product",
+      "difficulty": "easy",
+      "source_url": "https://github.com/dani-z/frontend-design-skill-benchmark",
+      "source_input_note_zh": "原题给出套餐名称与价格，没有输入设计图；截图是生成结果。",
+      "adaptation_note_zh": "新增功能表和本地套餐选择反馈，价格保持原题数值；没有加载原作者 skill。",
+      "prompt_status": "package_authored_adaptation",
+      "source_starter_included": false,
+      "supplied_design_reference": false,
+      "starter": "plain-html",
+      "output_file": "artifact.html",
+      "plan_file": "plan.json",
+      "input_files": [
+        "assets/pricing.json"
+      ],
+      "material_requirement": "text_plus_fixed_fixture",
+      "rubric": [
+        "价格与数据一致",
+        "功能差异便于比较",
+        "选择后确认内容正确",
+        "窄屏仍可理解各档区别"
+      ],
+      "interaction_actions": [
+        {
+          "action": "click",
+          "target": "Select Pro"
+        },
+        {
+          "action": "close",
+          "target": "confirmation dialog"
+        }
+      ],
+      "original_short_quote_available": false
+    },
+    {
+      "id": "18-metrics-dashboard",
+      "number": 18,
+      "title_zh": "经营指标面板",
+      "title_en": "Business metrics panel",
+      "category": "product",
+      "difficulty": "easy",
+      "source_url": "https://github.com/dani-z/frontend-design-skill-benchmark",
+      "source_input_note_zh": "原题要求生成单个 React JSX 组件，提供四个指标数值；无预置项目，但渲染 JSX 需要 React 宿主。",
+      "adaptation_note_zh": "统一版改为可独立渲染的 HTML 页面。新增固定趋势数据和时间范围；可选 React 空项目另附，需与 HTML 赛道分开比较。",
+      "prompt_status": "package_authored_adaptation",
+      "source_starter_included": false,
+      "supplied_design_reference": false,
+      "starter": "plain-html",
+      "output_file": "artifact.html",
+      "plan_file": "plan.json",
+      "input_files": [
+        "assets/metrics.json"
+      ],
+      "material_requirement": "text_plus_fixed_fixture",
+      "rubric": [
+        "四个当前指标符合输入",
+        "折线使用实际给定数组",
+        "流失率下降呈改善方向",
+        "时期切换及变化单位正确"
+      ],
+      "interaction_actions": [
+        {
+          "action": "click",
+          "target": "30 days"
+        },
+        {
+          "action": "click",
+          "target": "7 days"
+        }
+      ],
+      "original_short_quote_available": false
+    },
+    {
+      "id": "19-coffee-subscription",
+      "number": 19,
+      "title_zh": "咖啡订阅品牌页",
+      "title_en": "Coffee subscription landing page",
+      "category": "product",
+      "difficulty": "easy",
+      "source_url": "https://www.linkedin.com/posts/harshsoni-hs_i-just-built-a-landing-page-and-login-screen-activity-7453889705734979586-CiE3",
+      "source_input_note_zh": "作者原帖给出包含首屏、三档套餐与注册表单的短提示词，没有附带输入照片。",
+      "adaptation_note_zh": "新增虚构品牌、固定套餐、原创咖啡袋 SVG；防止模型各自编造产品价格或搜索不同照片。",
+      "prompt_status": "package_authored_adaptation",
+      "source_starter_included": false,
+      "supplied_design_reference": false,
+      "starter": "plain-html",
+      "output_file": "artifact.html",
+      "plan_file": "plan.json",
+      "input_files": [
+        "assets/coffee.json",
+        "assets/coffee-bag.svg"
+      ],
+      "material_requirement": "text_plus_fixed_fixture",
+      "rubric": [
+        "品牌和商品清楚",
+        "选择套餐更新价格与表单",
+        "输入校验和确认有效",
+        "使用相同商品素材且窄屏可读"
+      ],
+      "interaction_actions": [
+        {
+          "action": "click",
+          "target": "Choose Ritual"
+        },
+        {
+          "action": "type",
+          "target": "email",
+          "text": "demo@example.com"
+        },
+        {
+          "action": "submit",
+          "target": "signup"
+        }
+      ],
+      "original_short_quote_available": false
+    },
+    {
+      "id": "20-relationship-workbench",
+      "number": 20,
+      "title_zh": "关系图谱分析工作台",
+      "title_en": "Relationship analysis workbench",
+      "category": "product",
+      "difficulty": "hard",
+      "source_url": "https://www.bridgebench.ai/prompts/7262b063-142d-4266-a0c4-005e3c930e9c",
+      "source_input_note_zh": "原题是一套全栈 OSINT 平台说明，包含数据摄取、数据库、搜索、地图及实时来源；不能仅靠一句短 prompt 或零依赖 HTML 重现全部范围。",
+      "adaptation_note_zh": "主包缩小为前端工作台，提供虚构实体、关系、位置和事件。本包新增素材，不是原站真实数据；无数据库、账号、API 密钥要求。",
+      "prompt_status": "package_authored_adaptation",
+      "source_starter_included": false,
+      "supplied_design_reference": false,
+      "starter": "plain-html",
+      "output_file": "artifact.html",
+      "plan_file": "plan.json",
+      "input_files": [
+        "assets/investigation.json"
+      ],
+      "material_requirement": "text_plus_fixed_fixture",
+      "rubric": [
+        "四类视图使用同一数据源",
+        "实体选择跨视图联动",
+        "筛选及清除选择一致",
+        "虚构数据有明显标注，详情无错配"
+      ],
+      "interaction_actions": [
+        {
+          "action": "search",
+          "text": "Mira Chen"
+        },
+        {
+          "action": "click",
+          "target": "Mira Chen"
+        },
+        {
+          "action": "click",
+          "target": "Clear selection"
+        }
+      ],
+      "original_short_quote_available": false
+    }
+  ]
+}

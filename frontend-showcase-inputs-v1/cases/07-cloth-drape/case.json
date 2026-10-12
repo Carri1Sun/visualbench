@@ -1,0 +1,46 @@
+{
+  "id": "07-cloth-drape",
+  "number": 7,
+  "title_zh": "布料覆盖球体",
+  "title_en": "Cloth draping over a sphere",
+  "category": "simulation",
+  "difficulty": "hard",
+  "source_url": "https://goldiebench.com/tasks/cloth",
+  "source_input_note_zh": "公开页面给出一句布料模拟任务并称输出单 HTML；在 Agent Operating System 内运行，完整隐藏系统提示未公开。没有要求用户提供布料图片。",
+  "adaptation_note_zh": "使用本包统一系统说明，并新增可重复初始配置和拖拽、风力操作。不是对原站隐藏运行环境的精确复现。",
+  "prompt_status": "package_authored_adaptation",
+  "source_starter_included": false,
+  "supplied_design_reference": false,
+  "starter": "three-html",
+  "output_file": "artifact.html",
+  "plan_file": "plan.json",
+  "input_files": [
+    "assets/cloth-demo.json"
+  ],
+  "material_requirement": "text_plus_fixed_fixture",
+  "rubric": [
+    "布料实际变形并形成褶皱",
+    "不明显穿透球体",
+    "拖拽和风力改变布料状态",
+    "重置一致，数值稳定"
+  ],
+  "interaction_actions": [
+    {
+      "action": "wait",
+      "seconds": 6
+    },
+    {
+      "action": "drag",
+      "target": "cloth"
+    },
+    {
+      "action": "click",
+      "target": "Wind"
+    },
+    {
+      "action": "click",
+      "target": "Reset"
+    }
+  ],
+  "original_short_quote_available": true
+}

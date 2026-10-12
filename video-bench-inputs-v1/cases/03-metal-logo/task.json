@@ -1,0 +1,42 @@
+{
+  "id": "03-metal-logo",
+  "number": 3,
+  "title_zh": "金属 3D Logo",
+  "title_en": "Metal Logo",
+  "engine": "remotion",
+  "input_mode": "assets",
+  "source_kind": "published_prompt",
+  "source_url": "https://www.remotion.dev/prompts/spinning-glitching-svg-logo-turned-3d",
+  "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+  "duration_seconds": 8,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration_frames": 240,
+  "alpha_required": true,
+  "changes_from_source": "原帖包含多轮调色和导出反馈；统一为单次完整任务，换用原创 Logo。",
+  "checks": [
+    "Logo 轮廓和镂空保留",
+    "表现立体厚度与金属质感",
+    "透明视频有 alpha",
+    "同一帧重复渲染一致"
+  ],
+  "inputs": [
+    {
+      "path": "logo.svg",
+      "bytes": 244,
+      "sha256": "7c226d589d305e422684589071b77b8e58edf8490311cfa22a6d24bf50243c81"
+    }
+  ],
+  "brief_en": "Use logo.svg as the exact silhouette. Extrude or construct a three-dimensional silver metallic logo, light it so its surfaces and depth remain legible, and rotate it between front-facing oblique angles. Add brief deterministic glitch moments. Deliver both a transparent overlay.mov and a dark-background video.mp4 preview. Preserve the holes and negative space of the logo.",
+  "brief_zh": "使用 logo.svg 的准确轮廓，制作银色金属立体标志，让灯光清楚表现表面与厚度，进行正面附近的倾斜旋转，并加入短暂且可复现的故障效果。交付透明 overlay.mov 和深色背景预览 video.mp4，保留标志的镂空与负空间。",
+  "assets_ready": true,
+  "prompt_only": false,
+  "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+  "entrypoints": {
+    "en": "cases/03-metal-logo/prompt.en.md",
+    "zh": "cases/03-metal-logo/prompt.zh.md",
+    "task": "cases/03-metal-logo/task.json",
+    "assets": "cases/03-metal-logo/assets"
+  }
+}

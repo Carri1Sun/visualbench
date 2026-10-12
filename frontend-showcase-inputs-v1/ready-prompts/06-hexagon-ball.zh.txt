@@ -1,0 +1,40 @@
+你需要根据任务说明与给定输入文件，创作一个前端展示作品。自行作设计判断，不提出追问。
+
+交付两个文件：
+1. plan.json：简短的公开设计方案，包含 layout、visual_direction、interactions、implementation_choices、limitations。值为字符串或短数组，总长不超过约 160 个英文词。这是明确要求撰写的设计方案，不是私有推理过程。
+2. artifact.html：完整可运行 HTML，自己编写的 CSS 和 JS 内联，可引用提供的本地素材与可选 Three.js 运行库。不得加载外部网站、字体、图片、包、模型、音频或 API，不嵌入其他应用。
+
+可见界面文案使用英语。支持 1280×800 桌面视口，不裁切控件；产品页面还需适配 390×844。字体使用本地/系统字体栈，不强制特定美学。尽可能让控件可用键盘访问且有可见名称。没有后端、账户、密钥或在线数据源。
+
+题目素材位于 ./assets/，通过 HTTP 服务时可 fetch 本地 JSON。Three.js 的 import map 为：
+{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}
+只附带 OrbitControls 插件，其他功能使用核心库或自行内联实现。也可使用 Canvas、SVG、CSS、Web Audio 与程序化绘图。按题目要求标注虚构或示意数据。
+
+优先交付完成且可见的作品，不扩张任务范围。装饰性按钮或模拟不能宣称具有实际功能。近似方法与缺失要求写入 plan.json。在纯聊天模式中返回两个有文件名的代码块；在 coding agent 中将两个文件写入给定运行目录。
+
+TASK / 任务
+制作球在旋转六边形容器内弹跳的 Canvas 模拟。从 physics.json 加载初始设置。实现重力、能量损失，以及考虑墙面运动的碰撞响应，球应始终留在内部。按经过的时间推进，而非假设固定渲染帧率。提供暂停/继续、重置和转速滑块。重置恢复给定初始状态。可采用轻量数值近似，自行实现模拟，不加载物理引擎。自行设计场景与控制界面。
+
+INPUT FILE: assets/physics.json
+```json
+{
+  "provenance": "package-authored reproducibility fixture; units are pixels and seconds",
+  "hexagon_radius_px": 220,
+  "ball_radius_px": 14,
+  "gravity_px_s2": 600,
+  "rotation_rad_s": 0.45,
+  "restitution": 0.8,
+  "linear_damping_per_second": 0.15,
+  "initial_ball_offset_px": [
+    0,
+    -80
+  ],
+  "initial_velocity_px_s": [
+    110,
+    0
+  ],
+  "initial_hexagon_angle_rad": 0
+}
+```
+
+The input files above are supplied fixtures. In a file-based agent workspace they already exist; in chat output, preserve them in the named ./assets paths or inline their exact content.

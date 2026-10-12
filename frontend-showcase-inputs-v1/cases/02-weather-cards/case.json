@@ -1,0 +1,44 @@
+{
+  "id": "02-weather-cards",
+  "number": 2,
+  "title_zh": "四种天气动画卡片",
+  "title_en": "Animated weather cards",
+  "category": "visual",
+  "difficulty": "easy",
+  "source_url": "https://www.reddit.com/r/LocalLLaMA/comments/1jiqi81/new_deepseek_v3_vs_r1_first_is_v3/",
+  "source_input_note_zh": "公开帖给出单 HTML 的天气卡片提示词并展示模型结果；没有提供输入设计图。",
+  "adaptation_note_zh": "保留四种天气与深色背景；增加统一的暂停和重播操作，便于比较动效。",
+  "prompt_status": "package_authored_adaptation",
+  "source_starter_included": false,
+  "supplied_design_reference": false,
+  "starter": "plain-html",
+  "output_file": "artifact.html",
+  "plan_file": "plan.json",
+  "input_files": [],
+  "material_requirement": "text_only",
+  "rubric": [
+    "四种天气可辨认且动画各不相同",
+    "卡片视觉风格一致",
+    "暂停和重播有效",
+    "窄屏无水平溢出"
+  ],
+  "interaction_actions": [
+    {
+      "action": "wait",
+      "seconds": 3
+    },
+    {
+      "action": "click",
+      "target": "Pause"
+    },
+    {
+      "action": "click",
+      "target": "Resume"
+    },
+    {
+      "action": "click",
+      "target": "Replay"
+    }
+  ],
+  "original_short_quote_available": false
+}

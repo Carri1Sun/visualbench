@@ -1,0 +1,12 @@
+{
+  "core_authoring": "local Pi Agent",
+  "provider": "openai",
+  "model": "gpt-6.1-sol",
+  "thinking": "max",
+  "session_type": "fresh, --no-session",
+  "working_directory": "app/",
+  "scope": "showcase implementation; not a benchmark contestant run",
+  "core_generated": ["data helpers", "React application", "catalog and result polling", "dashboard", "task gallery", "result matrix", "result detail", "comparison", "protocol page"],
+  "handoff": "Pi authoring process stopped at the 45-minute deadline after React core files were produced. Integration, visual styles, new user requirements and browser verification were completed by Codex.",
+  "curator_integrations": ["trajectory downloads", "input audits", "manual observations", "Chinese status labels", "independent-origin preview", "video failure recovery", "playback speed", "single-track audio", "readability and responsive styles"]
+}

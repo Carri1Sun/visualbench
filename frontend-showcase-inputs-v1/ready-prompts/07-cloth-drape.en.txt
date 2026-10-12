@@ -1,0 +1,37 @@
+You are creating one frontend showcase artifact from a task brief and any supplied input files. Use your own design judgment. Do not ask follow-up questions.
+
+Return two deliverables:
+1. plan.json: a concise PUBLIC design proposal with these keys: layout, visual_direction, interactions, implementation_choices, limitations. Use strings or short arrays, at most 160 words total. This is an explicit design proposal, not a request for private reasoning.
+2. artifact.html: a complete, working HTML document. Put authored CSS and JS inline; referencing the supplied local assets and optional local Three.js runtime is allowed. Do not load external websites, fonts, images, packages, models, audio or APIs. Do not embed another app.
+
+Keep visible UI copy in English. Support a desktop viewport of 1280 x 800 and avoid clipping controls. Product pages must also adapt to 390 x 844. Choose fonts from local/system stacks; no particular aesthetic is imposed. Make controls keyboard reachable when practical, with visible labels. There is no backend, account, secret or network data source.
+
+Use ./assets/ for supplied case inputs. You can fetch local JSON when served over HTTP. If using Three.js, the included import map is:
+{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}
+Only OrbitControls is supplied as an addon. Other features must be implemented inline or from Three.js core. Canvas, SVG, CSS and Web Audio are also available. Procedural drawings are allowed. Clearly identify mock or illustrative data when the task requires it.
+
+Prefer a finished, visible artifact over adding scope. Do not report that controls or simulations work if they are merely decorative. Make any approximation or missing requirement explicit in plan.json. In a chat-only session return labeled code blocks for the two files. In a coding-agent session write the two files in the provided run workspace.
+
+TASK / 任务
+Simulate a square cloth falling onto a sphere and settling into visible folds. Use the supplied cloth-demo.json for the initial configuration. Model deformable cloth and sphere collision, not a flat plane with a looping wave animation. Support dragging part of the fabric, toggling wind and Reset. Keep the sphere and cloth in view; use at most a 32 by 32 particle grid so the demonstration remains lightweight. Choose fabric appearance, lighting and control layout yourself. Use Three.js for rendering and implement or describe the numerical method in your public design summary.
+
+INPUT FILE: assets/cloth-demo.json
+```json
+{
+  "provenance": "package-authored demonstration parameters",
+  "grid": 25,
+  "cloth_width": 3.4,
+  "initial_cloth_y": 2.2,
+  "sphere_radius": 0.85,
+  "sphere_center": [
+    0,
+    0.85,
+    0
+  ],
+  "floor_y": 0,
+  "gravity": 9.8,
+  "wind_enabled": false
+}
+```
+
+The input files above are supplied fixtures. In a file-based agent workspace they already exist; in chat output, preserve them in the named ./assets paths or inline their exact content.

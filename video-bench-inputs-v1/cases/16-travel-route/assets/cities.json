@@ -1,0 +1,23 @@
+{
+  "projection": "equirectangular",
+  "map_width": 1600,
+  "map_height": 800,
+  "formula": "x=(longitude+180)/360*1600; y=(90-latitude)/180*800",
+  "cities": [
+    {
+      "name": "Los Angeles",
+      "lat": 34.0522,
+      "lon": -118.2437
+    },
+    {
+      "name": "New York",
+      "lat": 40.7128,
+      "lon": -74.006
+    },
+    {
+      "name": "Paris",
+      "lat": 48.8566,
+      "lon": 2.3522
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "fictional": true,
+  "unit": "million copies",
+  "games": [
+    {
+      "rank": 1,
+      "name": "Aurora Fields",
+      "copies_millions": 84,
+      "cover": "covers/01.svg"
+    },
+    {
+      "rank": 2,
+      "name": "Pocket Planet",
+      "copies_millions": 72,
+      "cover": "covers/02.svg"
+    },
+    {
+      "rank": 3,
+      "name": "Skyline Circuit",
+      "copies_millions": 65,
+      "cover": "covers/03.svg"
+    },
+    {
+      "rank": 4,
+      "name": "Moss & Stone",
+      "copies_millions": 59,
+      "cover": "covers/04.svg"
+    },
+    {
+      "rank": 5,
+      "name": "Ocean Letters",
+      "copies_millions": 51,
+      "cover": "covers/05.svg"
+    },
+    {
+      "rank": 6,
+      "name": "Northbound",
+      "copies_millions": 46,
+      "cover": "covers/06.svg"
+    },
+    {
+      "rank": 7,
+      "name": "Signal Garden",
+      "copies_millions": 41,
+      "cover": "covers/07.svg"
+    },
+    {
+      "rank": 8,
+      "name": "Paper Kingdom",
+      "copies_millions": 36,
+      "cover": "covers/08.svg"
+    },
+    {
+      "rank": 9,
+      "name": "Orbit Workshop",
+      "copies_millions": 32,
+      "cover": "covers/09.svg"
+    },
+    {
+      "rank": 10,
+      "name": "Silver Forest",
+      "copies_millions": 28,
+      "cover": "covers/10.svg"
+    },
+    {
+      "rank": 11,
+      "name": "Dream Harbor",
+      "copies_millions": 25,
+      "cover": "covers/11.svg"
+    },
+    {
+      "rank": 12,
+      "name": "Tiny Atlas",
+      "copies_millions": 22,
+      "cover": "covers/12.svg"
+    },
+    {
+      "rank": 13,
+      "name": "Cloud Courier",
+      "copies_millions": 19,
+      "cover": "covers/13.svg"
+    },
+    {
+      "rank": 14,
+      "name": "Amber Valley",
+      "copies_millions": 16,
+      "cover": "covers/14.svg"
+    },
+    {
+      "rank": 15,
+      "name": "Neon Orchard",
+      "copies_millions": 13,
+      "cover": "covers/15.svg"
+    },
+    {
+      "rank": 16,
+      "name": "Quiet Machines",
+      "copies_millions": 11,
+      "cover": "covers/16.svg"
+    },
+    {
+      "rank": 17,
+      "name": "Moonlit Trails",
+      "copies_millions": 9,
+      "cover": "covers/17.svg"
+    },
+    {
+      "rank": 18,
+      "name": "Cobalt Quest",
+      "copies_millions": 7,
+      "cover": "covers/18.svg"
+    },
+    {
+      "rank": 19,
+      "name": "Echo Islands",
+      "copies_millions": 5,
+      "cover": "covers/19.svg"
+    },
+    {
+      "rank": 20,
+      "name": "Velvet Comet",
+      "copies_millions": 3,
+      "cover": "covers/20.svg"
+    }
+  ]
+}

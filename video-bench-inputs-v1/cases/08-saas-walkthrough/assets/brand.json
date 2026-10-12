@@ -1,0 +1,25 @@
+{
+  "name": "Waypoint",
+  "fictional": true,
+  "tagline": "Plan together. Go further.",
+  "url": "waypoint.example",
+  "colors": {
+    "forest": "#204F43",
+    "cream": "#F8F4EA",
+    "orange": "#FFAB6B",
+    "ink": "#172A25"
+  },
+  "audience": "Friends planning multi-day city trips",
+  "features": [
+    "Save places to a shared trip",
+    "Drag places between days",
+    "Share a view-only trip link"
+  ],
+  "claims_to_avoid": [
+    "Booking flights or hotels",
+    "Real-time navigation",
+    "User counts",
+    "Revenue or growth claims"
+  ],
+  "font": "DejaVu Sans"
+}

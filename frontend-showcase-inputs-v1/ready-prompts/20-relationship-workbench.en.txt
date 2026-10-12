@@ -1,0 +1,181 @@
+You are creating one frontend showcase artifact from a task brief and any supplied input files. Use your own design judgment. Do not ask follow-up questions.
+
+Return two deliverables:
+1. plan.json: a concise PUBLIC design proposal with these keys: layout, visual_direction, interactions, implementation_choices, limitations. Use strings or short arrays, at most 160 words total. This is an explicit design proposal, not a request for private reasoning.
+2. artifact.html: a complete, working HTML document. Put authored CSS and JS inline; referencing the supplied local assets and optional local Three.js runtime is allowed. Do not load external websites, fonts, images, packages, models, audio or APIs. Do not embed another app.
+
+Keep visible UI copy in English. Support a desktop viewport of 1280 x 800 and avoid clipping controls. Product pages must also adapt to 390 x 844. Choose fonts from local/system stacks; no particular aesthetic is imposed. Make controls keyboard reachable when practical, with visible labels. There is no backend, account, secret or network data source.
+
+Use ./assets/ for supplied case inputs. You can fetch local JSON when served over HTTP. If using Three.js, the included import map is:
+{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}
+Only OrbitControls is supplied as an addon. Other features must be implemented inline or from Three.js core. Canvas, SVG, CSS and Web Audio are also available. Procedural drawings are allowed. Clearly identify mock or illustrative data when the task requires it.
+
+Prefer a finished, visible artifact over adding scope. Do not report that controls or simulations work if they are merely decorative. Make any approximation or missing requirement explicit in plan.json. In a chat-only session return labeled code blocks for the two files. In a coding-agent session write the two files in the provided run workspace.
+
+TASK / 任务
+Create a relationship-analysis workbench using the supplied fictional investigation.json. Include an entity graph, a schematic geographic view, an event timeline, search/filter controls and an entity detail panel. Selecting an entity in any view should update the other views and show its relationships and events. Clear selection must restore the full dataset. Use local graph and map drawing; no map tiles, backend, live OSINT search or personal data lookup. Show a visible 'Synthetic demonstration data' label. Choose a coherent information architecture and visual design that remains usable at high information density.
+
+INPUT FILE: assets/investigation.json
+```json
+{
+  "provenance": "package-authored completely fictional dataset; not real OSINT",
+  "coordinate_system": "illustrative latitude/longitude; cities are real, entities/events fictional",
+  "entities": [
+    {
+      "id": "p1",
+      "type": "person",
+      "name": "Mira Chen",
+      "description": "Fictional program lead.",
+      "location_id": "l1"
+    },
+    {
+      "id": "p2",
+      "type": "person",
+      "name": "Leo Park",
+      "description": "Fictional design lead.",
+      "location_id": "l2"
+    },
+    {
+      "id": "o1",
+      "type": "organization",
+      "name": "Northline Studio",
+      "description": "Fictional design studio.",
+      "location_id": "l1"
+    },
+    {
+      "id": "o2",
+      "type": "organization",
+      "name": "Harbor Lab",
+      "description": "Fictional research group.",
+      "location_id": "l2"
+    },
+    {
+      "id": "a1",
+      "type": "project",
+      "name": "Project Lantern",
+      "description": "Fictional cross-team pilot.",
+      "location_id": "l3"
+    },
+    {
+      "id": "l1",
+      "type": "location",
+      "name": "Singapore",
+      "lat": 1.35,
+      "lon": 103.82
+    },
+    {
+      "id": "l2",
+      "type": "location",
+      "name": "Hong Kong",
+      "lat": 22.32,
+      "lon": 114.17
+    },
+    {
+      "id": "l3",
+      "type": "location",
+      "name": "San Francisco",
+      "lat": 37.77,
+      "lon": -122.42
+    }
+  ],
+  "relationships": [
+    {
+      "id": "r1",
+      "from": "p1",
+      "to": "o1",
+      "type": "works_at"
+    },
+    {
+      "id": "r2",
+      "from": "p2",
+      "to": "o2",
+      "type": "works_at"
+    },
+    {
+      "id": "r3",
+      "from": "o1",
+      "to": "a1",
+      "type": "partners_on"
+    },
+    {
+      "id": "r4",
+      "from": "o2",
+      "to": "a1",
+      "type": "partners_on"
+    },
+    {
+      "id": "r5",
+      "from": "p1",
+      "to": "p2",
+      "type": "collaborates_with"
+    },
+    {
+      "id": "r6",
+      "from": "o1",
+      "to": "l1",
+      "type": "located_in"
+    },
+    {
+      "id": "r7",
+      "from": "o2",
+      "to": "l2",
+      "type": "located_in"
+    },
+    {
+      "id": "r8",
+      "from": "a1",
+      "to": "l3",
+      "type": "demo_at"
+    }
+  ],
+  "events": [
+    {
+      "id": "e1",
+      "date": "2026-06-02",
+      "title": "Pilot kickoff",
+      "entity_ids": [
+        "p1",
+        "o1",
+        "a1"
+      ],
+      "location_id": "l1"
+    },
+    {
+      "id": "e2",
+      "date": "2026-06-16",
+      "title": "Design review",
+      "entity_ids": [
+        "p1",
+        "p2",
+        "o2",
+        "a1"
+      ],
+      "location_id": "l2"
+    },
+    {
+      "id": "e3",
+      "date": "2026-07-01",
+      "title": "Joint prototype",
+      "entity_ids": [
+        "o1",
+        "o2",
+        "a1"
+      ],
+      "location_id": "l1"
+    },
+    {
+      "id": "e4",
+      "date": "2026-07-20",
+      "title": "Demo session",
+      "entity_ids": [
+        "p1",
+        "p2",
+        "a1"
+      ],
+      "location_id": "l3"
+    }
+  ]
+}
+```
+
+The input files above are supplied fixtures. In a file-based agent workspace they already exist; in chat output, preserve them in the named ./assets paths or inline their exact content.

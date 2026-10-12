@@ -1,0 +1,38 @@
+{
+  "id": "18-metrics-dashboard",
+  "number": 18,
+  "title_zh": "经营指标面板",
+  "title_en": "Business metrics panel",
+  "category": "product",
+  "difficulty": "easy",
+  "source_url": "https://github.com/dani-z/frontend-design-skill-benchmark",
+  "source_input_note_zh": "原题要求生成单个 React JSX 组件，提供四个指标数值；无预置项目，但渲染 JSX 需要 React 宿主。",
+  "adaptation_note_zh": "统一版改为可独立渲染的 HTML 页面。新增固定趋势数据和时间范围；可选 React 空项目另附，需与 HTML 赛道分开比较。",
+  "prompt_status": "package_authored_adaptation",
+  "source_starter_included": false,
+  "supplied_design_reference": false,
+  "starter": "plain-html",
+  "output_file": "artifact.html",
+  "plan_file": "plan.json",
+  "input_files": [
+    "assets/metrics.json"
+  ],
+  "material_requirement": "text_plus_fixed_fixture",
+  "rubric": [
+    "四个当前指标符合输入",
+    "折线使用实际给定数组",
+    "流失率下降呈改善方向",
+    "时期切换及变化单位正确"
+  ],
+  "interaction_actions": [
+    {
+      "action": "click",
+      "target": "30 days"
+    },
+    {
+      "action": "click",
+      "target": "7 days"
+    }
+  ],
+  "original_short_quote_available": false
+}

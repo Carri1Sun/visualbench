@@ -1,0 +1,22 @@
+[
+  {
+    "id": "A",
+    "text": "Customer requests a refund 7 days after purchase. No security issue.",
+    "path": [
+      "start",
+      "security",
+      "refund",
+      "window",
+      "approve"
+    ]
+  },
+  {
+    "id": "B",
+    "text": "Customer reports an account takeover.",
+    "path": [
+      "start",
+      "security",
+      "urgent"
+    ]
+  }
+]

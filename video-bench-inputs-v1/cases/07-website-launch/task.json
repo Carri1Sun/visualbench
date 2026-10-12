@@ -1,0 +1,72 @@
+{
+  "id": "07-website-launch",
+  "number": 7,
+  "title_zh": "官网转产品发布视频",
+  "title_en": "Website Launch",
+  "engine": "remotion",
+  "input_mode": "assets",
+  "source_kind": "official_workflow_adaptation",
+  "source_url": "https://hyperframes.app/docs/3-guides/1-website-to-video",
+  "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+  "duration_seconds": 25,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration_frames": 750,
+  "alpha_required": false,
+  "changes_from_source": "将联网抓官网改为包内原创冻结网页；统一到 Remotion。",
+  "checks": [
+    "产品价值讲清",
+    "使用至少两个来源 UI 概念",
+    "品牌一致",
+    "无虚构用户数或产品能力"
+  ],
+  "inputs": [
+    {
+      "path": "brand.json",
+      "bytes": 574,
+      "sha256": "14eb3d8276079cb2078e1a1192f36534bc1dfbb69426a3a06bdfd6f90ecc9a98"
+    },
+    {
+      "path": "fonts/DejaVuSans.ttf",
+      "bytes": 759720,
+      "sha256": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280"
+    },
+    {
+      "path": "fonts/LICENSE.txt",
+      "bytes": 3859,
+      "sha256": "63d3ba759d12804c5b31a9d5940d855c1820d1f5999e6b0872eb1c7ff045fbc9"
+    },
+    {
+      "path": "logo.svg",
+      "bytes": 244,
+      "sha256": "7c226d589d305e422684589071b77b8e58edf8490311cfa22a6d24bf50243c81"
+    },
+    {
+      "path": "product.json",
+      "bytes": 574,
+      "sha256": "14eb3d8276079cb2078e1a1192f36534bc1dfbb69426a3a06bdfd6f90ecc9a98"
+    },
+    {
+      "path": "website/index.html",
+      "bytes": 2448,
+      "sha256": "9577016f653e0ad7224f9c751e8d1651edcab61a91b41e5b7ac08ed97c7050e0"
+    },
+    {
+      "path": "website.png",
+      "bytes": 112184,
+      "sha256": "e903e6ad268eabe86e3d7b583eb7a0d457e5618cfd11e5f87dc9455637f6c5bc"
+    }
+  ],
+  "brief_en": "Study website/index.html, website.png and product.json. Create a 25-second launch video for Waypoint, a fictional collaborative travel planner. Choose a clear story from problem to product to action. Reuse its identity and real supplied feature claims. Show at least two actual UI ideas from the source. End with \"Plan together. Go further.\" and \"waypoint.example\". The HTML is a frozen input, not a video solution.",
+  "brief_zh": "阅读 website/index.html、website.png 和 product.json，为虚构协作旅行工具 Waypoint 制作 25 秒发布视频。自行安排问题、产品、行动的叙事，沿用品牌并准确使用给定功能，呈现至少两个来源中的真实 UI 概念。结尾为 Plan together. Go further. 和 waypoint.example。HTML 是静态输入网站，不是视频答案。",
+  "assets_ready": true,
+  "prompt_only": false,
+  "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+  "entrypoints": {
+    "en": "cases/07-website-launch/prompt.en.md",
+    "zh": "cases/07-website-launch/prompt.zh.md",
+    "task": "cases/07-website-launch/task.json",
+    "assets": "cases/07-website-launch/assets"
+  }
+}

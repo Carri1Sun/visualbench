@@ -1,0 +1,43 @@
+{
+  "id": "09-solar-system",
+  "number": 9,
+  "title_zh": "交互式太阳系",
+  "title_en": "Interactive solar system",
+  "category": "simulation",
+  "difficulty": "hard",
+  "source_url": "https://www.bridgebench.ai/prompts/c95d2701-dd99-434c-8af0-f5caf03975dd",
+  "source_input_note_zh": "原题有很长的任务说明，允许 agent 使用文件、命令和浏览器工具，偏好 React/TypeScript/Vite；要求程序化/本地素材，不依赖天文 API。",
+  "adaptation_note_zh": "缩小为太阳与八大行星的教学演示，提供近似固定参数；不包含原题的全部轨道、音频或验证要求。",
+  "prompt_status": "package_authored_adaptation",
+  "source_starter_included": false,
+  "supplied_design_reference": false,
+  "starter": "three-html",
+  "output_file": "artifact.html",
+  "plan_file": "plan.json",
+  "input_files": [
+    "assets/planets.json"
+  ],
+  "material_requirement": "text_plus_fixed_fixture",
+  "rubric": [
+    "太阳和八大行星均可见",
+    "相对公转周期来自数据",
+    "选择行星显示正确事实",
+    "暂停、调速、重置有效"
+  ],
+  "interaction_actions": [
+    {
+      "action": "click",
+      "target": "Earth"
+    },
+    {
+      "action": "set",
+      "target": "days per second",
+      "value": 20
+    },
+    {
+      "action": "click",
+      "target": "Pause"
+    }
+  ],
+  "original_short_quote_available": false
+}

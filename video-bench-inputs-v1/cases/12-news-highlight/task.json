@@ -1,0 +1,57 @@
+{
+  "id": "12-news-highlight",
+  "number": 12,
+  "title_zh": "新闻截图动态划重点",
+  "title_en": "News Highlight",
+  "engine": "remotion",
+  "input_mode": "assets",
+  "source_kind": "published_prompt",
+  "source_url": "https://www.remotion.dev/prompts/news-article-headline-highlight",
+  "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+  "duration_seconds": 8,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration_frames": 240,
+  "alpha_required": false,
+  "changes_from_source": "原帖为私人桌面新闻截图；替换为原创虚构新闻 PNG，附强调词，不提供坐标答案。",
+  "checks": [
+    "两个强调词均准确定位",
+    "标记在字后方",
+    "镜头运动轻微",
+    "正文截图保持原内容"
+  ],
+  "inputs": [
+    {
+      "path": "article.png",
+      "bytes": 130822,
+      "sha256": "0ebab9a1007ec4372be7b697e6e7a5f3737cfab82f9234c5162be261bf2095fb"
+    },
+    {
+      "path": "fonts/DejaVuSans.ttf",
+      "bytes": 759720,
+      "sha256": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280"
+    },
+    {
+      "path": "fonts/LICENSE.txt",
+      "bytes": 3859,
+      "sha256": "63d3ba759d12804c5b31a9d5940d855c1820d1f5999e6b0872eb1c7ff045fbc9"
+    },
+    {
+      "path": "highlights.json",
+      "bytes": 106,
+      "sha256": "a056afceb62af705f04db3e39124898692cc56da23192bb0293458baf41c017b"
+    }
+  ],
+  "brief_en": "Use article.png unchanged as the source image. Build an 8-second editorial insert on a white background: initial blur resolves, the article moves slightly toward the camera with subtle 3D rotation, and a rough marker sweeps behind the exact phrases in highlights.json. Infer their locations from the screenshot or OCR; the marker must not cover the letter strokes.",
+  "brief_zh": "使用 article.png 原图制作 8 秒新闻插片：在白色背景上由模糊变清晰，文章缓慢推近并轻微三维旋转，随后手绘感荧光笔划过 highlights.json 中的准确词组。通过截图或 OCR 找到位置，标记不能遮挡字形。",
+  "assets_ready": true,
+  "prompt_only": false,
+  "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+  "entrypoints": {
+    "en": "cases/12-news-highlight/prompt.en.md",
+    "zh": "cases/12-news-highlight/prompt.zh.md",
+    "task": "cases/12-news-highlight/task.json",
+    "assets": "cases/12-news-highlight/assets"
+  }
+}

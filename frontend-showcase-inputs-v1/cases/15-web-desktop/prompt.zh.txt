@@ -1,0 +1,1 @@
+制作浏览器桌面，包含壁纸、启动 Dock 和三个可用应用：Notes、Paint、模拟 Terminal。窗口可打开、聚焦、拖动、缩放、最小化和关闭，保留当前状态。Notes 支持编辑文字并保存至 localStorage；Paint 提供画笔颜色、宽度和清空；Terminal 仅模拟 help、echo、clear，不执行系统命令。提供清除演示状态的 Reset desktop。自行选择一致的原创视觉风格，应用提供有用初始内容，使截图能表达桌面的用途。

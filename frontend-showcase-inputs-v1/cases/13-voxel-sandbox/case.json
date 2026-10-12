@@ -1,0 +1,43 @@
+{
+  "id": "13-voxel-sandbox",
+  "number": 13,
+  "title_zh": "迷你方块沙盒",
+  "title_en": "Mini voxel sandbox",
+  "category": "interactive",
+  "difficulty": "hard",
+  "source_url": "https://goldiebench.com/tasks/voxelcraft",
+  "source_input_note_zh": "公开任务要求 Minecraft 风格的放置/破坏方块及昼夜；没有用户设计图，完整 Agent OS 系统环境未公开。",
+  "adaptation_note_zh": "限定小型世界、原创程序化材质；增加视口内操作反馈。",
+  "prompt_status": "package_authored_adaptation",
+  "source_starter_included": false,
+  "supplied_design_reference": false,
+  "starter": "three-html",
+  "output_file": "artifact.html",
+  "plan_file": "plan.json",
+  "input_files": [],
+  "material_requirement": "text_only",
+  "rubric": [
+    "世界主体正常渲染",
+    "可以放置和删除被指向方块",
+    "材料选择真正生效",
+    "输入、指针锁定退出和重置有效"
+  ],
+  "interaction_actions": [
+    {
+      "action": "key_hold",
+      "key": "KeyW",
+      "seconds": 1
+    },
+    {
+      "action": "click",
+      "target": "targeted block",
+      "purpose": "remove"
+    },
+    {
+      "action": "right_click",
+      "target": "targeted face",
+      "purpose": "place"
+    }
+  ],
+  "original_short_quote_available": true
+}

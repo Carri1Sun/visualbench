@@ -1,0 +1,57 @@
+You are creating one frontend showcase artifact from a task brief and any supplied input files. Use your own design judgment. Do not ask follow-up questions.
+
+Return two deliverables:
+1. plan.json: a concise PUBLIC design proposal with these keys: layout, visual_direction, interactions, implementation_choices, limitations. Use strings or short arrays, at most 160 words total. This is an explicit design proposal, not a request for private reasoning.
+2. artifact.html: a complete, working HTML document. Put authored CSS and JS inline; referencing the supplied local assets and optional local Three.js runtime is allowed. Do not load external websites, fonts, images, packages, models, audio or APIs. Do not embed another app.
+
+Keep visible UI copy in English. Support a desktop viewport of 1280 x 800 and avoid clipping controls. Product pages must also adapt to 390 x 844. Choose fonts from local/system stacks; no particular aesthetic is imposed. Make controls keyboard reachable when practical, with visible labels. There is no backend, account, secret or network data source.
+
+Use ./assets/ for supplied case inputs. You can fetch local JSON when served over HTTP. If using Three.js, the included import map is:
+{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}
+Only OrbitControls is supplied as an addon. Other features must be implemented inline or from Three.js core. Canvas, SVG, CSS and Web Audio are also available. Procedural drawings are allowed. Clearly identify mock or illustrative data when the task requires it.
+
+Prefer a finished, visible artifact over adding scope. Do not report that controls or simulations work if they are merely decorative. Make any approximation or missing requirement explicit in plan.json. In a chat-only session return labeled code blocks for the two files. In a coding-agent session write the two files in the provided run workspace.
+
+TASK / 任务
+Create an arena that compares bubble sort, insertion sort, merge sort and quicksort using the same starting array from numbers.json. Animate each algorithm in its own labeled panel with bars showing current values. Add Run all, Pause/Resume, Reset and a common speed control. Show actual comparison and array-write counters; define the counting conventions in the UI. Implement the algorithms rather than replacing them with Array.sort or a prerecorded animation. Preserve duplicate values and use an independent state for every panel. Choose the page's typography, palette and layout yourself.
+
+INPUT FILE: assets/numbers.json
+```json
+{
+  "provenance": "package-authored fixed fixture",
+  "values": [
+    42,
+    8,
+    57,
+    23,
+    16,
+    64,
+    31,
+    8,
+    49,
+    12,
+    73,
+    28,
+    5,
+    61,
+    37,
+    19,
+    46,
+    2,
+    54,
+    33,
+    11,
+    67,
+    26,
+    40
+  ],
+  "algorithms": [
+    "bubble",
+    "insertion",
+    "merge",
+    "quick"
+  ]
+}
+```
+
+The input files above are supplied fixtures. In a file-based agent workspace they already exist; in chat output, preserve them in the named ./assets paths or inline their exact content.

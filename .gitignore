@@ -1,0 +1,15 @@
+.DS_Store
+node_modules/
+app/dist/
+app/pi-build.log
+app/BUILD-BRIEF.md
+app/qa/
+.runtime/
+.remotion/
+runs/
+results/
+data/
+bench/browser-space.json
+bench/*.lock
+__pycache__/
+*.pyc

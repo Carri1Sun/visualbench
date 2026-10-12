@@ -1,0 +1,35 @@
+{
+  "provenance": "package-authored fixed fixture",
+  "values": [
+    42,
+    8,
+    57,
+    23,
+    16,
+    64,
+    31,
+    8,
+    49,
+    12,
+    73,
+    28,
+    5,
+    61,
+    37,
+    19,
+    46,
+    2,
+    54,
+    33,
+    11,
+    67,
+    26,
+    40
+  ],
+  "algorithms": [
+    "bubble",
+    "insertion",
+    "merge",
+    "quick"
+  ]
+}

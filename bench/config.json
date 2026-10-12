@@ -1,0 +1,65 @@
+{
+  "round_id": "2026-10-03-full-zh-max",
+  "repetitions": 3,
+  "language": "zh",
+  "variant": "full",
+  "generation_timeout_seconds": 2700,
+  "render_timeout_seconds": 1800,
+  "workers_per_model": 3,
+  "render_workers": 1,
+  "models": [
+    {
+      "id": "deepseek-flash",
+      "label": "DeepSeek Flash",
+      "provider": "deepseek",
+      "model": "deepseek-flash",
+      "thinking": "max",
+      "image_input": true
+    },
+    {
+      "id": "glm-5.3",
+      "label": "GLM 5.3",
+      "provider": "zai-coding-cn",
+      "model": "glm-5.3",
+      "thinking": "max",
+      "image_input": false
+    },
+    {
+      "id": "glm-5.3-flash",
+      "label": "GLM 5.3 Flash",
+      "provider": "zai-coding-cn",
+      "model": "glm-5.3-flash",
+      "thinking": "max",
+      "image_input": true
+    },
+    {
+      "id": "gpt-6.1-sol",
+      "label": "GPT 6.1 Sol",
+      "provider": "openai",
+      "model": "gpt-6.1-sol",
+      "thinking": "high",
+      "image_input": true
+    },
+    {
+      "id": "gpt-6-astra",
+      "label": "GPT 6 Astra",
+      "provider": "openai",
+      "model": "gpt-6-astra",
+      "thinking": "high",
+      "image_input": true
+    }
+  ],
+  "thinking_policy": {
+    "event_id": "thinking-2026-10-03T12-09-20-406654+00-00",
+    "changed_at": "2026-10-03T12:09:20.406654+00:00",
+    "initial": "max",
+    "changed_models": [
+      "gpt-6-astra",
+      "gpt-6.1-sol"
+    ],
+    "remaining": "high",
+    "scope": "not_started_at_change",
+    "started_runs": "retain frozen request and session setting",
+    "note": "User requested high for remaining Astra and Sol runs. This round contains max and high samples; inspect each run separately."
+  }
+}

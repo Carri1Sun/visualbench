@@ -1,0 +1,27 @@
+/* Design tokens — single source for colour, type, radius and elevation. */
+:root {
+  --red: #ea383b;
+  --red-soft: #fff2f1;
+  --ink: #202124;
+  --ink-strong: #15171b;
+  --text: #3c4149;
+  --muted: #6b7079;          /* 4.5:1 on white */
+  --faint: #8a8f99;          /* decorative/meta only, ≥3:1 */
+  --border: #e9ebef;
+  --border-strong: #dfe3e9;
+  --soft: #f6f7f9;
+  --surface: #ffffff;
+  --neutral-chip: #eef0f3;   /* model identity — never a status colour */
+  --green: #2f8f6f;
+  --blue: #3f6fb5;
+  --amber: #a86a12;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  --shadow-sm: 0 1px 2px #1520300d;
+  --shadow-lg: 0 24px 60px #17223b2e;
+
+  --font-sans: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}

@@ -1,0 +1,36 @@
+{
+  "id": "01-motion-showreel",
+  "number": 1,
+  "title_zh": "15 秒动效作品集",
+  "title_en": "Motion Showreel",
+  "engine": "remotion",
+  "input_mode": "prompt_only",
+  "source_kind": "published_prompt",
+  "source_url": "https://x.com/ajith_io/status/2103449416325890146",
+  "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+  "duration_seconds": 15,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration_frames": 450,
+  "alpha_required": false,
+  "changes_from_source": "原作者短提示词改写；固定尺寸、时长及无外部素材基线。",
+  "checks": [
+    "15 秒完整作品",
+    "至少 4 个可辨识的视觉段落",
+    "段落之间有连贯转场",
+    "不出现 starter 占位画面"
+  ],
+  "inputs": [],
+  "brief_en": "Create a 15-second motion-design showreel for a fictional designer portfolio. Invent the visual direction, typography, geometric imagery and connected scene transitions. Show range while keeping a coherent identity. Use code-drawn visuals. A silent film is acceptable; do not spend time sourcing music.",
+  "brief_zh": "制作一段 15 秒虚构设计师作品集动效。自行决定视觉方向、字体排印、几何画面和连贯转场，兼顾变化和整体风格。图形用代码绘制。允许无声，不需要寻找音乐。",
+  "assets_ready": true,
+  "prompt_only": true,
+  "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+  "entrypoints": {
+    "en": "cases/01-motion-showreel/prompt.en.md",
+    "zh": "cases/01-motion-showreel/prompt.zh.md",
+    "task": "cases/01-motion-showreel/task.json",
+    "assets": "cases/01-motion-showreel/assets"
+  }
+}

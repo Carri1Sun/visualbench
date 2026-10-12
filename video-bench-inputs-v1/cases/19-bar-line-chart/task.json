@@ -1,0 +1,42 @@
+{
+  "id": "19-bar-line-chart",
+  "number": 19,
+  "title_zh": "销售额与转化率双轴动画",
+  "title_en": "Bar Line Chart",
+  "engine": "remotion",
+  "input_mode": "assets",
+  "source_kind": "published_prompt",
+  "source_url": "https://www.remotion.dev/prompts/bar-line-chart-combined",
+  "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+  "duration_seconds": 12,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration_frames": 360,
+  "alpha_required": false,
+  "changes_from_source": "沿用原题的六个月数值，将数据移入 JSON，延长阅读时间。",
+  "checks": [
+    "六个月数据准确",
+    "双轴单位清晰",
+    "动画先后清楚",
+    "六月变化表达正确"
+  ],
+  "inputs": [
+    {
+      "path": "monthly.json",
+      "bytes": 297,
+      "sha256": "c62799789bed2c102b46491c7157456adc7231ae0e68501927a2283df67724c3"
+    }
+  ],
+  "brief_en": "Use monthly.json. Make a 12-second chart sequence: revenue bars grow from the baseline month by month; the conversion-rate line is then drawn over them with a moving tip marker. Give dollars and percent separate labeled scales. Finish by emphasizing June and the change from January. Do not distort scale to exaggerate the result.",
+  "brief_zh": "使用 monthly.json 制作 12 秒图表动画：收入柱从基线逐月升起，随后绘制转化率折线与移动端点。美元和百分比分别使用清晰标注的坐标轴，结尾强调六月以及相对一月的变化，不通过歪曲比例夸大结果。",
+  "assets_ready": true,
+  "prompt_only": false,
+  "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+  "entrypoints": {
+    "en": "cases/19-bar-line-chart/prompt.en.md",
+    "zh": "cases/19-bar-line-chart/prompt.zh.md",
+    "task": "cases/19-bar-line-chart/task.json",
+    "assets": "cases/19-bar-line-chart/assets"
+  }
+}

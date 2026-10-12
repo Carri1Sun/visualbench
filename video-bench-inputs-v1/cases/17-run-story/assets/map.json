@@ -1,0 +1,10 @@
+{
+  "west": -122.46,
+  "east": -122.41,
+  "south": 37.755,
+  "north": 37.79,
+  "width": 1000,
+  "height": 1000,
+  "projection": "equirectangular-local",
+  "fictional": true
+}

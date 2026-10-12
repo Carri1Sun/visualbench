@@ -1,0 +1,52 @@
+{
+  "id": "17-run-story",
+  "number": 17,
+  "title_zh": "GPX 跑步回放",
+  "title_en": "Run Story",
+  "engine": "remotion",
+  "input_mode": "assets",
+  "source_kind": "published_prompt",
+  "source_url": "https://www.remotion.dev/prompts/strava-run-visualized",
+  "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+  "duration_seconds": 20,
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "duration_frames": 600,
+  "alpha_required": false,
+  "changes_from_source": "原作者私人 GPX 未提供；使用原创模拟轨迹及匹配的离线地图。",
+  "checks": [
+    "读取 GPX 点和时间",
+    "轨迹与标记同步",
+    "指标来自输入数据",
+    "总结正确"
+  ],
+  "inputs": [
+    {
+      "path": "local-map.svg",
+      "bytes": 1334,
+      "sha256": "f5e594cad9a24384129d954c3d5562accb5bed9b983cdd7dd8dc23504fb6fe84"
+    },
+    {
+      "path": "map.json",
+      "bytes": 175,
+      "sha256": "8c30a2efa234ce9cd67004f42c58ece35b53104a87cbfbcdf03ddf8360be294f"
+    },
+    {
+      "path": "run.gpx",
+      "bytes": 12269,
+      "sha256": "3233a65947899d0a83cbaff4f641c8f6349c617b800a9bc9c1566c3b8ea3ab5a"
+    }
+  ],
+  "brief_en": "Read run.gpx and map.json. Make a 20-second vertical story replaying the complete synthetic run in compressed time. Draw the route on local-map.svg, move a runner marker, and update elapsed time, cumulative distance and average pace from the GPX. Clearly distinguish real run elapsed time from video time. End with an accurate summary.",
+  "brief_zh": "读取 run.gpx 和 map.json，制作 20 秒竖屏回放，将完整模拟跑步过程压缩播放。在 local-map.svg 上绘制路线、移动跑者标记，并从 GPX 更新运动用时、累计距离和平均配速。明确区分运动时间与视频时间，结尾给出准确总结。",
+  "assets_ready": true,
+  "prompt_only": false,
+  "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+  "entrypoints": {
+    "en": "cases/17-run-story/prompt.en.md",
+    "zh": "cases/17-run-story/prompt.zh.md",
+    "task": "cases/17-run-story/task.json",
+    "assets": "cases/17-run-story/assets"
+  }
+}

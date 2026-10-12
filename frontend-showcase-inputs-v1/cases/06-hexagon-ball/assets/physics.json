@@ -1,0 +1,18 @@
+{
+  "provenance": "package-authored reproducibility fixture; units are pixels and seconds",
+  "hexagon_radius_px": 220,
+  "ball_radius_px": 14,
+  "gravity_px_s2": 600,
+  "rotation_rad_s": 0.45,
+  "restitution": 0.8,
+  "linear_damping_per_second": 0.15,
+  "initial_ball_offset_px": [
+    0,
+    -80
+  ],
+  "initial_velocity_px_s": [
+    110,
+    0
+  ],
+  "initial_hexagon_angle_rad": 0
+}

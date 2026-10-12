@@ -1,0 +1,1 @@
+Design a dashboard for DAU, revenue, churn and NPS with trend sparklines.

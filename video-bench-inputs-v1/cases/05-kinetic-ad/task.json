@@ -1,0 +1,52 @@
+{
+  "id": "05-kinetic-ad",
+  "number": 5,
+  "title_zh": "卡点文字广告",
+  "title_en": "Kinetic Ad",
+  "engine": "remotion",
+  "input_mode": "assets",
+  "source_kind": "published_prompt",
+  "source_url": "https://www.remotion.dev/prompts/the-kinetic-marketing",
+  "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+  "duration_seconds": 15,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration_frames": 450,
+  "alpha_required": false,
+  "changes_from_source": "补充原创品牌、固定文案及原创 140 BPM 音频。",
+  "checks": [
+    "全部文案出现",
+    "文字动态排版",
+    "主要变化贴合音乐",
+    "CTA 停留不少于 1.5 秒"
+  ],
+  "inputs": [
+    {
+      "path": "copy.json",
+      "bytes": 244,
+      "sha256": "940c26bc374fffb7a5d07e06993b63ebe979842ba9c8699524174fd75a213346"
+    },
+    {
+      "path": "music.json",
+      "bytes": 572,
+      "sha256": "3ac6cf42271d6af6a6eba2be9a2475b9ff934c31ee4df9edf3fbfb7bef27b4de"
+    },
+    {
+      "path": "music.wav",
+      "bytes": 1323044,
+      "sha256": "3d69f5f6c8a59fb942a25035a7e788a80ed839f716bbaee9b1331d3273ad98a7"
+    }
+  ],
+  "brief_en": "Build a 15-second typography-led ad for the fictional developer tool Trace from copy.json. Incoming words push or reorganize existing words. Use coherent elastic motion and at least two connected mask transitions. Use music.wav (140 BPM). Every required copy line must remain readable; make the final CTA legible for at least 1.5 seconds.",
+  "brief_zh": "根据 copy.json 为虚构开发者工具 Trace 制作 15 秒文字广告。新文字进入时推动或重排旧文字，使用统一的弹性运动和至少两次连贯遮罩转场。使用 140 BPM 的 music.wav，保证所有指定文案能读清，结尾 CTA 至少停留 1.5 秒。",
+  "assets_ready": true,
+  "prompt_only": false,
+  "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+  "entrypoints": {
+    "en": "cases/05-kinetic-ad/prompt.en.md",
+    "zh": "cases/05-kinetic-ad/prompt.zh.md",
+    "task": "cases/05-kinetic-ad/task.json",
+    "assets": "cases/05-kinetic-ad/assets"
+  }
+}

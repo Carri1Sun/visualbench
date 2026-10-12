@@ -1,0 +1,44 @@
+{
+  "id": "19-coffee-subscription",
+  "number": 19,
+  "title_zh": "咖啡订阅品牌页",
+  "title_en": "Coffee subscription landing page",
+  "category": "product",
+  "difficulty": "easy",
+  "source_url": "https://www.linkedin.com/posts/harshsoni-hs_i-just-built-a-landing-page-and-login-screen-activity-7453889705734979586-CiE3",
+  "source_input_note_zh": "作者原帖给出包含首屏、三档套餐与注册表单的短提示词，没有附带输入照片。",
+  "adaptation_note_zh": "新增虚构品牌、固定套餐、原创咖啡袋 SVG；防止模型各自编造产品价格或搜索不同照片。",
+  "prompt_status": "package_authored_adaptation",
+  "source_starter_included": false,
+  "supplied_design_reference": false,
+  "starter": "plain-html",
+  "output_file": "artifact.html",
+  "plan_file": "plan.json",
+  "input_files": [
+    "assets/coffee.json",
+    "assets/coffee-bag.svg"
+  ],
+  "material_requirement": "text_plus_fixed_fixture",
+  "rubric": [
+    "品牌和商品清楚",
+    "选择套餐更新价格与表单",
+    "输入校验和确认有效",
+    "使用相同商品素材且窄屏可读"
+  ],
+  "interaction_actions": [
+    {
+      "action": "click",
+      "target": "Choose Ritual"
+    },
+    {
+      "action": "type",
+      "target": "email",
+      "text": "demo@example.com"
+    },
+    {
+      "action": "submit",
+      "target": "signup"
+    }
+  ],
+  "original_short_quote_available": false
+}

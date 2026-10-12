@@ -1,0 +1,1 @@
+Design a developer-focused Forge CLI pricing page with free, $19 and $79 monthly tiers.

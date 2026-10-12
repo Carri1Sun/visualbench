@@ -1,0 +1,16 @@
+{
+  "name": "video-bench-remotion-starter", "version": "1.0.0", "private": true, "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.tsx",
+    "render": "remotion render src/index.tsx Main out/video.mp4 --codec=h264",
+    "render:alpha": "remotion render src/index.tsx Main out/overlay.mov --codec=prores --prores-profile=4444 --pixel-format=yuva444p10le --image-format=png",
+    "still": "remotion still src/index.tsx Main out/poster.png --frame=0",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "remotion": "4.0.532", "@remotion/cli": "4.0.532", "@remotion/media-utils": "4.0.532", "@remotion/captions": "4.0.532", "@remotion/three": "4.0.532",
+    "react": "19.0.0", "react-dom": "19.0.0", "three": "0.174.0", "@react-three/fiber": "9.1.2"
+  },
+  "devDependencies": {"typescript":"5.8.3","@types/react":"19.0.12","@types/react-dom":"19.0.4","@types/three":"0.174.0"},
+  "engines": {"node": ">=22"}
+}

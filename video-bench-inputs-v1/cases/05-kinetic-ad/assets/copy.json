@@ -1,0 +1,13 @@
+{
+  "product": "Trace",
+  "fictional": true,
+  "lines": [
+    "Ship with clarity.",
+    "Find the bottleneck.",
+    "See what changed.",
+    "Fix it. Move on."
+  ],
+  "cta": "Try Trace",
+  "url": "trace.example",
+  "no_factual_metrics": true
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "case_id": "04-watch-movement",
+    "path": "cases/04-watch-movement/assets/movement-demo.json",
+    "origin": "package_authored_fixture",
+    "role": "input",
+    "note": "NASA-based approximate periods are cited within planets.json; other data and SVG assets are synthetic/original."
+  },
+  {
+    "case_id": "05-zen-garden",
+    "path": "cases/05-zen-garden/assets/phrases.json",
+    "origin": "package_authored_fixture",
+    "role": "input",
+    "note": "NASA-based approximate periods are cited within planets.json; other data and SVG assets are synthetic/original."
+  },
+  {
+    "case_id": "06-hexagon-ball",
+    "path": "cases/06-hexagon-ball/assets/physics.json",
+    "origin": "package_authored_fixture",
+    "role": "input",
+    "note": "NASA-based approximate periods are cited within planets.json; other data and SVG assets are synthetic/original."
+  },
+  {
+    "case_id": "07-cloth-drape",
+    "path": "cases/07-cloth-drape/assets/cloth-demo.json",
+    "origin": "package_authored_fixture",
+    "role": "input",
+    "note": "NASA-based approximate periods are cited within planets.json; other data and SVG assets are synthetic/original."
+  },
+  {
+    "case_id": "09-solar-system",
+    "path": "cases/09-solar-system/assets/planets.json",
+    "origin": "package_authored_fixture",
+    "role": "input",
+    "note": "NASA-based approximate periods are cited within planets.json; other data and SVG assets are synthetic/original."
+  },
+  {
+    "case_id": "10-sorting-arena",
+    "path": "cases/10-sorting-arena/assets/numbers.json",
+    "origin": "package_authored_fixture",
+    "role": "input",
+    "note": "NASA-based approximate periods are cited within planets.json; other data and SVG assets are synthetic/original."
+  },
+  {
+    "case_id": "14-cd-player",
+    "path": "cases/14-cd-player/assets/albums.json",
+    "origin": "package_authored_fixture",
+    "role": "input",
+    "note": "NASA-based approximate periods are cited within planets.json; other data and SVG assets are synthetic/original."
+  },
+  {
+    "case_id": "14-cd-player",
+    "path": "cases/14-cd-player/assets/cover-orbit.svg",
+    "origin": "package_authored_fixture",
+    "role": "input",
+    "note": "NASA-based approximate periods are cited within planets.json; other data and SVG assets are synthetic/original."
+  },
+  {
+    "case_id": "14-cd-player",
+    "path": "cases/14-cd-player/assets/cover-afterglow.svg",
+    "origin": "package_authored_fixture",
+    "role": "input",
+    "note": "NASA-based approximate periods are cited within planets.json; other data and SVG assets are synthetic/original."
+  },
+  {
+    "case_id": "14-cd-player",
+    "path": "cases/14-cd-player/assets/cover-tidal.svg",
+    "origin": "package_authored_fixture",
+    "role": "input",
+    "note": "NASA-based approximate periods are cited within planets.json; other data and SVG assets are synthetic/original."
+  },
+  {
+    "case_id": "16-lumen-landing",
+    "path": "cases/16-lumen-landing/assets/product.json",
+    "origin": "package_authored_fixture",
+    "role": "input",
+    "note": "NASA-based approximate periods are cited within planets.json; other data and SVG assets are synthetic/original."
+  },
+  {
+    "case_id": "17-forge-pricing",
+    "path": "cases/17-forge-pricing/assets/pricing.json",
+    "origin": "package_authored_fixture",
+    "role": "input",
+    "note": "NASA-based approximate periods are cited within planets.json; other data and SVG assets are synthetic/original."
+  },
+  {
+    "case_id": "18-metrics-dashboard",
+    "path": "cases/18-metrics-dashboard/assets/metrics.json",
+    "origin": "package_authored_fixture",
+    "role": "input",
+    "note": "NASA-based approximate periods are cited within planets.json; other data and SVG assets are synthetic/original."
+  },
+  {
+    "case_id": "19-coffee-subscription",
+    "path": "cases/19-coffee-subscription/assets/coffee.json",
+    "origin": "package_authored_fixture",
+    "role": "input",
+    "note": "NASA-based approximate periods are cited within planets.json; other data and SVG assets are synthetic/original."
+  },
+  {
+    "case_id": "19-coffee-subscription",
+    "path": "cases/19-coffee-subscription/assets/coffee-bag.svg",
+    "origin": "package_authored_fixture",
+    "role": "input",
+    "note": "NASA-based approximate periods are cited within planets.json; other data and SVG assets are synthetic/original."
+  },
+  {
+    "case_id": "20-relationship-workbench",
+    "path": "cases/20-relationship-workbench/assets/investigation.json",
+    "origin": "package_authored_fixture",
+    "role": "input",
+    "note": "NASA-based approximate periods are cited within planets.json; other data and SVG assets are synthetic/original."
+  }
+]

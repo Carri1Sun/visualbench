@@ -1,0 +1,42 @@
+{
+  "id": "11-retro-racer",
+  "number": 11,
+  "title_zh": "复古霓虹赛车",
+  "title_en": "Retro neon racer",
+  "category": "interactive",
+  "difficulty": "medium",
+  "source_url": "https://goldiebench.com/tasks/outrun",
+  "source_input_note_zh": "公开页面给出一句伪 3D 驾驶游戏任务；Agent OS 的完整系统模板没有公开，没有图片输入要求。",
+  "adaptation_note_zh": "新增固定操控、自动演示和回放规则；不复制原游戏素材或原站模型成品。",
+  "prompt_status": "package_authored_adaptation",
+  "source_starter_included": false,
+  "supplied_design_reference": false,
+  "starter": "plain-html",
+  "output_file": "artifact.html",
+  "plan_file": "plan.json",
+  "input_files": [],
+  "material_requirement": "text_only",
+  "rubric": [
+    "公路透视和速度感成立",
+    "输入实际改变车辆状态",
+    "速度距离由运行状态产生",
+    "Demo 与 Restart 有效"
+  ],
+  "interaction_actions": [
+    {
+      "action": "key_hold",
+      "key": "ArrowUp",
+      "seconds": 3
+    },
+    {
+      "action": "key_hold",
+      "key": "ArrowLeft",
+      "seconds": 1
+    },
+    {
+      "action": "click",
+      "target": "Restart"
+    }
+  ],
+  "original_short_quote_available": true
+}

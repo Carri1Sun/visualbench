@@ -1,0 +1,46 @@
+{
+  "id": "10-sorting-arena",
+  "number": 10,
+  "title_zh": "排序算法竞技场",
+  "title_en": "Sorting algorithm arena",
+  "category": "logic",
+  "difficulty": "medium",
+  "source_url": "https://tools.simonwillison.net/sort-algorithms",
+  "source_input_note_zh": "作者公开了运行作品与后续提示词记录；这个作品经历了多轮修改，不能把最终版本宣称为一句 prompt 的结果。",
+  "adaptation_note_zh": "本包独立写成单次任务，提供相同数组、四种算法、统一运行与统计要求。",
+  "prompt_status": "package_authored_adaptation",
+  "source_starter_included": false,
+  "supplied_design_reference": false,
+  "starter": "plain-html",
+  "output_file": "artifact.html",
+  "plan_file": "plan.json",
+  "input_files": [
+    "assets/numbers.json"
+  ],
+  "material_requirement": "text_plus_fixed_fixture",
+  "rubric": [
+    "四个面板起始数组相同",
+    "最终结果均升序且保留重复值",
+    "算法动画和计数来自实际执行",
+    "暂停、继续、重置不交叉污染"
+  ],
+  "interaction_actions": [
+    {
+      "action": "click",
+      "target": "Run all"
+    },
+    {
+      "action": "wait",
+      "seconds": 3
+    },
+    {
+      "action": "click",
+      "target": "Pause"
+    },
+    {
+      "action": "click",
+      "target": "Reset"
+    }
+  ],
+  "original_short_quote_available": false
+}

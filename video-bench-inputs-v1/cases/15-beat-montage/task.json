@@ -1,0 +1,127 @@
+{
+  "id": "15-beat-montage",
+  "number": 15,
+  "title_zh": "音乐驱动品牌蒙太奇",
+  "title_en": "Beat Montage",
+  "engine": "remotion",
+  "input_mode": "assets",
+  "source_kind": "official_workflow_adaptation",
+  "source_url": "https://github.com/heygen-com/hyperframes/blob/main/skills/music-to-video/SKILL.md",
+  "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+  "duration_seconds": 20,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration_frames": 600,
+  "alpha_required": false,
+  "changes_from_source": "补充原创 120 BPM 音乐、矢量风景与短片；统一到 Remotion。",
+  "checks": [
+    "至少四张明信片和两段短片",
+    "重要切镜与拍点对应",
+    "音乐高潮有视觉推进",
+    "结尾品牌句清楚"
+  ],
+  "inputs": [
+    {
+      "path": "brand.json",
+      "bytes": 574,
+      "sha256": "14eb3d8276079cb2078e1a1192f36534bc1dfbb69426a3a06bdfd6f90ecc9a98"
+    },
+    {
+      "path": "clips/01.mp4",
+      "bytes": 143499,
+      "sha256": "affcef5a7c4585f30a2a72d7e4e7c7ce15abd6d2822501653dc26d4c37d5ae8e"
+    },
+    {
+      "path": "clips/02.mp4",
+      "bytes": 133883,
+      "sha256": "6b1ad50825deed83bc5c01239b0639825255ec1fd65d838ffd30d3d24df5a67c"
+    },
+    {
+      "path": "clips/03.mp4",
+      "bytes": 138916,
+      "sha256": "17bb02cdb529c5dea13f514a801884acaf38a8b5b2925dafc229db121cc19a28"
+    },
+    {
+      "path": "copy.json",
+      "bytes": 162,
+      "sha256": "725c48165b0f3c9aea4a359546fa0d44ee99146a43da576e0147138068a038af"
+    },
+    {
+      "path": "logo.svg",
+      "bytes": 244,
+      "sha256": "7c226d589d305e422684589071b77b8e58edf8490311cfa22a6d24bf50243c81"
+    },
+    {
+      "path": "music.json",
+      "bytes": 476,
+      "sha256": "b48c91d2134e4331600e7546a461a293ea4a69591d86e2a7d2da78d9f36a6b9b"
+    },
+    {
+      "path": "music.wav",
+      "bytes": 1764044,
+      "sha256": "3c74933ada6ec3de8b275547a9d37596141db705978f81eebbe9f5a4b253093d"
+    },
+    {
+      "path": "postcards/01.png",
+      "bytes": 46222,
+      "sha256": "7bf150a1cdca0d039efc610568ad08845439b96e6f2b52ec500e1da0e30831f1"
+    },
+    {
+      "path": "postcards/01.svg",
+      "bytes": 585,
+      "sha256": "611c417aeb6f6997bfaf81df29a04602bc52717972622fb18faac49f536fcce2"
+    },
+    {
+      "path": "postcards/02.png",
+      "bytes": 47482,
+      "sha256": "cf95e7afcc54b223caab54163f3bc744169968ff877b4b0e1dc80bcbbcc3f074"
+    },
+    {
+      "path": "postcards/02.svg",
+      "bytes": 590,
+      "sha256": "39019a719f978da37f0612055c56f72f1e395fd13dd12531559b1427eed44fe2"
+    },
+    {
+      "path": "postcards/03.png",
+      "bytes": 48186,
+      "sha256": "9a7042ca31683d598c3cd69dc75c17105853de8aca692c0b0cfe4e27bf61d2ff"
+    },
+    {
+      "path": "postcards/03.svg",
+      "bytes": 590,
+      "sha256": "6adc93fef08c05150bf1eebb36303960c33b56d9ed58e801e8213ddc776810d0"
+    },
+    {
+      "path": "postcards/04.png",
+      "bytes": 48137,
+      "sha256": "6ae69f2a948146937dc97d7393456f999f717c3fc4ff5f9f4c32c96ffc6eb3a1"
+    },
+    {
+      "path": "postcards/04.svg",
+      "bytes": 590,
+      "sha256": "7cca50d725725b20af8c0061cb25ac5becca727f1951139c9ec8fb60a183000c"
+    },
+    {
+      "path": "postcards/05.png",
+      "bytes": 48077,
+      "sha256": "df0d2182e6f1dd7259d55e8f195f524ddd044c1e6fd55504b05065bce8a26605"
+    },
+    {
+      "path": "postcards/05.svg",
+      "bytes": 593,
+      "sha256": "42f4de9cb6e6d48d69fcaef8d396d3800991312c87079865419c1c52457e8047"
+    }
+  ],
+  "brief_en": "Create a 20-second travel-brand montage using music.wav, the supplied vector postcards, and the three MP4 clips. The assets are original stylized illustrations, not photographic footage. Let the music dictate major cuts and the build toward the final brand card. Use at least four postcards and two clips. Keep on-screen copy short and end on the provided brand line.",
+  "brief_zh": "使用 music.wav、矢量旅行明信片和三段 MP4 制作 20 秒旅行品牌蒙太奇。素材是原创风格化插画，不是实拍。让音乐决定主要切镜和高潮，至少使用四张明信片与两段视频。画面文案简短，最后停留在给定品牌句上。",
+  "assets_ready": true,
+  "prompt_only": false,
+  "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+  "entrypoints": {
+    "en": "cases/15-beat-montage/prompt.en.md",
+    "zh": "cases/15-beat-montage/prompt.zh.md",
+    "task": "cases/15-beat-montage/task.json",
+    "assets": "cases/15-beat-montage/assets"
+  }
+}

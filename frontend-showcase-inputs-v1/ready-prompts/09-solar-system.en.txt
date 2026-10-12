@@ -1,0 +1,92 @@
+You are creating one frontend showcase artifact from a task brief and any supplied input files. Use your own design judgment. Do not ask follow-up questions.
+
+Return two deliverables:
+1. plan.json: a concise PUBLIC design proposal with these keys: layout, visual_direction, interactions, implementation_choices, limitations. Use strings or short arrays, at most 160 words total. This is an explicit design proposal, not a request for private reasoning.
+2. artifact.html: a complete, working HTML document. Put authored CSS and JS inline; referencing the supplied local assets and optional local Three.js runtime is allowed. Do not load external websites, fonts, images, packages, models, audio or APIs. Do not embed another app.
+
+Keep visible UI copy in English. Support a desktop viewport of 1280 x 800 and avoid clipping controls. Product pages must also adapt to 390 x 844. Choose fonts from local/system stacks; no particular aesthetic is imposed. Make controls keyboard reachable when practical, with visible labels. There is no backend, account, secret or network data source.
+
+Use ./assets/ for supplied case inputs. You can fetch local JSON when served over HTTP. If using Three.js, the included import map is:
+{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}
+Only OrbitControls is supplied as an addon. Other features must be implemented inline or from Three.js core. Canvas, SVG, CSS and Web Audio are also available. Procedural drawings are allowed. Clearly identify mock or illustrative data when the task requires it.
+
+Prefer a finished, visible artifact over adding scope. Do not report that controls or simulations work if they are merely decorative. Make any approximation or missing requirement explicit in plan.json. In a chat-only session return labeled code blocks for the two files. In a coding-agent session write the two files in the provided run workspace.
+
+TASK / 任务
+Build a 3D educational solar-system explorer using planets.json. Show the Sun and all eight supplied planets, distinguishing their appearances and drawing their orbits. Provide Play/Pause, a simulation-days-per-second control and Reset. Clicking a planet selects it and displays its supplied facts. Allow camera orbiting and clearly explain that display sizes and distances are exaggerated. Circular orbits are acceptable in this reduced task, but relative periods must come from the supplied data and be independent of display frame rate. Generate textures or geometry locally; use no astronomy API or remote images.
+
+INPUT FILE: assets/planets.json
+```json
+{
+  "provenance": "Approximate orbital periods from NASA NSSDC Planetary Fact Sheet; colors and display radii/distances are package-authored illustrative values. Not an ephemeris.",
+  "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+  "planets": [
+    {
+      "id": "mercury",
+      "name": "Mercury",
+      "period_days_approx": 88.0,
+      "display_orbit_radius": 4,
+      "display_radius": 0.2,
+      "display_color": "#ada49b"
+    },
+    {
+      "id": "venus",
+      "name": "Venus",
+      "period_days_approx": 224.7,
+      "display_orbit_radius": 5.5,
+      "display_radius": 0.4,
+      "display_color": "#d6b777"
+    },
+    {
+      "id": "earth",
+      "name": "Earth",
+      "period_days_approx": 365.2,
+      "display_orbit_radius": 7,
+      "display_radius": 0.43,
+      "display_color": "#3b82c4"
+    },
+    {
+      "id": "mars",
+      "name": "Mars",
+      "period_days_approx": 687.0,
+      "display_orbit_radius": 8.5,
+      "display_radius": 0.3,
+      "display_color": "#bc6744"
+    },
+    {
+      "id": "jupiter",
+      "name": "Jupiter",
+      "period_days_approx": 4331,
+      "display_orbit_radius": 11,
+      "display_radius": 0.85,
+      "display_color": "#c09a76"
+    },
+    {
+      "id": "saturn",
+      "name": "Saturn",
+      "period_days_approx": 10747,
+      "display_orbit_radius": 14,
+      "display_radius": 0.7,
+      "display_color": "#d1b77f"
+    },
+    {
+      "id": "uranus",
+      "name": "Uranus",
+      "period_days_approx": 30589,
+      "display_orbit_radius": 17,
+      "display_radius": 0.58,
+      "display_color": "#9ad9db"
+    },
+    {
+      "id": "neptune",
+      "name": "Neptune",
+      "period_days_approx": 59800,
+      "display_orbit_radius": 20,
+      "display_radius": 0.56,
+      "display_color": "#3765c3"
+    }
+  ]
+}
+```
+
+The input files above are supplied fixtures. In a file-based agent workspace they already exist; in chat output, preserve them in the named ./assets paths or inline their exact content.

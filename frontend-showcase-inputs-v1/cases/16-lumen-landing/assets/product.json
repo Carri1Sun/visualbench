@@ -1,0 +1,28 @@
+{
+  "provenance": "package-authored brief; product name and category adapted from public task",
+  "name": "Lumen",
+  "tagline": "Keep work moving across time zones.",
+  "description": "Asynchronous standups for remote teams.",
+  "cta": "Try Lumen",
+  "features": [
+    {
+      "title": "Daily check-ins",
+      "description": "Share progress, next steps and blockers in one place."
+    },
+    {
+      "title": "Team visibility",
+      "description": "Read updates when your workday begins."
+    },
+    {
+      "title": "Less meeting time",
+      "description": "Keep routine status updates asynchronous."
+    }
+  ],
+  "sample_update": {
+    "team": "Studio North",
+    "member": "Ari",
+    "completed": "Published the onboarding checklist.",
+    "next": "Test the invitation flow.",
+    "blocker": "Waiting for final copy."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "03-black-hole",
+  "number": 3,
+  "title_zh": "旋转黑洞",
+  "title_en": "Rotating black hole",
+  "category": "visual",
+  "difficulty": "hard",
+  "source_url": "https://github.com/jdmnk/design-benchmark/blob/main/config/examples/black-hole-spin.config.json",
+  "source_input_note_zh": "原仓库有 systemPrompt、长任务提示词、统一视口和渲染配置；Three.js 等库由运行环境提供。没有必需的输入照片或模型。",
+  "adaptation_note_zh": "主测试版独立重写，提供固定 Three.js 本地文件。另存仓库原始配置（仓库 README 声明 MIT），用于查看原题环境差异。",
+  "prompt_status": "package_authored_adaptation",
+  "source_starter_included": false,
+  "supplied_design_reference": false,
+  "starter": "three-html",
+  "output_file": "artifact.html",
+  "plan_file": "plan.json",
+  "input_files": [],
+  "material_requirement": "text_only",
+  "rubric": [
+    "黑色中心和横向吸积盘清楚",
+    "上下亮弧构成空间层次",
+    "运动可辨认且稳定",
+    "不会仅有 HUD 而主体黑屏"
+  ],
+  "interaction_actions": [],
+  "original_short_quote_available": false
+}

@@ -1,0 +1,22 @@
+{
+  "provenance": "package-authored simplified teaching fixture; not a commercial caliber specification",
+  "seconds_per_second_hand_revolution": 60,
+  "seconds_per_minute_hand_revolution": 3600,
+  "seconds_per_hour_hand_revolution": 43200,
+  "balance_frequency_hz_demo": 2,
+  "speed_presets": [
+    0.25,
+    1,
+    5
+  ],
+  "parts": [
+    "barrel",
+    "gear train",
+    "escape wheel",
+    "pallet fork",
+    "balance",
+    "second hand",
+    "minute hand",
+    "hour hand"
+  ]
+}

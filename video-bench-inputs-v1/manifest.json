@@ -1,0 +1,1294 @@
+{
+  "pack_name": "VideoBench Inputs",
+  "version": "1.0.0",
+  "created_at": "2026-10-02",
+  "case_count": 20,
+  "canonical_prompt_language": "en",
+  "engine": "remotion",
+  "input_policy": "fixed-local-assets",
+  "summary": {
+    "prompt_only": 2,
+    "with_assets": 18
+  },
+  "entrypoint": "AGENT_START_HERE.md",
+  "cases": [
+    {
+      "id": "01-motion-showreel",
+      "number": 1,
+      "title_zh": "15 秒动效作品集",
+      "title_en": "Motion Showreel",
+      "engine": "remotion",
+      "input_mode": "prompt_only",
+      "source_kind": "published_prompt",
+      "source_url": "https://x.com/ajith_io/status/2103449416325890146",
+      "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+      "duration_seconds": 15,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration_frames": 450,
+      "alpha_required": false,
+      "changes_from_source": "原作者短提示词改写；固定尺寸、时长及无外部素材基线。",
+      "checks": [
+        "15 秒完整作品",
+        "至少 4 个可辨识的视觉段落",
+        "段落之间有连贯转场",
+        "不出现 starter 占位画面"
+      ],
+      "inputs": [],
+      "brief_en": "Create a 15-second motion-design showreel for a fictional designer portfolio. Invent the visual direction, typography, geometric imagery and connected scene transitions. Show range while keeping a coherent identity. Use code-drawn visuals. A silent film is acceptable; do not spend time sourcing music.",
+      "brief_zh": "制作一段 15 秒虚构设计师作品集动效。自行决定视觉方向、字体排印、几何画面和连贯转场，兼顾变化和整体风格。图形用代码绘制。允许无声，不需要寻找音乐。",
+      "assets_ready": true,
+      "prompt_only": true,
+      "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+      "entrypoints": {
+        "en": "cases/01-motion-showreel/prompt.en.md",
+        "zh": "cases/01-motion-showreel/prompt.zh.md",
+        "task": "cases/01-motion-showreel/task.json",
+        "assets": "cases/01-motion-showreel/assets"
+      }
+    },
+    {
+      "id": "02-ui-morph-loop",
+      "number": 2,
+      "title_zh": "单一形状 UI 变形循环",
+      "title_en": "Ui Morph Loop",
+      "engine": "remotion",
+      "input_mode": "assets",
+      "source_kind": "published_prompt",
+      "source_url": "https://x.com/twoclipping/status/2103273003555402193",
+      "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+      "duration_seconds": 16,
+      "width": 1080,
+      "height": 1080,
+      "fps": 30,
+      "duration_frames": 480,
+      "alpha_required": false,
+      "changes_from_source": "公开模板改写，补充固定 8 状态和原创音乐。",
+      "checks": [
+        "8 个状态按序出现",
+        "同一外壳连续变形",
+        "鼠标动作与状态变化对应",
+        "循环首尾一致"
+      ],
+      "inputs": [
+        {
+          "path": "beat.json",
+          "bytes": 396,
+          "sha256": "7ea3aa6a0066a990e469097d73c648f21cf62da422187a34f1f7a1ad1b539b59"
+        },
+        {
+          "path": "beat.wav",
+          "bytes": 1411244,
+          "sha256": "5fa34afe7cc2ba314821113c617965f19f4dc8e5aa2d7b9c6bca030175884c30"
+        },
+        {
+          "path": "states.json",
+          "bytes": 351,
+          "sha256": "bfc097858cde76f8b73c083a88934b5b1165f688f207ea68bd173a85906ee657"
+        }
+      ],
+      "brief_en": "Read states.json. Create a 16-second seamless loop in which ONE persistent shell morphs through the eight UI states in order. A visible cursor motivates clicks and drags. The shell must preserve spatial continuity; transition internal content without hard-cutting the shell. Use beat.wav and align major changes to its 120 BPM pulse. Return to the initial visual state at the loop boundary.",
+      "brief_zh": "读取 states.json，制作 16 秒无缝循环。同一个外壳按顺序变成 8 种 UI，鼠标通过点击和拖拽触发变化。外壳保持空间连续，内部内容可以过渡切换。使用 120 BPM 的 beat.wav，让主要变化贴合节拍，结尾回到开头状态。",
+      "assets_ready": true,
+      "prompt_only": false,
+      "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+      "entrypoints": {
+        "en": "cases/02-ui-morph-loop/prompt.en.md",
+        "zh": "cases/02-ui-morph-loop/prompt.zh.md",
+        "task": "cases/02-ui-morph-loop/task.json",
+        "assets": "cases/02-ui-morph-loop/assets"
+      }
+    },
+    {
+      "id": "03-metal-logo",
+      "number": 3,
+      "title_zh": "金属 3D Logo",
+      "title_en": "Metal Logo",
+      "engine": "remotion",
+      "input_mode": "assets",
+      "source_kind": "published_prompt",
+      "source_url": "https://www.remotion.dev/prompts/spinning-glitching-svg-logo-turned-3d",
+      "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+      "duration_seconds": 8,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration_frames": 240,
+      "alpha_required": true,
+      "changes_from_source": "原帖包含多轮调色和导出反馈；统一为单次完整任务，换用原创 Logo。",
+      "checks": [
+        "Logo 轮廓和镂空保留",
+        "表现立体厚度与金属质感",
+        "透明视频有 alpha",
+        "同一帧重复渲染一致"
+      ],
+      "inputs": [
+        {
+          "path": "logo.svg",
+          "bytes": 244,
+          "sha256": "7c226d589d305e422684589071b77b8e58edf8490311cfa22a6d24bf50243c81"
+        }
+      ],
+      "brief_en": "Use logo.svg as the exact silhouette. Extrude or construct a three-dimensional silver metallic logo, light it so its surfaces and depth remain legible, and rotate it between front-facing oblique angles. Add brief deterministic glitch moments. Deliver both a transparent overlay.mov and a dark-background video.mp4 preview. Preserve the holes and negative space of the logo.",
+      "brief_zh": "使用 logo.svg 的准确轮廓，制作银色金属立体标志，让灯光清楚表现表面与厚度，进行正面附近的倾斜旋转，并加入短暂且可复现的故障效果。交付透明 overlay.mov 和深色背景预览 video.mp4，保留标志的镂空与负空间。",
+      "assets_ready": true,
+      "prompt_only": false,
+      "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+      "entrypoints": {
+        "en": "cases/03-metal-logo/prompt.en.md",
+        "zh": "cases/03-metal-logo/prompt.zh.md",
+        "task": "cases/03-metal-logo/task.json",
+        "assets": "cases/03-metal-logo/assets"
+      }
+    },
+    {
+      "id": "04-shapes-to-word",
+      "number": 4,
+      "title_zh": "几何图形变成品牌文字",
+      "title_en": "Shapes To Word",
+      "engine": "remotion",
+      "input_mode": "assets",
+      "source_kind": "published_prompt",
+      "source_url": "https://www.remotion.dev/prompts/shape-to-words-transformation",
+      "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+      "duration_seconds": 10,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration_frames": 300,
+      "alpha_required": false,
+      "changes_from_source": "品牌替换为虚构 WAYPOINT；提供原创 Logo，固定字母数。",
+      "checks": [
+        "8 个图形和 8 个字母对应",
+        "形变可见",
+        "文字可读",
+        "擦除顺序跟随 Logo"
+      ],
+      "inputs": [
+        {
+          "path": "logo.svg",
+          "bytes": 244,
+          "sha256": "7c226d589d305e422684589071b77b8e58edf8490311cfa22a6d24bf50243c81"
+        }
+      ],
+      "brief_en": "Make a 10-second ident for WAYPOINT. Eight colorful filled geometric shapes become the eight letters of WAYPOINT through a visible shape transformation. Use the supplied logo as a separate mark. In the last section the mark travels left to right and removes each letter only as it passes that letter. Keep the word readable before the exit.",
+      "brief_zh": "为 WAYPOINT 制作 10 秒品牌片头。8 个彩色实心几何图形通过可见形变成为 WAYPOINT 的 8 个字母。使用提供的独立标志，最后让标志从左到右移动，经过哪个字母才擦除哪个字母；退场前让完整品牌词清晰停留。",
+      "assets_ready": true,
+      "prompt_only": false,
+      "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+      "entrypoints": {
+        "en": "cases/04-shapes-to-word/prompt.en.md",
+        "zh": "cases/04-shapes-to-word/prompt.zh.md",
+        "task": "cases/04-shapes-to-word/task.json",
+        "assets": "cases/04-shapes-to-word/assets"
+      }
+    },
+    {
+      "id": "05-kinetic-ad",
+      "number": 5,
+      "title_zh": "卡点文字广告",
+      "title_en": "Kinetic Ad",
+      "engine": "remotion",
+      "input_mode": "assets",
+      "source_kind": "published_prompt",
+      "source_url": "https://www.remotion.dev/prompts/the-kinetic-marketing",
+      "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+      "duration_seconds": 15,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration_frames": 450,
+      "alpha_required": false,
+      "changes_from_source": "补充原创品牌、固定文案及原创 140 BPM 音频。",
+      "checks": [
+        "全部文案出现",
+        "文字动态排版",
+        "主要变化贴合音乐",
+        "CTA 停留不少于 1.5 秒"
+      ],
+      "inputs": [
+        {
+          "path": "copy.json",
+          "bytes": 244,
+          "sha256": "940c26bc374fffb7a5d07e06993b63ebe979842ba9c8699524174fd75a213346"
+        },
+        {
+          "path": "music.json",
+          "bytes": 572,
+          "sha256": "3ac6cf42271d6af6a6eba2be9a2475b9ff934c31ee4df9edf3fbfb7bef27b4de"
+        },
+        {
+          "path": "music.wav",
+          "bytes": 1323044,
+          "sha256": "3d69f5f6c8a59fb942a25035a7e788a80ed839f716bbaee9b1331d3273ad98a7"
+        }
+      ],
+      "brief_en": "Build a 15-second typography-led ad for the fictional developer tool Trace from copy.json. Incoming words push or reorganize existing words. Use coherent elastic motion and at least two connected mask transitions. Use music.wav (140 BPM). Every required copy line must remain readable; make the final CTA legible for at least 1.5 seconds.",
+      "brief_zh": "根据 copy.json 为虚构开发者工具 Trace 制作 15 秒文字广告。新文字进入时推动或重排旧文字，使用统一的弹性运动和至少两次连贯遮罩转场。使用 140 BPM 的 music.wav，保证所有指定文案能读清，结尾 CTA 至少停留 1.5 秒。",
+      "assets_ready": true,
+      "prompt_only": false,
+      "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+      "entrypoints": {
+        "en": "cases/05-kinetic-ad/prompt.en.md",
+        "zh": "cases/05-kinetic-ad/prompt.zh.md",
+        "task": "cases/05-kinetic-ad/task.json",
+        "assets": "cases/05-kinetic-ad/assets"
+      }
+    },
+    {
+      "id": "06-device-rise",
+      "number": 6,
+      "title_zh": "设备亮相与通知卡片",
+      "title_en": "Device Rise",
+      "engine": "remotion",
+      "input_mode": "prompt_only",
+      "source_kind": "published_prompt",
+      "source_url": "https://www.remotion.dev/prompts/apple-style-device-rise-animation",
+      "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+      "duration_seconds": 6,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration_frames": 180,
+      "alpha_required": false,
+      "changes_from_source": "保留设备上升任务，时长改为 6 秒，使用虚构 App 通知，无外部图像。",
+      "checks": [
+        "设备进入时无意外裁切",
+        "透视变化平滑",
+        "停稳后通知错峰出现",
+        "设备与通知文字清楚"
+      ],
+      "inputs": [],
+      "brief_en": "Create a six-second product reveal. Draw a premium smartphone with code on a pale background. It rises from below the frame, starts tilted in perspective and settles upright with a gentle deceleration. After settling, show three staggered notifications: \"Your trip is ready\", \"3 places saved\", \"Share with Maya\". The device occupies about two-thirds of the frame height.",
+      "brief_zh": "制作 6 秒设备亮相视频。在浅色背景上用代码绘制精致手机，从画面下方升起，由透视倾斜逐渐收敛并缓慢停稳；随后依次出现三张通知：Your trip is ready、3 places saved、Share with Maya。手机约占画面高度的三分之二。",
+      "assets_ready": true,
+      "prompt_only": true,
+      "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+      "entrypoints": {
+        "en": "cases/06-device-rise/prompt.en.md",
+        "zh": "cases/06-device-rise/prompt.zh.md",
+        "task": "cases/06-device-rise/task.json",
+        "assets": "cases/06-device-rise/assets"
+      }
+    },
+    {
+      "id": "07-website-launch",
+      "number": 7,
+      "title_zh": "官网转产品发布视频",
+      "title_en": "Website Launch",
+      "engine": "remotion",
+      "input_mode": "assets",
+      "source_kind": "official_workflow_adaptation",
+      "source_url": "https://hyperframes.app/docs/3-guides/1-website-to-video",
+      "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+      "duration_seconds": 25,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration_frames": 750,
+      "alpha_required": false,
+      "changes_from_source": "将联网抓官网改为包内原创冻结网页；统一到 Remotion。",
+      "checks": [
+        "产品价值讲清",
+        "使用至少两个来源 UI 概念",
+        "品牌一致",
+        "无虚构用户数或产品能力"
+      ],
+      "inputs": [
+        {
+          "path": "brand.json",
+          "bytes": 574,
+          "sha256": "14eb3d8276079cb2078e1a1192f36534bc1dfbb69426a3a06bdfd6f90ecc9a98"
+        },
+        {
+          "path": "fonts/DejaVuSans.ttf",
+          "bytes": 759720,
+          "sha256": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280"
+        },
+        {
+          "path": "fonts/LICENSE.txt",
+          "bytes": 3859,
+          "sha256": "63d3ba759d12804c5b31a9d5940d855c1820d1f5999e6b0872eb1c7ff045fbc9"
+        },
+        {
+          "path": "logo.svg",
+          "bytes": 244,
+          "sha256": "7c226d589d305e422684589071b77b8e58edf8490311cfa22a6d24bf50243c81"
+        },
+        {
+          "path": "product.json",
+          "bytes": 574,
+          "sha256": "14eb3d8276079cb2078e1a1192f36534bc1dfbb69426a3a06bdfd6f90ecc9a98"
+        },
+        {
+          "path": "website/index.html",
+          "bytes": 2448,
+          "sha256": "9577016f653e0ad7224f9c751e8d1651edcab61a91b41e5b7ac08ed97c7050e0"
+        },
+        {
+          "path": "website.png",
+          "bytes": 112184,
+          "sha256": "e903e6ad268eabe86e3d7b583eb7a0d457e5618cfd11e5f87dc9455637f6c5bc"
+        }
+      ],
+      "brief_en": "Study website/index.html, website.png and product.json. Create a 25-second launch video for Waypoint, a fictional collaborative travel planner. Choose a clear story from problem to product to action. Reuse its identity and real supplied feature claims. Show at least two actual UI ideas from the source. End with \"Plan together. Go further.\" and \"waypoint.example\". The HTML is a frozen input, not a video solution.",
+      "brief_zh": "阅读 website/index.html、website.png 和 product.json，为虚构协作旅行工具 Waypoint 制作 25 秒发布视频。自行安排问题、产品、行动的叙事，沿用品牌并准确使用给定功能，呈现至少两个来源中的真实 UI 概念。结尾为 Plan together. Go further. 和 waypoint.example。HTML 是静态输入网站，不是视频答案。",
+      "assets_ready": true,
+      "prompt_only": false,
+      "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+      "entrypoints": {
+        "en": "cases/07-website-launch/prompt.en.md",
+        "zh": "cases/07-website-launch/prompt.zh.md",
+        "task": "cases/07-website-launch/task.json",
+        "assets": "cases/07-website-launch/assets"
+      }
+    },
+    {
+      "id": "08-saas-walkthrough",
+      "number": 8,
+      "title_zh": "SaaS 核心流程演示",
+      "title_en": "Saas Walkthrough",
+      "engine": "remotion",
+      "input_mode": "assets",
+      "source_kind": "published_prompt",
+      "source_url": "https://www.remotion.dev/prompts/product-demo-for-presscut",
+      "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+      "duration_seconds": 30,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration_frames": 900,
+      "alpha_required": false,
+      "changes_from_source": "原题依赖 Presscut 未公开的应用上下文且要求问答；替换为完整的原创 Waypoint UI 与固定流程。",
+      "checks": [
+        "四步流程完整",
+        "UI 可对应参考截图",
+        "每次操作有可见结果",
+        "核心 UI 使用 React 元素"
+      ],
+      "inputs": [
+        {
+          "path": "brand.json",
+          "bytes": 574,
+          "sha256": "14eb3d8276079cb2078e1a1192f36534bc1dfbb69426a3a06bdfd6f90ecc9a98"
+        },
+        {
+          "path": "fonts/DejaVuSans.ttf",
+          "bytes": 759720,
+          "sha256": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280"
+        },
+        {
+          "path": "fonts/LICENSE.txt",
+          "bytes": 3859,
+          "sha256": "63d3ba759d12804c5b31a9d5940d855c1820d1f5999e6b0872eb1c7ff045fbc9"
+        },
+        {
+          "path": "logo.svg",
+          "bytes": 244,
+          "sha256": "7c226d589d305e422684589071b77b8e58edf8490311cfa22a6d24bf50243c81"
+        },
+        {
+          "path": "screenshots/added.png",
+          "bytes": 50397,
+          "sha256": "9e0f8b646a133fae18ae05054c68280425ec4b0b1a54fbb9cfda21d1cc38c82d"
+        },
+        {
+          "path": "screenshots/created.png",
+          "bytes": 45061,
+          "sha256": "df2f541d6010bc2133311213c572060a3fcb3cd9b06b263b79c79d99add19999"
+        },
+        {
+          "path": "screenshots/moved.png",
+          "bytes": 52200,
+          "sha256": "7547df304c89053aa9309e9459e7a9854954a116dc1c62c53ea02e98a7435c26"
+        },
+        {
+          "path": "screenshots/shared.png",
+          "bytes": 73173,
+          "sha256": "5c86558440095aca5e40c24b44ea7708c7d36da73894acccea6d10adf519b439"
+        },
+        {
+          "path": "source-ui/added.html",
+          "bytes": 2058,
+          "sha256": "54e23610314ebc90a56a1eba0b09a41909ff1153fe7c9e2609e9f0eb49b747bd"
+        },
+        {
+          "path": "source-ui/created.html",
+          "bytes": 1966,
+          "sha256": "833be5880dea6d6be8de0db93b33f0f42a94f1c8846c8be2be565e65e105ef38"
+        },
+        {
+          "path": "source-ui/moved.html",
+          "bytes": 2058,
+          "sha256": "5b5da8b977f4edfaf85d73d7807a3076d9a2e99bbc7e5b5c8a7eeb9498edf221"
+        },
+        {
+          "path": "source-ui/shared.html",
+          "bytes": 2245,
+          "sha256": "e5779ee277b514cb51595ad7402aa93924209fe009d6f0cb4a8dc085f15af3c7"
+        },
+        {
+          "path": "workflow.json",
+          "bytes": 471,
+          "sha256": "944ad7e3f342ab2785759a5fc2be4cced086ac09caf65a2e774ebfc76e8dd972"
+        }
+      ],
+      "brief_en": "Use the supplied Waypoint source-ui HTML files, screenshots and workflow.json. Recreate their UI as editable React elements and animate the workflow: create a Lisbon trip, add a museum, move the museum to day 2, share the plan. Use an intentional camera/cursor to explain each action. Deliver a 30-second demo. Do not replace the workflow with unrelated marketing slides.",
+      "brief_zh": "根据 source-ui HTML、截图和 workflow.json，使用可编辑 React 元素重建 Waypoint UI，演示创建里斯本行程、添加博物馆、移动到第 2 天、分享行程的流程。用有目的的镜头或鼠标引导每一步，制作 30 秒演示。",
+      "assets_ready": true,
+      "prompt_only": false,
+      "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+      "entrypoints": {
+        "en": "cases/08-saas-walkthrough/prompt.en.md",
+        "zh": "cases/08-saas-walkthrough/prompt.zh.md",
+        "task": "cases/08-saas-walkthrough/task.json",
+        "assets": "cases/08-saas-walkthrough/assets"
+      }
+    },
+    {
+      "id": "09-release-notes",
+      "number": 9,
+      "title_zh": "更新日志转发布短片",
+      "title_en": "Release Notes",
+      "engine": "remotion",
+      "input_mode": "assets",
+      "source_kind": "official_prompt_adaptation",
+      "source_url": "https://hyperframes.app/docs/3-guides/2-prompting",
+      "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+      "duration_seconds": 30,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration_frames": 900,
+      "alpha_required": false,
+      "changes_from_source": "补充虚构更新日志、前后截图与品牌素材；统一到 Remotion。",
+      "checks": [
+        "三个主要更新",
+        "版本及日期正确",
+        "前后变化可理解",
+        "未扩大产品能力"
+      ],
+      "inputs": [
+        {
+          "path": "brand.json",
+          "bytes": 574,
+          "sha256": "14eb3d8276079cb2078e1a1192f36534bc1dfbb69426a3a06bdfd6f90ecc9a98"
+        },
+        {
+          "path": "changelog.md",
+          "bytes": 526,
+          "sha256": "0cc7698381b6384dcebdbd8592e81d1f52e2f0178f12f7d1ae808c5a00719716"
+        },
+        {
+          "path": "fonts/DejaVuSans.ttf",
+          "bytes": 759720,
+          "sha256": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280"
+        },
+        {
+          "path": "fonts/LICENSE.txt",
+          "bytes": 3859,
+          "sha256": "63d3ba759d12804c5b31a9d5940d855c1820d1f5999e6b0872eb1c7ff045fbc9"
+        },
+        {
+          "path": "logo.svg",
+          "bytes": 244,
+          "sha256": "7c226d589d305e422684589071b77b8e58edf8490311cfa22a6d24bf50243c81"
+        },
+        {
+          "path": "screenshots/after.png",
+          "bytes": 54404,
+          "sha256": "d6d3644ede02957bc5e223031d166cc17c2a7b521323a2d386b8b327fa015cbd"
+        },
+        {
+          "path": "screenshots/before.png",
+          "bytes": 50397,
+          "sha256": "9e0f8b646a133fae18ae05054c68280425ec4b0b1a54fbb9cfda21d1cc38c82d"
+        },
+        {
+          "path": "source-ui/after.html",
+          "bytes": 2107,
+          "sha256": "7b3a04ef2a32e467ad06b5f802ff69c458d02e167054337b3e76231a044cb673"
+        },
+        {
+          "path": "source-ui/before.html",
+          "bytes": 2058,
+          "sha256": "54e23610314ebc90a56a1eba0b09a41909ff1153fe7c9e2609e9f0eb49b747bd"
+        }
+      ],
+      "brief_en": "Read changelog.md and the before/after UI references. Create a 30-second release announcement. Select the three most useful user-facing changes, show what changed, and explain the benefit in plain language. Keep release name and date exact. Smaller fixes may be omitted. End with the provided update CTA.",
+      "brief_zh": "阅读 changelog.md 和更新前后 UI 参考，制作 30 秒版本发布短片。挑选三个最有用的用户功能，展示变化并用简单语言解释收益。版本名和日期准确，可以省略小修复，结尾使用指定更新 CTA。",
+      "assets_ready": true,
+      "prompt_only": false,
+      "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+      "entrypoints": {
+        "en": "cases/09-release-notes/prompt.en.md",
+        "zh": "cases/09-release-notes/prompt.zh.md",
+        "task": "cases/09-release-notes/task.json",
+        "assets": "cases/09-release-notes/assets"
+      }
+    },
+    {
+      "id": "10-vertical-explainer",
+      "number": 10,
+      "title_zh": "竖屏知识短视频",
+      "title_en": "Vertical Explainer",
+      "engine": "remotion",
+      "input_mode": "assets",
+      "source_kind": "official_prompt_adaptation",
+      "source_url": "https://hyperframes.app/docs/3-guides/2-prompting",
+      "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+      "duration_seconds": 20,
+      "width": 1080,
+      "height": 1920,
+      "fps": 30,
+      "duration_frames": 600,
+      "alpha_required": false,
+      "changes_from_source": "补充原创脚本、离线合成旁白和确定性词时间；声音是固定测试输入。",
+      "checks": [
+        "语音完整且清晰",
+        "字幕内容与语音一致",
+        "图解解释重复行为",
+        "竖屏字幕不出界"
+      ],
+      "inputs": [
+        {
+          "path": "TIMING_NOTES.md",
+          "bytes": 434,
+          "sha256": "758d8c2d5b0edb3a1d17c312c951d053bf18e8208ba8fb03e82acb2b5c240b47"
+        },
+        {
+          "path": "TTS_ENGINE_LICENSE.txt",
+          "bytes": 16340,
+          "sha256": "77d13a5e6cbe7277b4721033f9ad15707241c2832baa8c74ec823c9ee5ebf71c"
+        },
+        {
+          "path": "captions.srt",
+          "bytes": 1508,
+          "sha256": "abab0fe152565603fb54691d95b2e276182d7e0efa927aff7799d53ece5aa2fb"
+        },
+        {
+          "path": "narration.wav",
+          "bytes": 1764078,
+          "sha256": "0a08db052a39f33838082246d56430589caf3ad181d2f333fb56d7a9c128ef7a"
+        },
+        {
+          "path": "script.txt",
+          "bytes": 226,
+          "sha256": "d13d4501b324e00aeb866bc2f9700befe709dfab50d818b90ba975fba66c47b8"
+        },
+        {
+          "path": "transcript.txt",
+          "bytes": 226,
+          "sha256": "d13d4501b324e00aeb866bc2f9700befe709dfab50d818b90ba975fba66c47b8"
+        },
+        {
+          "path": "words.json",
+          "bytes": 4283,
+          "sha256": "045e1162c8e130b4bd24086b58cc9d14bd7505f09680326fdace69b21ec1e6c6"
+        }
+      ],
+      "brief_en": "Create a 20-second 9:16 educational video using the exact narration.wav and script.txt. Topic: why an agent repeats the same action. Invent supporting diagrams and a strong opening visual. Add readable word-synced captions using words.json. Preserve the supplied speech, ending and factual scope. Music is optional and must not obscure the voice.",
+      "brief_zh": "使用固定 narration.wav 和 script.txt 制作 20 秒 9:16 知识短视频，主题是 agent 为什么重复同一动作。自行设计辅助图解和有吸引力的开场，依据 words.json 添加可读的逐词字幕。保留给定语音、结尾和事实范围，可加音乐但不能盖过旁白。",
+      "assets_ready": true,
+      "prompt_only": false,
+      "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+      "entrypoints": {
+        "en": "cases/10-vertical-explainer/prompt.en.md",
+        "zh": "cases/10-vertical-explainer/prompt.zh.md",
+        "task": "cases/10-vertical-explainer/task.json",
+        "assets": "cases/10-vertical-explainer/assets"
+      }
+    },
+    {
+      "id": "11-speaker-captions",
+      "number": 11,
+      "title_zh": "人物后方关键词字幕",
+      "title_en": "Speaker Captions",
+      "engine": "remotion",
+      "input_mode": "assets",
+      "source_kind": "official_workflow_adaptation",
+      "source_url": "https://github.com/heygen-com/hyperframes/blob/main/skills/embedded-captions/SKILL.md",
+      "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+      "duration_seconds": 11.5,
+      "width": 1280,
+      "height": 720,
+      "fps": 30,
+      "duration_frames": 345,
+      "alpha_required": false,
+      "changes_from_source": "官方工作流没有统一口播原片；改用 remotion.media 公布的 11.478 秒绿幕测试素材，附人物遮罩和 ASR 转录；非原作者素材复刻。",
+      "checks": [
+        "原人物和原声时序保留",
+        "至少一个大字被人物自然遮挡",
+        "前景字幕清楚",
+        "绿幕移除无明显绿色残留"
+      ],
+      "inputs": [
+        {
+          "path": "MEDIA_SOURCE.md",
+          "bytes": 968,
+          "sha256": "425f34128d046b0472c0fad8381597fec53305b31261297e7bde87db39711439"
+        },
+        {
+          "path": "TIMING_NOTES.md",
+          "bytes": 434,
+          "sha256": "758d8c2d5b0edb3a1d17c312c951d053bf18e8208ba8fb03e82acb2b5c240b47"
+        },
+        {
+          "path": "captions.srt",
+          "bytes": 660,
+          "sha256": "e347464c6c1c8ada642a8c5ae7b8bb0355efcf38da76423ff2ae62656d90d0a8"
+        },
+        {
+          "path": "foreground-mask.mp4",
+          "bytes": 774680,
+          "sha256": "d5d40fc345889594c6a21d3ab59352b38a6816fffa30770af084d9f16e99c99b"
+        },
+        {
+          "path": "foreground.webm",
+          "bytes": 1594616,
+          "sha256": "c992578b1ff627db47f41b4969233a1bc414622531e8ecc53d48b89fbbab4b94"
+        },
+        {
+          "path": "source.mp4",
+          "bytes": 888217,
+          "sha256": "a53e1975562b99e423ed2488bfea1b4fe2dc92c25d34dd3c86db38923e80903f"
+        },
+        {
+          "path": "transcript.json",
+          "bytes": 1941,
+          "sha256": "ba170a2ab64fb329344a7786c8287d36cc336587ae236f9b6021aad5f665e65c"
+        },
+        {
+          "path": "transcript.txt",
+          "bytes": 92,
+          "sha256": "f8b9d0ba8ec5c35d1527485bf1cce9ed470ff2d808a0e4ca607a3b5dd65b1a18"
+        }
+      ],
+      "brief_en": "Use source.mp4 and transcript.json to create an 11.5-second captioned clip. Keep the speaker performance and original audio timing. Replace the green background with a designed simple background. Use the supplied foreground mask to place at least one large keyword BEHIND the person, with normal captions in front. Choose emphasis from the actual transcript. This is a green-screen compositing variant, not a natural-background segmentation test.",
+      "brief_zh": "使用 source.mp4 与 transcript.json 制作 11.5 秒字幕视频，保留人物动作和原音频时序。将绿幕替换为简洁设计背景，利用提供的人物遮罩让至少一个巨大关键词出现在人物后方，普通字幕位于前方。强调词从实际转录选择。本题是绿幕合成版本，不考自然背景分割。",
+      "assets_ready": true,
+      "prompt_only": false,
+      "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+      "entrypoints": {
+        "en": "cases/11-speaker-captions/prompt.en.md",
+        "zh": "cases/11-speaker-captions/prompt.zh.md",
+        "task": "cases/11-speaker-captions/task.json",
+        "assets": "cases/11-speaker-captions/assets"
+      }
+    },
+    {
+      "id": "12-news-highlight",
+      "number": 12,
+      "title_zh": "新闻截图动态划重点",
+      "title_en": "News Highlight",
+      "engine": "remotion",
+      "input_mode": "assets",
+      "source_kind": "published_prompt",
+      "source_url": "https://www.remotion.dev/prompts/news-article-headline-highlight",
+      "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+      "duration_seconds": 8,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration_frames": 240,
+      "alpha_required": false,
+      "changes_from_source": "原帖为私人桌面新闻截图；替换为原创虚构新闻 PNG，附强调词，不提供坐标答案。",
+      "checks": [
+        "两个强调词均准确定位",
+        "标记在字后方",
+        "镜头运动轻微",
+        "正文截图保持原内容"
+      ],
+      "inputs": [
+        {
+          "path": "article.png",
+          "bytes": 130822,
+          "sha256": "0ebab9a1007ec4372be7b697e6e7a5f3737cfab82f9234c5162be261bf2095fb"
+        },
+        {
+          "path": "fonts/DejaVuSans.ttf",
+          "bytes": 759720,
+          "sha256": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280"
+        },
+        {
+          "path": "fonts/LICENSE.txt",
+          "bytes": 3859,
+          "sha256": "63d3ba759d12804c5b31a9d5940d855c1820d1f5999e6b0872eb1c7ff045fbc9"
+        },
+        {
+          "path": "highlights.json",
+          "bytes": 106,
+          "sha256": "a056afceb62af705f04db3e39124898692cc56da23192bb0293458baf41c017b"
+        }
+      ],
+      "brief_en": "Use article.png unchanged as the source image. Build an 8-second editorial insert on a white background: initial blur resolves, the article moves slightly toward the camera with subtle 3D rotation, and a rough marker sweeps behind the exact phrases in highlights.json. Infer their locations from the screenshot or OCR; the marker must not cover the letter strokes.",
+      "brief_zh": "使用 article.png 原图制作 8 秒新闻插片：在白色背景上由模糊变清晰，文章缓慢推近并轻微三维旋转，随后手绘感荧光笔划过 highlights.json 中的准确词组。通过截图或 OCR 找到位置，标记不能遮挡字形。",
+      "assets_ready": true,
+      "prompt_only": false,
+      "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+      "entrypoints": {
+        "en": "cases/12-news-highlight/prompt.en.md",
+        "zh": "cases/12-news-highlight/prompt.zh.md",
+        "task": "cases/12-news-highlight/task.json",
+        "assets": "cases/12-news-highlight/assets"
+      }
+    },
+    {
+      "id": "13-subscribe-overlay",
+      "number": 13,
+      "title_zh": "透明订阅引导动画",
+      "title_en": "Subscribe Overlay",
+      "engine": "remotion",
+      "input_mode": "assets",
+      "source_kind": "published_prompt",
+      "source_url": "https://www.remotion.dev/prompts/transparent-call-to-action-overlay",
+      "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+      "duration_seconds": 8,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration_frames": 240,
+      "alpha_required": true,
+      "changes_from_source": "原题需在线抓取频道；提供虚构频道固定数据和原创头像。",
+      "checks": [
+        "数据准确",
+        "按钮状态有改变",
+        "按下和释放反馈可见",
+        "导出保留 alpha"
+      ],
+      "inputs": [
+        {
+          "path": "avatar.svg",
+          "bytes": 240,
+          "sha256": "316b334ab71f3b163d62a0968472863e847189b0fa77249a2a6bac0a58fca88c"
+        },
+        {
+          "path": "channel.json",
+          "bytes": 184,
+          "sha256": "855cd314267d3fb25fc70681b65b8a94952da758c6e62ecc8772a300c3e7503a"
+        }
+      ],
+      "brief_en": "Use channel.json and avatar.svg. Make an 8-second lower-third subscription callout that slides in, shows the exact name and count, receives a cursor click, changes Subscribe to Subscribed, then exits. The button press and release should have distinct motion. Deliver a transparent overlay.mov and a preview composited over a neutral background.",
+      "brief_zh": "使用 channel.json 与 avatar.svg 制作 8 秒订阅条：滑入、显示准确名称和订阅数、鼠标点击、Subscribe 变为 Subscribed、退出。按钮按下和释放有不同反馈。交付透明 overlay.mov 和中性背景上的预览视频。",
+      "assets_ready": true,
+      "prompt_only": false,
+      "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+      "entrypoints": {
+        "en": "cases/13-subscribe-overlay/prompt.en.md",
+        "zh": "cases/13-subscribe-overlay/prompt.zh.md",
+        "task": "cases/13-subscribe-overlay/task.json",
+        "assets": "cases/13-subscribe-overlay/assets"
+      }
+    },
+    {
+      "id": "14-audio-spectrum",
+      "number": 14,
+      "title_zh": "音乐频谱动画",
+      "title_en": "Audio Spectrum",
+      "engine": "remotion",
+      "input_mode": "assets",
+      "source_kind": "published_prompt",
+      "source_url": "https://www.remotion.dev/prompts/audio-spectrum-visualizer",
+      "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+      "duration_seconds": 16,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration_frames": 480,
+      "alpha_required": false,
+      "changes_from_source": "原帖 funk.mp3 未随 prompt 公布；提供原创分段频段诊断音乐。",
+      "checks": [
+        "频谱使用实际音频",
+        "静音区间收敛",
+        "低高频表现不同",
+        "可修改样式参数"
+      ],
+      "inputs": [
+        {
+          "path": "music.json",
+          "bytes": 421,
+          "sha256": "308d3b5c0f3b651349037512b91517efcda8f9ab10f694d2240c616c4eb5ef4f"
+        },
+        {
+          "path": "music.wav",
+          "bytes": 1411244,
+          "sha256": "8d400f57d1c26eacc50005f5e83bbd81ea0d478f2b5131a880224c43afdf0c6d"
+        }
+      ],
+      "brief_en": "Analyze music.wav and render a 16-second spectrum with 32 frequency bars. The bar values must derive from the actual sound, not random or purely periodic animation. Use a magenta-to-cyan palette with restrained glow and reflection. Make the low-only, high-only and silent regions perceptibly different. Parameters for bar count, color and glow should be easy to edit.",
+      "brief_zh": "分析 music.wav，制作 16 秒、32 根频谱柱动画。数值必须来自实际声音，不能使用随机或纯周期动画。采用洋红到青色配色，适度加入辉光和倒影。低频、高频与静音区间应呈现可辨识差异，柱数、颜色和辉光便于修改。",
+      "assets_ready": true,
+      "prompt_only": false,
+      "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+      "entrypoints": {
+        "en": "cases/14-audio-spectrum/prompt.en.md",
+        "zh": "cases/14-audio-spectrum/prompt.zh.md",
+        "task": "cases/14-audio-spectrum/task.json",
+        "assets": "cases/14-audio-spectrum/assets"
+      }
+    },
+    {
+      "id": "15-beat-montage",
+      "number": 15,
+      "title_zh": "音乐驱动品牌蒙太奇",
+      "title_en": "Beat Montage",
+      "engine": "remotion",
+      "input_mode": "assets",
+      "source_kind": "official_workflow_adaptation",
+      "source_url": "https://github.com/heygen-com/hyperframes/blob/main/skills/music-to-video/SKILL.md",
+      "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+      "duration_seconds": 20,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration_frames": 600,
+      "alpha_required": false,
+      "changes_from_source": "补充原创 120 BPM 音乐、矢量风景与短片；统一到 Remotion。",
+      "checks": [
+        "至少四张明信片和两段短片",
+        "重要切镜与拍点对应",
+        "音乐高潮有视觉推进",
+        "结尾品牌句清楚"
+      ],
+      "inputs": [
+        {
+          "path": "brand.json",
+          "bytes": 574,
+          "sha256": "14eb3d8276079cb2078e1a1192f36534bc1dfbb69426a3a06bdfd6f90ecc9a98"
+        },
+        {
+          "path": "clips/01.mp4",
+          "bytes": 143499,
+          "sha256": "affcef5a7c4585f30a2a72d7e4e7c7ce15abd6d2822501653dc26d4c37d5ae8e"
+        },
+        {
+          "path": "clips/02.mp4",
+          "bytes": 133883,
+          "sha256": "6b1ad50825deed83bc5c01239b0639825255ec1fd65d838ffd30d3d24df5a67c"
+        },
+        {
+          "path": "clips/03.mp4",
+          "bytes": 138916,
+          "sha256": "17bb02cdb529c5dea13f514a801884acaf38a8b5b2925dafc229db121cc19a28"
+        },
+        {
+          "path": "copy.json",
+          "bytes": 162,
+          "sha256": "725c48165b0f3c9aea4a359546fa0d44ee99146a43da576e0147138068a038af"
+        },
+        {
+          "path": "logo.svg",
+          "bytes": 244,
+          "sha256": "7c226d589d305e422684589071b77b8e58edf8490311cfa22a6d24bf50243c81"
+        },
+        {
+          "path": "music.json",
+          "bytes": 476,
+          "sha256": "b48c91d2134e4331600e7546a461a293ea4a69591d86e2a7d2da78d9f36a6b9b"
+        },
+        {
+          "path": "music.wav",
+          "bytes": 1764044,
+          "sha256": "3c74933ada6ec3de8b275547a9d37596141db705978f81eebbe9f5a4b253093d"
+        },
+        {
+          "path": "postcards/01.png",
+          "bytes": 46222,
+          "sha256": "7bf150a1cdca0d039efc610568ad08845439b96e6f2b52ec500e1da0e30831f1"
+        },
+        {
+          "path": "postcards/01.svg",
+          "bytes": 585,
+          "sha256": "611c417aeb6f6997bfaf81df29a04602bc52717972622fb18faac49f536fcce2"
+        },
+        {
+          "path": "postcards/02.png",
+          "bytes": 47482,
+          "sha256": "cf95e7afcc54b223caab54163f3bc744169968ff877b4b0e1dc80bcbbcc3f074"
+        },
+        {
+          "path": "postcards/02.svg",
+          "bytes": 590,
+          "sha256": "39019a719f978da37f0612055c56f72f1e395fd13dd12531559b1427eed44fe2"
+        },
+        {
+          "path": "postcards/03.png",
+          "bytes": 48186,
+          "sha256": "9a7042ca31683d598c3cd69dc75c17105853de8aca692c0b0cfe4e27bf61d2ff"
+        },
+        {
+          "path": "postcards/03.svg",
+          "bytes": 590,
+          "sha256": "6adc93fef08c05150bf1eebb36303960c33b56d9ed58e801e8213ddc776810d0"
+        },
+        {
+          "path": "postcards/04.png",
+          "bytes": 48137,
+          "sha256": "6ae69f2a948146937dc97d7393456f999f717c3fc4ff5f9f4c32c96ffc6eb3a1"
+        },
+        {
+          "path": "postcards/04.svg",
+          "bytes": 590,
+          "sha256": "7cca50d725725b20af8c0061cb25ac5becca727f1951139c9ec8fb60a183000c"
+        },
+        {
+          "path": "postcards/05.png",
+          "bytes": 48077,
+          "sha256": "df0d2182e6f1dd7259d55e8f195f524ddd044c1e6fd55504b05065bce8a26605"
+        },
+        {
+          "path": "postcards/05.svg",
+          "bytes": 593,
+          "sha256": "42f4de9cb6e6d48d69fcaef8d396d3800991312c87079865419c1c52457e8047"
+        }
+      ],
+      "brief_en": "Create a 20-second travel-brand montage using music.wav, the supplied vector postcards, and the three MP4 clips. The assets are original stylized illustrations, not photographic footage. Let the music dictate major cuts and the build toward the final brand card. Use at least four postcards and two clips. Keep on-screen copy short and end on the provided brand line.",
+      "brief_zh": "使用 music.wav、矢量旅行明信片和三段 MP4 制作 20 秒旅行品牌蒙太奇。素材是原创风格化插画，不是实拍。让音乐决定主要切镜和高潮，至少使用四张明信片与两段视频。画面文案简短，最后停留在给定品牌句上。",
+      "assets_ready": true,
+      "prompt_only": false,
+      "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+      "entrypoints": {
+        "en": "cases/15-beat-montage/prompt.en.md",
+        "zh": "cases/15-beat-montage/prompt.zh.md",
+        "task": "cases/15-beat-montage/task.json",
+        "assets": "cases/15-beat-montage/assets"
+      }
+    },
+    {
+      "id": "16-travel-route",
+      "number": 16,
+      "title_zh": "跨城市旅行路线",
+      "title_en": "Travel Route",
+      "engine": "remotion",
+      "input_mode": "assets",
+      "source_kind": "published_prompt",
+      "source_url": "https://www.remotion.dev/prompts/travel-route-on-map-with-3d-landmarks",
+      "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+      "duration_seconds": 20,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration_frames": 600,
+      "alpha_required": false,
+      "changes_from_source": "原题涉及多轮追问和地图获取；固定城市坐标，提供原创简化地图，无地图 API key。",
+      "checks": [
+        "城市坐标正确投影",
+        "路线顺序正确",
+        "镜头跟随稳定",
+        "巴黎地标有立体感"
+      ],
+      "inputs": [
+        {
+          "path": "cities.json",
+          "bytes": 413,
+          "sha256": "d667c665259cdea314ff3432e95fa4a83f60bf7ca5b14b9352424139a71f303e"
+        },
+        {
+          "path": "world-map.svg",
+          "bytes": 1800,
+          "sha256": "bcf80926ce5ff61d6d0dbd9d9057ff935496b9d0722e630c4bb1a9f516bcd8f5"
+        }
+      ],
+      "brief_en": "Make a 20-second map travel story: Los Angeles to New York to Paris. Use cities.json and world-map.svg. Keep map projection and coordinates consistent, draw the route progressively, and move the camera along it. At Paris reveal a dimensional Eiffel Tower built with code. The provided map is a deliberately simplified geographic diagram, not a navigation map.",
+      "brief_zh": "制作 20 秒洛杉矶—纽约—巴黎旅行地图视频。使用 cities.json 与 world-map.svg，保持地图投影和坐标一致，逐步绘制路线并让镜头跟随。在巴黎用代码制作有立体感的埃菲尔铁塔。给定地图是简化地理示意图，不用于导航。",
+      "assets_ready": true,
+      "prompt_only": false,
+      "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+      "entrypoints": {
+        "en": "cases/16-travel-route/prompt.en.md",
+        "zh": "cases/16-travel-route/prompt.zh.md",
+        "task": "cases/16-travel-route/task.json",
+        "assets": "cases/16-travel-route/assets"
+      }
+    },
+    {
+      "id": "17-run-story",
+      "number": 17,
+      "title_zh": "GPX 跑步回放",
+      "title_en": "Run Story",
+      "engine": "remotion",
+      "input_mode": "assets",
+      "source_kind": "published_prompt",
+      "source_url": "https://www.remotion.dev/prompts/strava-run-visualized",
+      "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+      "duration_seconds": 20,
+      "width": 1080,
+      "height": 1920,
+      "fps": 30,
+      "duration_frames": 600,
+      "alpha_required": false,
+      "changes_from_source": "原作者私人 GPX 未提供；使用原创模拟轨迹及匹配的离线地图。",
+      "checks": [
+        "读取 GPX 点和时间",
+        "轨迹与标记同步",
+        "指标来自输入数据",
+        "总结正确"
+      ],
+      "inputs": [
+        {
+          "path": "local-map.svg",
+          "bytes": 1334,
+          "sha256": "f5e594cad9a24384129d954c3d5562accb5bed9b983cdd7dd8dc23504fb6fe84"
+        },
+        {
+          "path": "map.json",
+          "bytes": 175,
+          "sha256": "8c30a2efa234ce9cd67004f42c58ece35b53104a87cbfbcdf03ddf8360be294f"
+        },
+        {
+          "path": "run.gpx",
+          "bytes": 12269,
+          "sha256": "3233a65947899d0a83cbaff4f641c8f6349c617b800a9bc9c1566c3b8ea3ab5a"
+        }
+      ],
+      "brief_en": "Read run.gpx and map.json. Make a 20-second vertical story replaying the complete synthetic run in compressed time. Draw the route on local-map.svg, move a runner marker, and update elapsed time, cumulative distance and average pace from the GPX. Clearly distinguish real run elapsed time from video time. End with an accurate summary.",
+      "brief_zh": "读取 run.gpx 和 map.json，制作 20 秒竖屏回放，将完整模拟跑步过程压缩播放。在 local-map.svg 上绘制路线、移动跑者标记，并从 GPX 更新运动用时、累计距离和平均配速。明确区分运动时间与视频时间，结尾给出准确总结。",
+      "assets_ready": true,
+      "prompt_only": false,
+      "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+      "entrypoints": {
+        "en": "cases/17-run-story/prompt.en.md",
+        "zh": "cases/17-run-story/prompt.zh.md",
+        "task": "cases/17-run-story/task.json",
+        "assets": "cases/17-run-story/assets"
+      }
+    },
+    {
+      "id": "18-ranking-towers",
+      "number": 18,
+      "title_zh": "销量排行榜 3D 高塔",
+      "title_en": "Ranking Towers",
+      "engine": "remotion",
+      "input_mode": "assets",
+      "source_kind": "published_prompt",
+      "source_url": "https://www.remotion.dev/prompts/threejs-top-20-games-sold-ranking-1",
+      "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+      "duration_seconds": 30,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration_frames": 900,
+      "alpha_required": false,
+      "changes_from_source": "原页面省略了 JSON 数据；使用 20 款原创虚构游戏数据和封面。",
+      "checks": [
+        "20 项顺序正确",
+        "高度与销量同比例",
+        "标签可读",
+        "镜头不穿模"
+      ],
+      "inputs": [
+        {
+          "path": "covers/01.svg",
+          "bytes": 476,
+          "sha256": "3d43b245b684a8c4e9960146e90cc43ce622461af4898faf6b8f7518b15ac491"
+        },
+        {
+          "path": "covers/02.svg",
+          "bytes": 476,
+          "sha256": "8ac91de1546871b1acbc4e7bd701f081b759c737e90925f6484a1e9953aea6f9"
+        },
+        {
+          "path": "covers/03.svg",
+          "bytes": 478,
+          "sha256": "67fc4977b729008d102967cbaca3ae7979bdf4f741ea91448f3581b233597d36"
+        },
+        {
+          "path": "covers/04.svg",
+          "bytes": 479,
+          "sha256": "1e8edc767cae4a6090a2a645bf148e04a4f88e8943be1a2fb16823e2c32ccbfd"
+        },
+        {
+          "path": "covers/05.svg",
+          "bytes": 476,
+          "sha256": "1fb86c5d0bc97c96eb24465a657481ac18a02be70c71bb7c50a31550f2e4b9a7"
+        },
+        {
+          "path": "covers/06.svg",
+          "bytes": 473,
+          "sha256": "fcf05009220f6aec8599226466e3bbd66184edeaf1cb162fc18106412b00c193"
+        },
+        {
+          "path": "covers/07.svg",
+          "bytes": 476,
+          "sha256": "a98ef47512aa0b851782b48edb957fa720d0c074884a29a4e2cf6b50d1771e31"
+        },
+        {
+          "path": "covers/08.svg",
+          "bytes": 476,
+          "sha256": "f365af8b32d952c3c2ad726c66898450e4e6d2669d06297ffc675224e3e3d7db"
+        },
+        {
+          "path": "covers/09.svg",
+          "bytes": 477,
+          "sha256": "1946ebbd1d778209ecad8eda436818b57dca42cafba1f964ef0abf79564d6823"
+        },
+        {
+          "path": "covers/10.svg",
+          "bytes": 476,
+          "sha256": "190487bffda259869833ee6df1e905937897aa99ad513f16104a3fcfb1e92f30"
+        },
+        {
+          "path": "covers/11.svg",
+          "bytes": 475,
+          "sha256": "fe835fc33aa3b30bfc29239317f0c7e3553850af591e408db15eaa3602f2f7af"
+        },
+        {
+          "path": "covers/12.svg",
+          "bytes": 473,
+          "sha256": "994a740c9f03e4340ee335cac462e3e45f48e7419b2a04db2ee577dc10cc2559"
+        },
+        {
+          "path": "covers/13.svg",
+          "bytes": 476,
+          "sha256": "2f7b9561b56a36980c76e0ab51f7d2515bb5732116672b914a9d670d4f34e022"
+        },
+        {
+          "path": "covers/14.svg",
+          "bytes": 475,
+          "sha256": "e5a3df5b071732d345520964fad463bee14f2cae256ee84e3b6dc7cc6f449228"
+        },
+        {
+          "path": "covers/15.svg",
+          "bytes": 475,
+          "sha256": "b9f1c22f897a089ee02749b53aabf386771f1935309389440bcb44a41a15d44d"
+        },
+        {
+          "path": "covers/16.svg",
+          "bytes": 477,
+          "sha256": "ebeab3e33b5d9d4c15aa0c1cd28cdea317e95737fb2c93766e783ba1906a0d53"
+        },
+        {
+          "path": "covers/17.svg",
+          "bytes": 477,
+          "sha256": "9b40c206bea8f3d1afcd019d7f267f34846b5ee0a0714874b78cc6da6681ec6c"
+        },
+        {
+          "path": "covers/18.svg",
+          "bytes": 475,
+          "sha256": "e7391340680d88ab41189c11db5fd8e428191c3a3edd491183d7cc27db43dd70"
+        },
+        {
+          "path": "covers/19.svg",
+          "bytes": 475,
+          "sha256": "64921871d3236026faa78bb2185489bb999c63a8e93efd017cf6b1be0cbf50f6"
+        },
+        {
+          "path": "covers/20.svg",
+          "bytes": 475,
+          "sha256": "874d1cedc6c401325475574aecba57ff284fabd6623826725d558d82c2ff69a3"
+        },
+        {
+          "path": "ranking.json",
+          "bytes": 2488,
+          "sha256": "a3d4b080a2b6b166ad8247da3769c058a64b40fbdc78f2e57f13714b1f8e1019"
+        }
+      ],
+      "brief_en": "Read ranking.json and covers/. This is fictional benchmark data, not a real game-sales ranking. Create a 30-second 3D ranking film in which tower height is proportional to copies sold. Visit entries from rank 20 to rank 1 with a smooth camera, showing each name, cover and value. Keep a consistent height scale and give the winner a clear final reveal.",
+      "brief_zh": "读取 ranking.json 和 covers/。这是虚构评测数据，不是真实游戏销量榜。制作 30 秒 3D 排行榜，以销量成比例决定塔高。镜头按第 20 名到第 1 名移动，显示名称、封面、数值；高度比例保持一致，结尾清楚揭晓第一名。",
+      "assets_ready": true,
+      "prompt_only": false,
+      "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+      "entrypoints": {
+        "en": "cases/18-ranking-towers/prompt.en.md",
+        "zh": "cases/18-ranking-towers/prompt.zh.md",
+        "task": "cases/18-ranking-towers/task.json",
+        "assets": "cases/18-ranking-towers/assets"
+      }
+    },
+    {
+      "id": "19-bar-line-chart",
+      "number": 19,
+      "title_zh": "销售额与转化率双轴动画",
+      "title_en": "Bar Line Chart",
+      "engine": "remotion",
+      "input_mode": "assets",
+      "source_kind": "published_prompt",
+      "source_url": "https://www.remotion.dev/prompts/bar-line-chart-combined",
+      "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+      "duration_seconds": 12,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration_frames": 360,
+      "alpha_required": false,
+      "changes_from_source": "沿用原题的六个月数值，将数据移入 JSON，延长阅读时间。",
+      "checks": [
+        "六个月数据准确",
+        "双轴单位清晰",
+        "动画先后清楚",
+        "六月变化表达正确"
+      ],
+      "inputs": [
+        {
+          "path": "monthly.json",
+          "bytes": 297,
+          "sha256": "c62799789bed2c102b46491c7157456adc7231ae0e68501927a2283df67724c3"
+        }
+      ],
+      "brief_en": "Use monthly.json. Make a 12-second chart sequence: revenue bars grow from the baseline month by month; the conversion-rate line is then drawn over them with a moving tip marker. Give dollars and percent separate labeled scales. Finish by emphasizing June and the change from January. Do not distort scale to exaggerate the result.",
+      "brief_zh": "使用 monthly.json 制作 12 秒图表动画：收入柱从基线逐月升起，随后绘制转化率折线与移动端点。美元和百分比分别使用清晰标注的坐标轴，结尾强调六月以及相对一月的变化，不通过歪曲比例夸大结果。",
+      "assets_ready": true,
+      "prompt_only": false,
+      "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+      "entrypoints": {
+        "en": "cases/19-bar-line-chart/prompt.en.md",
+        "zh": "cases/19-bar-line-chart/prompt.zh.md",
+        "task": "cases/19-bar-line-chart/task.json",
+        "assets": "cases/19-bar-line-chart/assets"
+      }
+    },
+    {
+      "id": "20-decision-explainer",
+      "number": 20,
+      "title_zh": "决策树流程解释",
+      "title_en": "Decision Explainer",
+      "engine": "remotion",
+      "input_mode": "assets",
+      "source_kind": "official_template_adaptation",
+      "source_url": "https://hyperframes.app/docs/1-startup/3-examples",
+      "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+      "duration_seconds": 30,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration_frames": 900,
+      "alpha_required": false,
+      "changes_from_source": "从官方 decision-tree 模板题型改写，补充原创流程、示例工单和固定说明文本。",
+      "checks": [
+        "节点和边完整",
+        "两条路径与数据一致",
+        "高亮与解说同步",
+        "分支无歧义"
+      ],
+      "inputs": [
+        {
+          "path": "examples.json",
+          "bytes": 357,
+          "sha256": "947937a217c30507c3a099b92ed21f2f11bfe959359ae57a54862627429acb4e"
+        },
+        {
+          "path": "explanation.txt",
+          "bytes": 282,
+          "sha256": "fcba6769986d588f6ef7caaed6cdbfb7af0b94c354f0ad6a0bfccce591def0ba"
+        },
+        {
+          "path": "flow.json",
+          "bytes": 1158,
+          "sha256": "f800e51fff3d11142c2506cb5e6fd009c71d2c1b15010694dc9d5bb15f94feae"
+        }
+      ],
+      "brief_en": "Use flow.json and examples.json to make a 30-second explanation of a fictional support triage policy. Introduce the graph progressively, then follow BOTH example tickets through their exact branches. Synchronize textual explanation and active-node highlighting. Keep branch labels legible and end on the correct outcome for each ticket.",
+      "brief_zh": "使用 flow.json 和 examples.json 制作 30 秒虚构客服分流流程讲解。逐步展示流程，再让两个示例工单沿各自准确分支走完；解释文字与当前节点高亮同步，分支标签可读，两个结局都准确。",
+      "assets_ready": true,
+      "prompt_only": false,
+      "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+      "entrypoints": {
+        "en": "cases/20-decision-explainer/prompt.en.md",
+        "zh": "cases/20-decision-explainer/prompt.zh.md",
+        "task": "cases/20-decision-explainer/task.json",
+        "assets": "cases/20-decision-explainer/assets"
+      }
+    }
+  ]
+}

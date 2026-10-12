@@ -1,0 +1,142 @@
+{
+  "id": "18-ranking-towers",
+  "number": 18,
+  "title_zh": "销量排行榜 3D 高塔",
+  "title_en": "Ranking Towers",
+  "engine": "remotion",
+  "input_mode": "assets",
+  "source_kind": "published_prompt",
+  "source_url": "https://www.remotion.dev/prompts/threejs-top-20-games-sold-ranking-1",
+  "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+  "duration_seconds": 30,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration_frames": 900,
+  "alpha_required": false,
+  "changes_from_source": "原页面省略了 JSON 数据；使用 20 款原创虚构游戏数据和封面。",
+  "checks": [
+    "20 项顺序正确",
+    "高度与销量同比例",
+    "标签可读",
+    "镜头不穿模"
+  ],
+  "inputs": [
+    {
+      "path": "covers/01.svg",
+      "bytes": 476,
+      "sha256": "3d43b245b684a8c4e9960146e90cc43ce622461af4898faf6b8f7518b15ac491"
+    },
+    {
+      "path": "covers/02.svg",
+      "bytes": 476,
+      "sha256": "8ac91de1546871b1acbc4e7bd701f081b759c737e90925f6484a1e9953aea6f9"
+    },
+    {
+      "path": "covers/03.svg",
+      "bytes": 478,
+      "sha256": "67fc4977b729008d102967cbaca3ae7979bdf4f741ea91448f3581b233597d36"
+    },
+    {
+      "path": "covers/04.svg",
+      "bytes": 479,
+      "sha256": "1e8edc767cae4a6090a2a645bf148e04a4f88e8943be1a2fb16823e2c32ccbfd"
+    },
+    {
+      "path": "covers/05.svg",
+      "bytes": 476,
+      "sha256": "1fb86c5d0bc97c96eb24465a657481ac18a02be70c71bb7c50a31550f2e4b9a7"
+    },
+    {
+      "path": "covers/06.svg",
+      "bytes": 473,
+      "sha256": "fcf05009220f6aec8599226466e3bbd66184edeaf1cb162fc18106412b00c193"
+    },
+    {
+      "path": "covers/07.svg",
+      "bytes": 476,
+      "sha256": "a98ef47512aa0b851782b48edb957fa720d0c074884a29a4e2cf6b50d1771e31"
+    },
+    {
+      "path": "covers/08.svg",
+      "bytes": 476,
+      "sha256": "f365af8b32d952c3c2ad726c66898450e4e6d2669d06297ffc675224e3e3d7db"
+    },
+    {
+      "path": "covers/09.svg",
+      "bytes": 477,
+      "sha256": "1946ebbd1d778209ecad8eda436818b57dca42cafba1f964ef0abf79564d6823"
+    },
+    {
+      "path": "covers/10.svg",
+      "bytes": 476,
+      "sha256": "190487bffda259869833ee6df1e905937897aa99ad513f16104a3fcfb1e92f30"
+    },
+    {
+      "path": "covers/11.svg",
+      "bytes": 475,
+      "sha256": "fe835fc33aa3b30bfc29239317f0c7e3553850af591e408db15eaa3602f2f7af"
+    },
+    {
+      "path": "covers/12.svg",
+      "bytes": 473,
+      "sha256": "994a740c9f03e4340ee335cac462e3e45f48e7419b2a04db2ee577dc10cc2559"
+    },
+    {
+      "path": "covers/13.svg",
+      "bytes": 476,
+      "sha256": "2f7b9561b56a36980c76e0ab51f7d2515bb5732116672b914a9d670d4f34e022"
+    },
+    {
+      "path": "covers/14.svg",
+      "bytes": 475,
+      "sha256": "e5a3df5b071732d345520964fad463bee14f2cae256ee84e3b6dc7cc6f449228"
+    },
+    {
+      "path": "covers/15.svg",
+      "bytes": 475,
+      "sha256": "b9f1c22f897a089ee02749b53aabf386771f1935309389440bcb44a41a15d44d"
+    },
+    {
+      "path": "covers/16.svg",
+      "bytes": 477,
+      "sha256": "ebeab3e33b5d9d4c15aa0c1cd28cdea317e95737fb2c93766e783ba1906a0d53"
+    },
+    {
+      "path": "covers/17.svg",
+      "bytes": 477,
+      "sha256": "9b40c206bea8f3d1afcd019d7f267f34846b5ee0a0714874b78cc6da6681ec6c"
+    },
+    {
+      "path": "covers/18.svg",
+      "bytes": 475,
+      "sha256": "e7391340680d88ab41189c11db5fd8e428191c3a3edd491183d7cc27db43dd70"
+    },
+    {
+      "path": "covers/19.svg",
+      "bytes": 475,
+      "sha256": "64921871d3236026faa78bb2185489bb999c63a8e93efd017cf6b1be0cbf50f6"
+    },
+    {
+      "path": "covers/20.svg",
+      "bytes": 475,
+      "sha256": "874d1cedc6c401325475574aecba57ff284fabd6623826725d558d82c2ff69a3"
+    },
+    {
+      "path": "ranking.json",
+      "bytes": 2488,
+      "sha256": "a3d4b080a2b6b166ad8247da3769c058a64b40fbdc78f2e57f13714b1f8e1019"
+    }
+  ],
+  "brief_en": "Read ranking.json and covers/. This is fictional benchmark data, not a real game-sales ranking. Create a 30-second 3D ranking film in which tower height is proportional to copies sold. Visit entries from rank 20 to rank 1 with a smooth camera, showing each name, cover and value. Keep a consistent height scale and give the winner a clear final reveal.",
+  "brief_zh": "读取 ranking.json 和 covers/。这是虚构评测数据，不是真实游戏销量榜。制作 30 秒 3D 排行榜，以销量成比例决定塔高。镜头按第 20 名到第 1 名移动，显示名称、封面、数值；高度比例保持一致，结尾清楚揭晓第一名。",
+  "assets_ready": true,
+  "prompt_only": false,
+  "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+  "entrypoints": {
+    "en": "cases/18-ranking-towers/prompt.en.md",
+    "zh": "cases/18-ranking-towers/prompt.zh.md",
+    "task": "cases/18-ranking-towers/task.json",
+    "assets": "cases/18-ranking-towers/assets"
+  }
+}

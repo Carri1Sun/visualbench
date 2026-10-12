@@ -1,0 +1,43 @@
+{
+  "id": "16-lumen-landing",
+  "number": 16,
+  "title_zh": "Lumen 远程团队官网",
+  "title_en": "Lumen remote-team landing page",
+  "category": "product",
+  "difficulty": "easy",
+  "source_url": "https://github.com/dani-z/frontend-design-skill-benchmark",
+  "source_input_note_zh": "原题是无素材的 SaaS 落地页请求；原仓库 assets 里的截图是输出结果，不是应交给模型的输入。",
+  "adaptation_note_zh": "新增统一品牌文案与虚构团队示例，增加 CTA 演示反馈。原仓库的 frontend-design skill 属于另一个实验条件，本包不默默加载。",
+  "prompt_status": "package_authored_adaptation",
+  "source_starter_included": false,
+  "supplied_design_reference": false,
+  "starter": "plain-html",
+  "output_file": "artifact.html",
+  "plan_file": "plan.json",
+  "input_files": [
+    "assets/product.json"
+  ],
+  "material_requirement": "text_plus_fixed_fixture",
+  "rubric": [
+    "产品用途和主要入口清楚",
+    "提供功能与产品预览",
+    "CTA 和表单反馈可操作",
+    "内容一致、窄屏可读"
+  ],
+  "interaction_actions": [
+    {
+      "action": "click",
+      "target": "Try Lumen"
+    },
+    {
+      "action": "type",
+      "target": "email",
+      "text": "demo@example.com"
+    },
+    {
+      "action": "submit",
+      "target": "signup"
+    }
+  ],
+  "original_short_quote_available": false
+}

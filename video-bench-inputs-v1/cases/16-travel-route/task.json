@@ -1,0 +1,47 @@
+{
+  "id": "16-travel-route",
+  "number": 16,
+  "title_zh": "跨城市旅行路线",
+  "title_en": "Travel Route",
+  "engine": "remotion",
+  "input_mode": "assets",
+  "source_kind": "published_prompt",
+  "source_url": "https://www.remotion.dev/prompts/travel-route-on-map-with-3d-landmarks",
+  "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+  "duration_seconds": 20,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration_frames": 600,
+  "alpha_required": false,
+  "changes_from_source": "原题涉及多轮追问和地图获取；固定城市坐标，提供原创简化地图，无地图 API key。",
+  "checks": [
+    "城市坐标正确投影",
+    "路线顺序正确",
+    "镜头跟随稳定",
+    "巴黎地标有立体感"
+  ],
+  "inputs": [
+    {
+      "path": "cities.json",
+      "bytes": 413,
+      "sha256": "d667c665259cdea314ff3432e95fa4a83f60bf7ca5b14b9352424139a71f303e"
+    },
+    {
+      "path": "world-map.svg",
+      "bytes": 1800,
+      "sha256": "bcf80926ce5ff61d6d0dbd9d9057ff935496b9d0722e630c4bb1a9f516bcd8f5"
+    }
+  ],
+  "brief_en": "Make a 20-second map travel story: Los Angeles to New York to Paris. Use cities.json and world-map.svg. Keep map projection and coordinates consistent, draw the route progressively, and move the camera along it. At Paris reveal a dimensional Eiffel Tower built with code. The provided map is a deliberately simplified geographic diagram, not a navigation map.",
+  "brief_zh": "制作 20 秒洛杉矶—纽约—巴黎旅行地图视频。使用 cities.json 与 world-map.svg，保持地图投影和坐标一致，逐步绘制路线并让镜头跟随。在巴黎用代码制作有立体感的埃菲尔铁塔。给定地图是简化地理示意图，不用于导航。",
+  "assets_ready": true,
+  "prompt_only": false,
+  "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+  "entrypoints": {
+    "en": "cases/16-travel-route/prompt.en.md",
+    "zh": "cases/16-travel-route/prompt.zh.md",
+    "task": "cases/16-travel-route/task.json",
+    "assets": "cases/16-travel-route/assets"
+  }
+}

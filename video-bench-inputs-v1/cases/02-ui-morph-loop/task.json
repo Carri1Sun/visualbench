@@ -1,0 +1,52 @@
+{
+  "id": "02-ui-morph-loop",
+  "number": 2,
+  "title_zh": "单一形状 UI 变形循环",
+  "title_en": "Ui Morph Loop",
+  "engine": "remotion",
+  "input_mode": "assets",
+  "source_kind": "published_prompt",
+  "source_url": "https://x.com/twoclipping/status/2103273003555402193",
+  "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+  "duration_seconds": 16,
+  "width": 1080,
+  "height": 1080,
+  "fps": 30,
+  "duration_frames": 480,
+  "alpha_required": false,
+  "changes_from_source": "公开模板改写，补充固定 8 状态和原创音乐。",
+  "checks": [
+    "8 个状态按序出现",
+    "同一外壳连续变形",
+    "鼠标动作与状态变化对应",
+    "循环首尾一致"
+  ],
+  "inputs": [
+    {
+      "path": "beat.json",
+      "bytes": 396,
+      "sha256": "7ea3aa6a0066a990e469097d73c648f21cf62da422187a34f1f7a1ad1b539b59"
+    },
+    {
+      "path": "beat.wav",
+      "bytes": 1411244,
+      "sha256": "5fa34afe7cc2ba314821113c617965f19f4dc8e5aa2d7b9c6bca030175884c30"
+    },
+    {
+      "path": "states.json",
+      "bytes": 351,
+      "sha256": "bfc097858cde76f8b73c083a88934b5b1165f688f207ea68bd173a85906ee657"
+    }
+  ],
+  "brief_en": "Read states.json. Create a 16-second seamless loop in which ONE persistent shell morphs through the eight UI states in order. A visible cursor motivates clicks and drags. The shell must preserve spatial continuity; transition internal content without hard-cutting the shell. Use beat.wav and align major changes to its 120 BPM pulse. Return to the initial visual state at the loop boundary.",
+  "brief_zh": "读取 states.json，制作 16 秒无缝循环。同一个外壳按顺序变成 8 种 UI，鼠标通过点击和拖拽触发变化。外壳保持空间连续，内部内容可以过渡切换。使用 120 BPM 的 beat.wav，让主要变化贴合节拍，结尾回到开头状态。",
+  "assets_ready": true,
+  "prompt_only": false,
+  "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+  "entrypoints": {
+    "en": "cases/02-ui-morph-loop/prompt.en.md",
+    "zh": "cases/02-ui-morph-loop/prompt.zh.md",
+    "task": "cases/02-ui-morph-loop/task.json",
+    "assets": "cases/02-ui-morph-loop/assets"
+  }
+}

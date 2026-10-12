@@ -1,0 +1,44 @@
+{
+  "id": "08-fluid-dye",
+  "number": 8,
+  "title_zh": "鼠标搅动彩色流体",
+  "title_en": "Interactive dye flow",
+  "category": "simulation",
+  "difficulty": "hard",
+  "source_url": "https://goldiebench.com/tasks/fluid",
+  "source_input_note_zh": "公开页面给出一句 WebGL 流体任务并展示结果；原 Agent OS 的完整系统环境未公开。没有必需的图片。",
+  "adaptation_note_zh": "本包定义二维染料流体、统一操作与清空状态，避免把普通粒子云当成流体模拟。",
+  "prompt_status": "package_authored_adaptation",
+  "source_starter_included": false,
+  "supplied_design_reference": false,
+  "starter": "plain-html",
+  "output_file": "artifact.html",
+  "plan_file": "plan.json",
+  "input_files": [],
+  "material_requirement": "text_only",
+  "rubric": [
+    "拖动注入颜色与动量",
+    "染料被持续流场输运",
+    "清空和暂停有效",
+    "近似方法说明诚实且画面持续可见"
+  ],
+  "interaction_actions": [
+    {
+      "action": "drag",
+      "target": "simulation",
+      "from_normalized": [
+        0.25,
+        0.5
+      ],
+      "to_normalized": [
+        0.75,
+        0.5
+      ]
+    },
+    {
+      "action": "click",
+      "target": "Clear"
+    }
+  ],
+  "original_short_quote_available": true
+}

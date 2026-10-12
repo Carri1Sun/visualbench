@@ -1,0 +1,31 @@
+{
+  "provenance": "package-authored fictional brand, copy and prices",
+  "brand": "Field & Fold",
+  "tagline": "A better morning, delivered.",
+  "description": "Freshly roasted coffee on a simple monthly schedule.",
+  "currency": "USD",
+  "plans": [
+    {
+      "id": "starter",
+      "name": "Starter",
+      "price_monthly": 16,
+      "bags_per_month": 1,
+      "bag_grams": 250
+    },
+    {
+      "id": "ritual",
+      "name": "Ritual",
+      "price_monthly": 29,
+      "bags_per_month": 2,
+      "bag_grams": 250
+    },
+    {
+      "id": "household",
+      "name": "Household",
+      "price_monthly": 52,
+      "bags_per_month": 4,
+      "bag_grams": 250
+    }
+  ],
+  "asset": "coffee-bag.svg"
+}

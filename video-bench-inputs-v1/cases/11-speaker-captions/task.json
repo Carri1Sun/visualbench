@@ -1,0 +1,77 @@
+{
+  "id": "11-speaker-captions",
+  "number": 11,
+  "title_zh": "人物后方关键词字幕",
+  "title_en": "Speaker Captions",
+  "engine": "remotion",
+  "input_mode": "assets",
+  "source_kind": "official_workflow_adaptation",
+  "source_url": "https://github.com/heygen-com/hyperframes/blob/main/skills/embedded-captions/SKILL.md",
+  "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+  "duration_seconds": 11.5,
+  "width": 1280,
+  "height": 720,
+  "fps": 30,
+  "duration_frames": 345,
+  "alpha_required": false,
+  "changes_from_source": "官方工作流没有统一口播原片；改用 remotion.media 公布的 11.478 秒绿幕测试素材，附人物遮罩和 ASR 转录；非原作者素材复刻。",
+  "checks": [
+    "原人物和原声时序保留",
+    "至少一个大字被人物自然遮挡",
+    "前景字幕清楚",
+    "绿幕移除无明显绿色残留"
+  ],
+  "inputs": [
+    {
+      "path": "MEDIA_SOURCE.md",
+      "bytes": 968,
+      "sha256": "425f34128d046b0472c0fad8381597fec53305b31261297e7bde87db39711439"
+    },
+    {
+      "path": "TIMING_NOTES.md",
+      "bytes": 434,
+      "sha256": "758d8c2d5b0edb3a1d17c312c951d053bf18e8208ba8fb03e82acb2b5c240b47"
+    },
+    {
+      "path": "captions.srt",
+      "bytes": 660,
+      "sha256": "e347464c6c1c8ada642a8c5ae7b8bb0355efcf38da76423ff2ae62656d90d0a8"
+    },
+    {
+      "path": "foreground-mask.mp4",
+      "bytes": 774680,
+      "sha256": "d5d40fc345889594c6a21d3ab59352b38a6816fffa30770af084d9f16e99c99b"
+    },
+    {
+      "path": "foreground.webm",
+      "bytes": 1594616,
+      "sha256": "c992578b1ff627db47f41b4969233a1bc414622531e8ecc53d48b89fbbab4b94"
+    },
+    {
+      "path": "source.mp4",
+      "bytes": 888217,
+      "sha256": "a53e1975562b99e423ed2488bfea1b4fe2dc92c25d34dd3c86db38923e80903f"
+    },
+    {
+      "path": "transcript.json",
+      "bytes": 1941,
+      "sha256": "ba170a2ab64fb329344a7786c8287d36cc336587ae236f9b6021aad5f665e65c"
+    },
+    {
+      "path": "transcript.txt",
+      "bytes": 92,
+      "sha256": "f8b9d0ba8ec5c35d1527485bf1cce9ed470ff2d808a0e4ca607a3b5dd65b1a18"
+    }
+  ],
+  "brief_en": "Use source.mp4 and transcript.json to create an 11.5-second captioned clip. Keep the speaker performance and original audio timing. Replace the green background with a designed simple background. Use the supplied foreground mask to place at least one large keyword BEHIND the person, with normal captions in front. Choose emphasis from the actual transcript. This is a green-screen compositing variant, not a natural-background segmentation test.",
+  "brief_zh": "使用 source.mp4 与 transcript.json 制作 11.5 秒字幕视频，保留人物动作和原音频时序。将绿幕替换为简洁设计背景，利用提供的人物遮罩让至少一个巨大关键词出现在人物后方，普通字幕位于前方。强调词从实际转录选择。本题是绿幕合成版本，不考自然背景分割。",
+  "assets_ready": true,
+  "prompt_only": false,
+  "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+  "entrypoints": {
+    "en": "cases/11-speaker-captions/prompt.en.md",
+    "zh": "cases/11-speaker-captions/prompt.zh.md",
+    "task": "cases/11-speaker-captions/task.json",
+    "assets": "cases/11-speaker-captions/assets"
+  }
+}

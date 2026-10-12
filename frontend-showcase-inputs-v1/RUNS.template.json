@@ -1,0 +1,1 @@
+{"case_id":"01-pelican-bicycle","model_id":"replace-with-exact-model-id","prompt_variant":"full","language":"en","runs":[{"run_number":1,"path":"runs/model-a/01/run-1"},{"run_number":2,"path":"runs/model-a/01/run-2"},{"run_number":3,"path":"runs/model-a/01/run-3"},{"run_number":4,"path":"runs/model-a/01/run-4"},{"run_number":5,"path":"runs/model-a/01/run-5"}]}

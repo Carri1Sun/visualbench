@@ -1,0 +1,15 @@
+{
+  "provenance": "package-authored demonstration parameters",
+  "grid": 25,
+  "cloth_width": 3.4,
+  "initial_cloth_y": 2.2,
+  "sphere_radius": 0.85,
+  "sphere_center": [
+    0,
+    0.85,
+    0
+  ],
+  "floor_y": 0,
+  "gravity": 9.8,
+  "wind_enabled": false
+}

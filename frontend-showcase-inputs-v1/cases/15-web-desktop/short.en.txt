@@ -1,0 +1,1 @@
+Build a working browser desktop with draggable Notes, Paint and Terminal windows.

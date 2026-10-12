@@ -1,0 +1,57 @@
+你需要根据任务说明与给定输入文件，创作一个前端展示作品。自行作设计判断，不提出追问。
+
+交付两个文件：
+1. plan.json：简短的公开设计方案，包含 layout、visual_direction、interactions、implementation_choices、limitations。值为字符串或短数组，总长不超过约 160 个英文词。这是明确要求撰写的设计方案，不是私有推理过程。
+2. artifact.html：完整可运行 HTML，自己编写的 CSS 和 JS 内联，可引用提供的本地素材与可选 Three.js 运行库。不得加载外部网站、字体、图片、包、模型、音频或 API，不嵌入其他应用。
+
+可见界面文案使用英语。支持 1280×800 桌面视口，不裁切控件；产品页面还需适配 390×844。字体使用本地/系统字体栈，不强制特定美学。尽可能让控件可用键盘访问且有可见名称。没有后端、账户、密钥或在线数据源。
+
+题目素材位于 ./assets/，通过 HTTP 服务时可 fetch 本地 JSON。Three.js 的 import map 为：
+{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}
+只附带 OrbitControls 插件，其他功能使用核心库或自行内联实现。也可使用 Canvas、SVG、CSS、Web Audio 与程序化绘图。按题目要求标注虚构或示意数据。
+
+优先交付完成且可见的作品，不扩张任务范围。装饰性按钮或模拟不能宣称具有实际功能。近似方法与缺失要求写入 plan.json。在纯聊天模式中返回两个有文件名的代码块；在 coding agent 中将两个文件写入给定运行目录。
+
+TASK / 任务
+制作比较冒泡、插入、归并和快速排序的竞技场，四种算法都使用 numbers.json 中的同一初始数组。每种算法在独立有名称的面板中以柱状动画显示当前数值。提供同时运行、暂停/继续、重置与共用速度控制。显示实际比较和数组写入计数，并在界面解释计数约定。实现算法本身，不用 Array.sort 或预录动画代替。保留重复数值，各面板状态独立。自行设计字体、配色和布局。
+
+INPUT FILE: assets/numbers.json
+```json
+{
+  "provenance": "package-authored fixed fixture",
+  "values": [
+    42,
+    8,
+    57,
+    23,
+    16,
+    64,
+    31,
+    8,
+    49,
+    12,
+    73,
+    28,
+    5,
+    61,
+    37,
+    19,
+    46,
+    2,
+    54,
+    33,
+    11,
+    67,
+    26,
+    40
+  ],
+  "algorithms": [
+    "bubble",
+    "insertion",
+    "merge",
+    "quick"
+  ]
+}
+```
+
+The input files above are supplied fixtures. In a file-based agent workspace they already exist; in chat output, preserve them in the named ./assets paths or inline their exact content.

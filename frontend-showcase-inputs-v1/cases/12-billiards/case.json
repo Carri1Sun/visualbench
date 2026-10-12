@@ -1,0 +1,41 @@
+{
+  "id": "12-billiards",
+  "number": 12,
+  "title_zh": "可玩的台球桌",
+  "title_en": "Playable billiards table",
+  "category": "interactive",
+  "difficulty": "medium",
+  "source_url": "https://goldiebench.com/tasks/pool",
+  "source_input_note_zh": "公开页面给出一句台球模拟任务及结果；未要求输入照片，原 Agent OS 系统模板未公开。",
+  "adaptation_note_zh": "新增固定初始球组和简单练习规则；不要求完整八球赛事规则。",
+  "prompt_status": "package_authored_adaptation",
+  "source_starter_included": false,
+  "supplied_design_reference": false,
+  "starter": "plain-html",
+  "output_file": "artifact.html",
+  "plan_file": "plan.json",
+  "input_files": [],
+  "material_requirement": "text_only",
+  "rubric": [
+    "瞄准与力度决定实际击球",
+    "球间碰撞和库边响应合理",
+    "进袋更新球状态与计数",
+    "母球复位和整桌重置有效"
+  ],
+  "interaction_actions": [
+    {
+      "action": "drag",
+      "target": "cue ball",
+      "purpose": "aim and set power"
+    },
+    {
+      "action": "wait",
+      "seconds": 5
+    },
+    {
+      "action": "click",
+      "target": "Reset table"
+    }
+  ],
+  "original_short_quote_available": true
+}

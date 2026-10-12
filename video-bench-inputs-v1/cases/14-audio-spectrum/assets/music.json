@@ -1,0 +1,32 @@
+{
+  "segments": [
+    {
+      "start": 0,
+      "end": 4,
+      "band": "low",
+      "hz": 90
+    },
+    {
+      "start": 4,
+      "end": 8,
+      "band": "mid",
+      "hz": 600
+    },
+    {
+      "start": 8,
+      "end": 12,
+      "band": "high",
+      "hz": 3500
+    },
+    {
+      "start": 12,
+      "end": 14,
+      "band": "silence"
+    },
+    {
+      "start": 14,
+      "end": 16,
+      "band": "mixed"
+    }
+  ]
+}

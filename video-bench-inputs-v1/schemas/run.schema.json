@@ -1,0 +1,15 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema",
+ "title":"VideoBench run record","type":"object",
+ "required":["case_id","model","run_index","status","protocol","artifacts","metrics"],
+ "properties":{
+  "case_id":{"type":"string"},"variant_id":{"type":["string","null"]},
+  "model":{"type":"object","required":["id","version"],"properties":{"id":{"type":"string"},"version":{"type":"string"}}},
+  "run_index":{"type":"integer","minimum":1},
+  "status":{"enum":["pending","running","generation_failed","build_failed","render_failed","completed","incomplete"]},
+  "protocol":{"type":"object","required":["harness","prompt_language","input_pack_version","budget","tools","skills"],"properties":{"harness":{"type":"string"},"prompt_language":{"enum":["en","zh"]},"input_pack_version":{"type":"string"},"budget":{"type":"object"},"tools":{"type":"array"},"skills":{"type":"array"},"temperature":{"type":["number","null"]},"seed":{"type":["integer","null"]}}},
+  "artifacts":{"type":"object","properties":{"video":{"type":["string","null"]},"poster":{"type":["string","null"]},"frames":{"type":"array","items":{"type":"string"}},"alpha_master":{"type":["string","null"]},"source_directory":{"type":"string"},"plan":{"type":["string","null"]},"logs":{"type":"array","items":{"type":"string"}}}},
+  "metrics":{"type":"object","properties":{"elapsed_seconds":{"type":["number","null"]},"input_tokens":{"type":["integer","null"]},"output_tokens":{"type":["integer","null"]},"cost_usd":{"type":["number","null"]},"typecheck_pass":{"type":["boolean","null"]},"render_pass":{"type":["boolean","null"]}}},
+  "notes":{"type":"string"}
+ }
+}

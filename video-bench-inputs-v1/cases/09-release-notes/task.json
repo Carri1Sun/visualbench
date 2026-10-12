@@ -1,0 +1,82 @@
+{
+  "id": "09-release-notes",
+  "number": 9,
+  "title_zh": "更新日志转发布短片",
+  "title_en": "Release Notes",
+  "engine": "remotion",
+  "input_mode": "assets",
+  "source_kind": "official_prompt_adaptation",
+  "source_url": "https://hyperframes.app/docs/3-guides/2-prompting",
+  "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+  "duration_seconds": 30,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration_frames": 900,
+  "alpha_required": false,
+  "changes_from_source": "补充虚构更新日志、前后截图与品牌素材；统一到 Remotion。",
+  "checks": [
+    "三个主要更新",
+    "版本及日期正确",
+    "前后变化可理解",
+    "未扩大产品能力"
+  ],
+  "inputs": [
+    {
+      "path": "brand.json",
+      "bytes": 574,
+      "sha256": "14eb3d8276079cb2078e1a1192f36534bc1dfbb69426a3a06bdfd6f90ecc9a98"
+    },
+    {
+      "path": "changelog.md",
+      "bytes": 526,
+      "sha256": "0cc7698381b6384dcebdbd8592e81d1f52e2f0178f12f7d1ae808c5a00719716"
+    },
+    {
+      "path": "fonts/DejaVuSans.ttf",
+      "bytes": 759720,
+      "sha256": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280"
+    },
+    {
+      "path": "fonts/LICENSE.txt",
+      "bytes": 3859,
+      "sha256": "63d3ba759d12804c5b31a9d5940d855c1820d1f5999e6b0872eb1c7ff045fbc9"
+    },
+    {
+      "path": "logo.svg",
+      "bytes": 244,
+      "sha256": "7c226d589d305e422684589071b77b8e58edf8490311cfa22a6d24bf50243c81"
+    },
+    {
+      "path": "screenshots/after.png",
+      "bytes": 54404,
+      "sha256": "d6d3644ede02957bc5e223031d166cc17c2a7b521323a2d386b8b327fa015cbd"
+    },
+    {
+      "path": "screenshots/before.png",
+      "bytes": 50397,
+      "sha256": "9e0f8b646a133fae18ae05054c68280425ec4b0b1a54fbb9cfda21d1cc38c82d"
+    },
+    {
+      "path": "source-ui/after.html",
+      "bytes": 2107,
+      "sha256": "7b3a04ef2a32e467ad06b5f802ff69c458d02e167054337b3e76231a044cb673"
+    },
+    {
+      "path": "source-ui/before.html",
+      "bytes": 2058,
+      "sha256": "54e23610314ebc90a56a1eba0b09a41909ff1153fe7c9e2609e9f0eb49b747bd"
+    }
+  ],
+  "brief_en": "Read changelog.md and the before/after UI references. Create a 30-second release announcement. Select the three most useful user-facing changes, show what changed, and explain the benefit in plain language. Keep release name and date exact. Smaller fixes may be omitted. End with the provided update CTA.",
+  "brief_zh": "阅读 changelog.md 和更新前后 UI 参考，制作 30 秒版本发布短片。挑选三个最有用的用户功能，展示变化并用简单语言解释收益。版本名和日期准确，可以省略小修复，结尾使用指定更新 CTA。",
+  "assets_ready": true,
+  "prompt_only": false,
+  "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+  "entrypoints": {
+    "en": "cases/09-release-notes/prompt.en.md",
+    "zh": "cases/09-release-notes/prompt.zh.md",
+    "task": "cases/09-release-notes/task.json",
+    "assets": "cases/09-release-notes/assets"
+  }
+}

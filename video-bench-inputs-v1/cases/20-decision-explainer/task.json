@@ -1,0 +1,52 @@
+{
+  "id": "20-decision-explainer",
+  "number": 20,
+  "title_zh": "决策树流程解释",
+  "title_en": "Decision Explainer",
+  "engine": "remotion",
+  "input_mode": "assets",
+  "source_kind": "official_template_adaptation",
+  "source_url": "https://hyperframes.app/docs/1-startup/3-examples",
+  "prompt_provenance": "independently_rewritten_benchmark_adaptation",
+  "duration_seconds": 30,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration_frames": 900,
+  "alpha_required": false,
+  "changes_from_source": "从官方 decision-tree 模板题型改写，补充原创流程、示例工单和固定说明文本。",
+  "checks": [
+    "节点和边完整",
+    "两条路径与数据一致",
+    "高亮与解说同步",
+    "分支无歧义"
+  ],
+  "inputs": [
+    {
+      "path": "examples.json",
+      "bytes": 357,
+      "sha256": "947937a217c30507c3a099b92ed21f2f11bfe959359ae57a54862627429acb4e"
+    },
+    {
+      "path": "explanation.txt",
+      "bytes": 282,
+      "sha256": "fcba6769986d588f6ef7caaed6cdbfb7af0b94c354f0ad6a0bfccce591def0ba"
+    },
+    {
+      "path": "flow.json",
+      "bytes": 1158,
+      "sha256": "f800e51fff3d11142c2506cb5e6fd009c71d2c1b15010694dc9d5bb15f94feae"
+    }
+  ],
+  "brief_en": "Use flow.json and examples.json to make a 30-second explanation of a fictional support triage policy. Introduce the graph progressively, then follow BOTH example tickets through their exact branches. Synchronize textual explanation and active-node highlighting. Keep branch labels legible and end on the correct outcome for each ticket.",
+  "brief_zh": "使用 flow.json 和 examples.json 制作 30 秒虚构客服分流流程讲解。逐步展示流程，再让两个示例工单沿各自准确分支走完；解释文字与当前节点高亮同步，分支标签可读，两个结局都准确。",
+  "assets_ready": true,
+  "prompt_only": false,
+  "origin_assets_status": "original_creator_assets_not_required_or_not_fully_published; packaged substitutes documented",
+  "entrypoints": {
+    "en": "cases/20-decision-explainer/prompt.en.md",
+    "zh": "cases/20-decision-explainer/prompt.zh.md",
+    "task": "cases/20-decision-explainer/task.json",
+    "assets": "cases/20-decision-explainer/assets"
+  }
+}

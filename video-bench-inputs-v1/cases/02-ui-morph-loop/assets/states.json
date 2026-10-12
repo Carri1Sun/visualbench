@@ -1,0 +1,16 @@
+{
+  "accent": "#91F5C3",
+  "states": [
+    "button",
+    "loader",
+    "music player",
+    "volume slider",
+    "toggle",
+    "tabs",
+    "bar chart",
+    "command palette"
+  ],
+  "shell_rule": "One persistent outer shell; no hard cut between shells.",
+  "initial_label": "Start",
+  "final_transition": "Return to Start button before loop boundary"
+}
