@@ -1,6 +1,6 @@
 # run_control
 
-visualbench 运行控制模块：**仅在本机运行**的评测执行系统。负责批量调度模型运行、采集与渲染产物、导出轨迹、维护实时索引。它不对外提供任何网络服务（4174/4175 端口属于 `result_background`）。
+visualbench 运行控制模块：**仅在本机运行**的评测执行系统。负责批量调度模型运行、采集与渲染产物、导出轨迹、维护实时索引。它不对外提供任何网络服务（4174/4175/4180 端口属于 `result_background`）。
 
 ## 组成
 
@@ -57,5 +57,5 @@ pi --provider <p> --model <m> --mode json --print
 ## 与其他模块的关系
 
 - 唯一数据写入方：产出 `runs/`、`results/index.json`、`data/*.json`，由 `result_background` 只读提供
-- `manage.py` 会同时拉起 `result_background/server.py`（4174 数据、4175 独立捕获 origin）与前端 dev 服务
+- `manage.py` 会同时拉起 `result_background/server.py`（4174 数据、4180 资源、4175 独立捕获 origin）与前端 dev 服务
 - **部署到服务器时本模块不需要同步**：远端没有任何组件能触发本机模型运行

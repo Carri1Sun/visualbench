@@ -1,3 +1,6 @@
+import { resultUrl } from './resources.js';
+export { resourceUrl, downloadUrl } from './resources.js';
+
 export const STATUS = {
   unreported: { label: '等待真实结果', group: 'waiting', className: 'waiting' },
   queued: { label: '排队中', group: 'waiting', className: 'waiting' },
@@ -163,12 +166,10 @@ export function prettyText(text) {
 
 // Only index-provided result paths are fetched; source text is never evaluated.
 export function resultPath(path) {
-  return typeof path === 'string' && /^\/results\//.test(path) && !path.includes('..') && !/[\r\n\\]/.test(path) ? path : null;
+  return resultUrl(path);
 }
 
 export function artifactUrl(path) {
-  // Same-origin relative path: vite dev proxy or the production reverse proxy
-  // forwards /api, /results and /inputs to result_background.
   return resultPath(path);
 }
 

@@ -13,7 +13,7 @@ export default function useTextFile(path, enabled = true) {
     let alive = true;
     const timeout = setTimeout(() => controller.abort(), 20000);
     setState({ path: safe, loading: true, text: '', error: null, binary: false });
-    fetch(safe, { signal: controller.signal, cache: 'no-store' })
+    fetch(safe, { signal: controller.signal })
       .then(async (response) => {
         if (!response.ok) throw new Error(`HTTP ${response.status} · 文件暂时不可用`);
         const type = response.headers.get('content-type') || '';

@@ -1,7 +1,7 @@
 import { useEffect, useId, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { AlertCircle, Check, Clapperboard, Copy, Download, FileQuestion, Loader2, Monitor, RefreshCw, X } from 'lucide-react';
-import { asText, downloadText, resultPath, statusInfo, taskNumber } from '../lib/data.js';
+import { asText, downloadText, downloadUrl, resultPath, statusInfo, taskNumber } from '../lib/data.js';
 
 export function StatusBadge({ status, small = false }) {
   const info = statusInfo(status);
@@ -132,7 +132,7 @@ export function TextBlock({ text, title, filename, actions = true }) {
 export function FileContent({ resource, path, emptyTitle, emptyDescription, title }) {
   const safe = resultPath(path);
   return <div className="file-content">
-    {safe && <div className="file-toolbar"><span title={safe}>{title || safe.split('/').pop()}</span><div className="file-actions">{resource.text && <CopyButton text={resource.text} />}<a className="button small ghost" href={safe} download target="_blank" rel="noreferrer" title="下载原始文件"><Download size={14} />下载</a></div></div>}
+    {safe && <div className="file-toolbar"><span title={safe}>{title || safe.split('/').pop()}</span><div className="file-actions">{resource.text && <CopyButton text={resource.text} />}<a className="button small ghost" href={downloadUrl(safe)} download rel="noreferrer" title="下载原始文件"><Download size={14} />下载</a></div></div>}
     {resource.missing ? <EmptyState compact title={emptyTitle || '尚未提供文件'} description={emptyDescription || '结果索引未提供对应路径；有文件后会自动显示。'} />
       : resource.loading ? <Loading compact label="正在读取原始文件…" />
       : resource.error ? <EmptyState compact icon={AlertCircle} title="文件读取失败" description={resource.error}><button className="button outline small" onClick={resource.retry} title="重新读取文件"><RefreshCw size={14} />重试</button></EmptyState>

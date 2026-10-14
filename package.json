@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "python3 run_control/manage.py start",
+    "dev": "python3 result_background/dev.py",
     "build": "npm --prefix result_display_frontend run build",
     "bench:init": "python3 run_control/common.py",
     "bench:run": "python3 -u run_control/runner.py",
@@ -11,6 +11,8 @@
     "bench:status": "python3 run_control/manage.py status",
     "bench:export": "python3 run_control/export_trajectories.py",
     "bench:setup": "python3 run_control/setup.py",
-    "serve": "python3 result_background/server.py --port 4174"
+    "serve": "python3 result_background/server.py --port 4174",
+    "serve:resources": "python3 result_background/resource_server.py --port 4180",
+    "test:display": "npm --prefix result_display_frontend test && python3 -m unittest discover -s result_background/tests"
   }
 }

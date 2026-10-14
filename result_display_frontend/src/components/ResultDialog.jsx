@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { AlertCircle, ArrowUpRight, Check, Code2, Columns2, Download, ExternalLink, FileText, Image, Info, List, MessageSquareText, MonitorPlay, Play, Plus } from 'lucide-react';
-import { artifactUrl, asText, formatDate, formatDuration, resultPath, sourcePath, statusInfo, trackLabel } from '../lib/data.js';
+import { artifactUrl, asText, downloadUrl, formatDate, formatDuration, resultPath, sourcePath, statusInfo, trackLabel } from '../lib/data.js';
 import useTextFile from '../hooks/useTextFile.js';
 import TrajectoryPanel from './TrajectoryPanel.jsx';
 import EvidencePanel from './EvidencePanel.jsx';
@@ -22,11 +22,11 @@ function PicturePanel({ slot }) {
   const preview = artifactUrl(run?.artifact_path);
   // Artifacts are untrusted model output. The iframe runs in an opaque origin
   // (sandbox without allow-same-origin) plus the CSP header set by
-  // result_background, so isolation no longer depends on cross-origin hosting.
+  // the resource service, including when opened in a separate window.
   const [mode, setMode] = useState(video ? 'video' : 'screenshot');
   const [videoError, setVideoError] = useState(false);
   useEffect(() => setVideoError(false), [video]);
-  return <div className="picture-panel"><div className="picture-toolbar"><div className="view-switch" role="group" aria-label="画面查看方式"><button className={mode === 'screenshot' ? 'active' : ''} onClick={() => setMode('screenshot')} title="查看真实截图"><Image size={14} />截图</button>{video && <button className={mode === 'video' ? 'active' : ''} onClick={() => setMode('video')} title="播放真实输出视频"><Play size={14} />视频</button>}{task.track === 'frontend' && preview && <button className={mode === 'preview' ? 'active' : ''} onClick={() => setMode('preview')} title="在隔离的 iframe 中加载独立产物"><MonitorPlay size={14} />交互预览</button>}</div><div className="file-actions">{(mode === 'video' ? video : screenshot) && mode !== 'preview' && <a className="button small ghost" href={mode === 'video' ? video : screenshot} download target="_blank" rel="noreferrer" title="下载真实输出文件"><Download size={14} />下载{mode === 'video' ? '视频' : '截图'}</a>}{preview && <a className="button small ghost" href={preview} target="_blank" rel="noreferrer" title="在独立页面打开产物"><ExternalLink size={14} />独立预览</a>}</div></div>
+  return <div className="picture-panel"><div className="picture-toolbar"><div className="view-switch" role="group" aria-label="画面查看方式"><button className={mode === 'screenshot' ? 'active' : ''} onClick={() => setMode('screenshot')} title="查看真实截图"><Image size={14} />截图</button>{video && <button className={mode === 'video' ? 'active' : ''} onClick={() => setMode('video')} title="播放真实输出视频"><Play size={14} />视频</button>}{task.track === 'frontend' && preview && <button className={mode === 'preview' ? 'active' : ''} onClick={() => setMode('preview')} title="在隔离的 iframe 中加载独立产物"><MonitorPlay size={14} />交互预览</button>}</div><div className="file-actions">{(mode === 'video' ? video : screenshot) && mode !== 'preview' && <a className="button small ghost" href={downloadUrl(mode === 'video' ? video : screenshot)} download rel="noreferrer" title="下载真实输出文件"><Download size={14} />下载{mode === 'video' ? '视频' : '截图'}</a>}{preview && <a className="button small ghost" href={preview} target="_blank" rel="noreferrer" title="在独立页面打开产物"><ExternalLink size={14} />独立预览</a>}</div></div>
     <div className={`result-stage ${mode === 'preview' ? 'iframe-stage' : ''}`}>
       {mode === 'preview' && preview ? <iframe title={`${task.title} 的隔离交互预览`} src={preview} sandbox="allow-scripts" referrerPolicy="no-referrer" loading="lazy" style={{ aspectRatio: `${task.width || 1440} / ${task.height || 900}` }} />
         : mode === 'video' && video ? videoError ? <EmptyState icon={AlertCircle} title="视频暂时无法播放" description="原始视频可能尚未写入完成，或浏览器不支持其编码。可下载文件查看。" /> : <video key={video} src={video} poster={screenshot || undefined} controls playsInline preload="metadata" onError={() => setVideoError(true)} aria-label={`${task.title} 的真实输出视频`} />

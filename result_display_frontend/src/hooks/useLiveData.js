@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { configureResources } from '../lib/resources.js';
 
 async function fetchJSON(path, signal) {
   const response = await fetch(path, { signal, cache: 'no-store', headers: { Accept: 'application/json' } });
@@ -28,14 +29,21 @@ export default function useLiveData() {
       fetchJSON('/api/index', abort.signal),
       fetchJSON('/api/trajectories', abort.signal),
       fetchJSON('/api/audits', abort.signal),
+      fetchJSON('/api/config', abort.signal).then(config => {
+        if (typeof config.resource_base_url !== 'string') throw new Error('资源地址配置缺少 resource_base_url');
+        configureResources(config.resource_base_url);
+        return config;
+      }),
     ]);
     clearTimeout(timeout);
     if (alive.current && controller.current === abort) {
       setState((previous) => {
         const errors = {};
         responses.forEach((result, number) => {
-          if (result.status === 'rejected') errors[['catalog', 'index', 'trajectories', 'audits'][number]] = result.reason?.name === 'AbortError' ? '请求超时，请检查数据服务' : result.reason?.message || '网络连接失败';
+          if (result.status === 'rejected') errors[['catalog', 'index', 'trajectories', 'audits', 'config'][number]] = result.reason?.name === 'AbortError' ? '请求超时，请检查数据服务' : result.reason?.message || '网络连接失败';
         });
+        // Do not display resources under an unconfigured origin on initial load.
+        if (responses[4].status === 'rejected') return { ...previous, errors, loading: false, refreshing: false };
         return {
           catalog: responses[0].status === 'fulfilled' ? responses[0].value : previous.catalog,
           index: responses[1].status === 'fulfilled' ? responses[1].value : previous.index,

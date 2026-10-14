@@ -38,7 +38,8 @@ def status():
 def start(include_runner=False):
     services = [
         ('server',['python3','result_background/server.py','--port','4174']),
-        ('capture-server',['python3','result_background/server.py','--port','4175']),
+        ('resources',['python3','result_background/resource_server.py','--port','4180']),
+        ('capture-server',['python3','result_background/server.py','--port','4175','--with-resources']),
         ('trajectory',['python3','-u','run_control/export_trajectories.py','--watch']),
         ('audit',['python3','-u','run_control/audit_outputs.py','--watch']),
         ('app',['npm','run','dev','--','--host','127.0.0.1']),
@@ -49,7 +50,7 @@ def start(include_runner=False):
     runner_pid=RUNTIME/'runner.pid'
     if __import__('sys').platform=='darwin' and runner_pid.exists() and alive(int(runner_pid.read_text())):
         spawn('awake',['caffeinate','-i','-w',(RUNTIME/'runner.pid').read_text()])
-    print('展示页 http://127.0.0.1:4173 · 预览/数据4174 · 独立捕获4175')
+    print('展示页 http://127.0.0.1:4173 · 数据4174 · 资源4180 · 独立捕获4175')
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('action',choices=['start','status']);p.add_argument('--runner',action='store_true');a=p.parse_args()

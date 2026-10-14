@@ -13,7 +13,7 @@ visualbench 展示站前端：React 19 + Vite 6 单页应用，只消费 `result
 
 ## 与后台的接口约定
 
-所有请求均为**同源相对路径**，不硬编码主机或端口：
+API 使用同源 `/api/*`；资源通过 `/api/config` 中的 `resource_base_url` 解析后直接访问独立资源服务：
 
 | 用途 | 请求 |
 |---|---|
@@ -24,7 +24,9 @@ visualbench 展示站前端：React 19 + Vite 6 单页应用，只消费 `result
 | 截图 / 视频 / 源码 / 方案 / 产物预览 / 轨迹文件 | `GET /results/runs/...`（路径来自 `/api/index` 各 `*_path` 字段） |
 | 冻结输入文件 | `GET /inputs/...` |
 
-- `src/lib/data.js` 的 `artifactUrl()` 是产物 URL 的唯一出口，只放行 `/results/` 前缀的安全相对路径。
+- `src/lib/resources.js` 统一解析资源与下载地址，只接受 `/results/`、`/inputs/` 逻辑路径和当前配置下的完整地址。
+- 默认从 API 配置读取资源地址；可用 `VITE_RESOURCE_BASE_URL` 在启动 Vite 或构建时覆盖。
+- 下载链接使用 `?download=1`，由资源服务提供 attachment 响应。
 - 源码面板只以文本展示 `code_path`，从不执行模型代码。
 
 ## 本地开发
@@ -34,7 +36,7 @@ npm install
 npm run dev        # http://127.0.0.1:4173，需 result_background 已在 4174 运行
 ```
 
-`vite.config.js` 将 `/api`、`/results`、`/inputs` 代理到 `http://127.0.0.1:4174`。
+`vite.config.js` 只将 `/api` 代理到 `http://127.0.0.1:4174`。默认资源直接访问 `http://127.0.0.1:4180`。在项目根目录运行 `npm run dev` 可启动完整展示服务。
 
 ## 构建与部署
 
@@ -42,7 +44,7 @@ npm run dev        # http://127.0.0.1:4173，需 result_background 已在 4174 �
 npm run build      # 产物输出到 dist/
 ```
 
-`dist/` 是纯静态文件，可托管在任意静态服务器；数据请求由 nginx/Caddy 反代到 `result_background`，或直接使用 `result_background` 的单机模式（它本身会服务 `dist/`）。
+`dist/` 是纯静态文件。数据请求由 `/api` 提供，资源地址由运行时配置决定。`result_background/server.py` 也可以服务构建后的前端；资源仍由独立服务提供。
 
 ## 目录结构
 
